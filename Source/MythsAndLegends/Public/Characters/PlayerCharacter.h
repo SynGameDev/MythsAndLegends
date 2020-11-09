@@ -24,7 +24,6 @@ private:
     class USpringArmComponent* CameraBoom;
 
     virtual void Tick(float DeltaSeconds) override;
-    virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
-    void SetMoveDestination();
+    
 };

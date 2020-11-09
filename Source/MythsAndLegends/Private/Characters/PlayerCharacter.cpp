@@ -17,12 +17,6 @@ APlayerCharacter::APlayerCharacter()
     CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FOLLOW CAMERA"));
     CameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 
-    // Setup The Cursor
-    if(auto pc = Cast<APlayerController>(GetController()))
-    {
-        pc->bShowMouseCursor = true;
-    }
-
     // Don't Rotate the player
     bUseControllerRotationPitch = false;
     bUseControllerRotationRoll = false;
@@ -34,15 +28,4 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
-}
-
-void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-    Super::SetupPlayerInputComponent(PlayerInputComponent);
-    PlayerInputComponent->BindAction("SetDestination", IE_Pressed, this, &APlayerCharacter::SetMoveDestination);
-}
-
-void APlayerCharacter::SetMoveDestination()
-{
-    UE_LOG(LogTemp, Warning, TEXT("SET"));
 }
