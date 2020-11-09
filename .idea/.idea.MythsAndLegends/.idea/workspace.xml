@@ -16,8 +16,11 @@
       <list>
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/BaseCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/PlayerAiController.cpp" />
       </list>
     </option>
   </component>
@@ -253,7 +256,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604911309190</updated>
-      <workItem from="1604911465768" duration="3576000" />
+      <workItem from="1604911465768" duration="6156000" />
     </task>
     <servers />
   </component>

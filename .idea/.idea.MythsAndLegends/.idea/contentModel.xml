@@ -43041,13 +43041,21 @@
           <e p="MythsAndLegendsPlayerController.h" t="Include" />
           <e p="Private" t="Include">
             <e p="Characters" t="Include">
+              <e p="ML_PlayerController.cpp" t="Include" />
               <e p="PlayerCharacter.cpp" t="Include" />
+            </e>
+            <e p="Controllers" t="Include">
+              <e p="PlayerAiController.cpp" t="Include" />
             </e>
           </e>
           <e p="Public" t="Include">
             <e p="Characters" t="Include">
               <e p="BaseCharacter.h" t="Include" />
+              <e p="ML_PlayerController.h" t="Include" />
               <e p="PlayerCharacter.h" t="Include" />
+            </e>
+            <e p="Controllers" t="Include">
+              <e p="PlayerAiController.h" t="Include" />
             </e>
           </e>
         </e>
