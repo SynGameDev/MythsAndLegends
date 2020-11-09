@@ -17,5 +17,12 @@ public:
     APlayerCharacter();
 
 private:
-    
+    // --- COMPONENTS --- //
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
+    class UCameraComponent* CameraComponent;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
+    class USpringArmComponent* CameraBoom;
+
+    void Tick(float DeltaSeconds) override;
+    void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 };

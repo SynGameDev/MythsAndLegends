@@ -16,6 +16,8 @@
       <list>
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/BaseCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
       </list>
     </option>
   </component>
@@ -251,7 +253,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604911309190</updated>
-      <workItem from="1604911465768" duration="1709000" />
+      <workItem from="1604911465768" duration="2321000" />
     </task>
     <servers />
   </component>
@@ -262,5 +264,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="642" y="227" key="RiderGenerateDialog" timestamp="1604915225539">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state x="642" y="227" key="RiderGenerateDialog/0.0.1857.1080@0.0.1857.1080" timestamp="1604915225539" />
   </component>
 </project>
