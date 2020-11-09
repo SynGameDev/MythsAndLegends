@@ -39,7 +39,7 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent);
-    PlayerInputComponent->BindAction("SetDestination", IE_Pressed, this, APlayerCharacter::SetMoveDestination);
+    PlayerInputComponent->BindAction("SetDestination", IE_Pressed, this, &APlayerCharacter::SetMoveDestination);
 }
 
 void APlayerCharacter::SetMoveDestination()
