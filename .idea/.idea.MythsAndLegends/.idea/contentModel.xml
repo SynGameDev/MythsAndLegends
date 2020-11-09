@@ -9697,6 +9697,28 @@
         </e>
       </e>
     </e>
+    <e p="C:\Users\KAMil\OneDrive\Documents\UE_4.25\Engine\Plugins\Marketplace\Restart" t="Include">
+      <e p="Resources" t="Include">
+        <e p="ButtonIcon_40x.png" t="Include" />
+        <e p="Icon128.png" t="Include" />
+      </e>
+      <e p="Restart.uplugin" t="Include" />
+      <e p="Source" t="Include">
+        <e p="Restart" t="Include">
+          <e p="Private" t="Include">
+            <e p="Restart.cpp" t="Include" />
+            <e p="RestartCommands.cpp" t="Include" />
+            <e p="RestartStyle.cpp" t="Include" />
+          </e>
+          <e p="Public" t="Include">
+            <e p="Restart.h" t="Include" />
+            <e p="RestartCommands.h" t="Include" />
+            <e p="RestartStyle.h" t="Include" />
+          </e>
+          <e p="Restart.Build.cs" t="Include" />
+        </e>
+      </e>
+    </e>
     <e p="C:\Users\KAMil\OneDrive\Documents\UE_4.25\Engine\Plugins\Media\AjaMedia" t="Include">
       <e p="AjaMedia.uplugin" t="Include" />
       <e p="Resources" t="Include">
@@ -43018,11 +43040,14 @@
           <e p="MythsAndLegendsPlayerController.cpp" t="Include" />
           <e p="MythsAndLegendsPlayerController.h" t="Include" />
           <e p="Private" t="Include">
-            <e p="Characters" t="Include" />
+            <e p="Characters" t="Include">
+              <e p="PlayerCharacter.cpp" t="Include" />
+            </e>
           </e>
           <e p="Public" t="Include">
             <e p="Characters" t="Include">
               <e p="BaseCharacter.h" t="Include" />
+              <e p="PlayerCharacter.h" t="Include" />
             </e>
           </e>
         </e>
