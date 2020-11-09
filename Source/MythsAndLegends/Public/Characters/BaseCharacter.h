@@ -13,5 +13,8 @@ class MYTHSANDLEGENDS_API ABaseCharacter : public ACharacter
 
 public:
 	// Sets default values for this character's properties
-	ABaseCharacter();
+	ABaseCharacter()
+	{
+		
+	}
 };
