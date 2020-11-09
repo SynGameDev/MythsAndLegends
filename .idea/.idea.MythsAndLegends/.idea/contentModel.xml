@@ -42987,6 +42987,8 @@
       <e p="UE4Game.Target.cs" t="Include" />
     </e>
     <e p="C:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends" t="IncludeFlat">
+      <e p=".gitattributes" t="Include" />
+      <e p=".gitignore" t="Include" />
       <e p="Config" t="Include">
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEditorPerProjectUserSettings.ini" t="Include" />
@@ -43015,6 +43017,14 @@
           <e p="MythsAndLegendsGameMode.h" t="Include" />
           <e p="MythsAndLegendsPlayerController.cpp" t="Include" />
           <e p="MythsAndLegendsPlayerController.h" t="Include" />
+          <e p="Private" t="Include">
+            <e p="Characters" t="Include" />
+          </e>
+          <e p="Public" t="Include">
+            <e p="Characters" t="Include">
+              <e p="BaseCharacter.h" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="MythsAndLegends.Target.cs" t="Include" />
         <e p="MythsAndLegendsEditor.Target.cs" t="Include" />
