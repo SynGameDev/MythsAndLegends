@@ -23,6 +23,8 @@ private:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
     class USpringArmComponent* CameraBoom;
 
-    void Tick(float DeltaSeconds) override;
-    void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+    virtual void Tick(float DeltaSeconds) override;
+    virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+
+    void SetMoveDestination();
 };
