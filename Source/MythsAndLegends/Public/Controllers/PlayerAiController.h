@@ -13,5 +13,10 @@ UCLASS()
 class MYTHSANDLEGENDS_API APlayerAiController : public AAIController
 {
 	GENERATED_BODY()
-	
+public:
+
+private:
+    
+
+    
 };

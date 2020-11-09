@@ -17,4 +17,7 @@ public:
 	{
 		
 	}
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI", meta=(AllowProtectedAccess="true"))
+	class UBehaviorTree* BehaviorTree;
 };
