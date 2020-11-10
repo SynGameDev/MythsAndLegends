@@ -24,9 +24,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Ability_E.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Ability_Q.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Ability_R.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Ability_Ultimate.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_A_Slow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_A_Slow_Recovery.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_B_Slow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_B_Slow_Recovery.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_C_Slow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_C_Slow_Recovery.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_D_Slow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_D_Slow_Recovery.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_PrimaryA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_PrimaryB.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_PrimaryC.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_RMB.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseItem.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +72,21 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/PlayerAiController.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/MoveToPositionNode.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/AiCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/AiCharacter.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseItem.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
       </list>
     </option>
   </component>
@@ -70,7 +99,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
   <component name="RunManager" selected="C++ Project.MythsAndLegends">
     <configuration name="MythsAndLegends" type="CppProject" factoryName="C++ Project">
@@ -296,7 +325,8 @@
       <updated>1604911309190</updated>
       <workItem from="1604911465768" duration="15638000" />
       <workItem from="1604976911895" duration="11030000" />
-      <workItem from="1604988898336" duration="8131000" />
+      <workItem from="1604988898336" duration="11143000" />
+      <workItem from="1605002471971" duration="3453000" />
     </task>
     <servers />
   </component>
@@ -315,22 +345,23 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="642" y="227" key="RiderGenerateDialog" timestamp="1604992383756">
+    <state x="642" y="227" key="RiderGenerateDialog" timestamp="1605000612533">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state x="642" y="227" key="RiderGenerateDialog/0.0.1857.1080@0.0.1857.1080" timestamp="1604992383756" />
-    <state x="429" y="185" key="SettingsEditor" timestamp="1604991718951">
+    <state x="642" y="227" key="RiderGenerateDialog/0.0.1857.1080@0.0.1857.1080" timestamp="1605000612533" />
+    <state x="429" y="185" key="SettingsEditor" timestamp="1605052231104">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state x="429" y="185" key="SettingsEditor/0.0.1857.1080@0.0.1857.1080" timestamp="1604991718951" />
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1604993058307">
+    <state x="429" y="185" key="SettingsEditor/0.0.1857.1080@0.0.1857.1080" timestamp="1605052231104" />
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605001120069">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1604993058307" />
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1605001120069" />
   </component>
 </project>

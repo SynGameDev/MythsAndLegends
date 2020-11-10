@@ -22,6 +22,8 @@ private:
     class UCameraComponent* CameraComponent;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
     class USpringArmComponent* CameraBoom;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
+    class UInventoryComponent* InventoryComponent;
 
     virtual void Tick(float DeltaSeconds) override;
     

@@ -43044,6 +43044,7 @@
               <e p="MoveToPositionNode.cpp" t="Include" />
             </e>
             <e p="Characters" t="Include">
+              <e p="InventoryComponent.cpp" t="Include" />
               <e p="ML_PlayerController.cpp" t="Include" />
               <e p="NPC.cpp" t="Include" />
               <e p="PlayerCharacter.cpp" t="Include" />
@@ -43053,6 +43054,9 @@
               <e p="BaseAIController.cpp" t="Include" />
               <e p="PlayerAiController.cpp" t="Include" />
             </e>
+            <e p="Items" t="Include">
+              <e p="BaseItem.cpp" t="Include" />
+            </e>
           </e>
           <e p="Public" t="Include">
             <e p="AI_Task" t="Include">
@@ -43060,6 +43064,7 @@
             </e>
             <e p="Characters" t="Include">
               <e p="BaseCharacter.h" t="Include" />
+              <e p="InventoryComponent.h" t="Include" />
               <e p="ML_PlayerController.h" t="Include" />
               <e p="NPC.h" t="Include" />
               <e p="PlayerCharacter.h" t="Include" />
@@ -43068,6 +43073,9 @@
             <e p="Controllers" t="Include">
               <e p="BaseAIController.h" t="Include" />
               <e p="PlayerAiController.h" t="Include" />
+            </e>
+            <e p="Items" t="Include">
+              <e p="BaseItem.h" t="Include" />
             </e>
           </e>
         </e>

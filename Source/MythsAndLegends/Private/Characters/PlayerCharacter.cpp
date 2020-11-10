@@ -3,6 +3,7 @@
 
 #include "MythsAndLegends/Public/Characters/PlayerCharacter.h"
 #include "GameFramework/PlayerController.h"
+#include "MythsAndLegends/Public/Characters/InventoryComponent.h"
 
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
@@ -17,6 +18,7 @@ APlayerCharacter::APlayerCharacter()
     CameraBoom->SetupAttachment(RootComponent);
     CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FOLLOW CAMERA"));
     CameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
+    InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("Inventory Component"));
 
     // Don't Rotate the player
     bUseControllerRotationPitch = false;

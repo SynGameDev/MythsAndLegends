@@ -6,12 +6,15 @@
 #include "MythsAndLegends/Public/Characters/PlayerCharacter.h"
 #include "MythsAndLegends/Public/Characters/BaseCharacter.h"
 #include "MythsAndLegends/Public/Characters/NPC.h"
+#include "MythsAndLegends/Public/Items/BaseItem.h"
+
 
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BehaviorTreeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Components/StaticMeshComponent.h"
 
 AML_PlayerController::AML_PlayerController()
 {
@@ -172,6 +175,20 @@ void AML_PlayerController::PerformInteractWithTarget()
     
     TargetObject = nullptr;
     TargetIsEnemy = false;
+}
+
+void AML_PlayerController::TraceOverItem()
+{
+    FHitResult HitResult;
+    GetHitResultUnderCursor(ECC_Visibility, false, HitResult);
+
+    if(HitResult.bBlockingHit)
+    {
+        if(ABaseItem* const HitItem = Cast<ABaseItem>(HitResult.Actor))
+        {
+            HitItem->GetItemMesh()->SetRenderCustomDepth(true);
+        }
+    }
 }
 
 

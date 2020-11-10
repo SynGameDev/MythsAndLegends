@@ -44,5 +44,8 @@ private:
     bool IsTargetInRange();
     void PerformInteractWithTarget();
 
+    // --- TRACES --- //
+    void TraceOverItem();
+
     
 };
