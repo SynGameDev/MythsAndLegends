@@ -20,10 +20,7 @@ public:
 protected:
 	class UBehaviorTreeComponent* BT_Component;
 	class UBlackboardComponent* BB_Component;
-
-	UPROPERTY(EditDefaultsOnly, Category="AI|Keys")
-	FName MoveToLocation;
-
+	
 	virtual void OnPossess(APawn* InPawn) override;
 	
 };
