@@ -7,6 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/GameMode/Temp_GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/GameMode/Temp_GameMode.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/TopDownCPP/Maps/TopDownExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/TopDownCPP/Maps/TopDownExampleMap.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/TopDownCPP/Maps/TopDownExampleMap_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/TopDownCPP/Maps/TopDownExampleMap_BuiltData.uasset" afterDir="false" />
@@ -278,7 +279,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604911309190</updated>
       <workItem from="1604911465768" duration="15638000" />
-      <workItem from="1604976911895" duration="2959000" />
+      <workItem from="1604976911895" duration="3319000" />
     </task>
     <servers />
   </component>
