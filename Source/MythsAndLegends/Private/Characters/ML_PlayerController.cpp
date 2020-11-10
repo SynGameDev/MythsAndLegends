@@ -85,7 +85,10 @@ void AML_PlayerController::Tick(float DeltaSeconds)
     {
         if(!TargetIsEnemy)
         {
-            PerformInteractWithTarget();
+            if(IsTargetInRange())
+            {
+                PerformInteractWithTarget();
+            }
         }
     }
 }
