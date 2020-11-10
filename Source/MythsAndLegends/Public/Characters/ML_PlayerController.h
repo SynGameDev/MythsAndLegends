@@ -41,4 +41,6 @@ private:
     void MoveToTarget(FVector const Location);
     bool IsTargetInRange();
     void PerformInteractWithTarget();
+
+    
 };

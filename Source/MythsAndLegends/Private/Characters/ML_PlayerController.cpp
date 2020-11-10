@@ -23,6 +23,7 @@ AML_PlayerController::AML_PlayerController()
 
     TargetObject = nullptr;
     TargetIsEnemy = false;
+    MinTargetDistance = 120.0f;
 }
 
 
@@ -95,6 +96,8 @@ void AML_PlayerController::Tick(float DeltaSeconds)
 
 void AML_PlayerController::MoveToPosition(FVector const MovePosition)
 {
+    TargetObject = nullptr;
+    TargetIsEnemy = false;
     UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, MovePosition);
 }
 
@@ -109,10 +112,22 @@ void AML_PlayerController::MoveToTarget(FVector const Location)
 
 bool AML_PlayerController::IsTargetInRange()
 {
-    if(FVector::Dist(GetOwner()->GetActorLocation(), TargetObject->GetActorLocation()) < MinTargetDistance)
-        return true;
+    if(!TargetObject)
+        return false;
 
+    float DistanceBetween = FVector::Dist(TargetObject->GetActorLocation(), GetPawn()->GetActorLocation());
+
+    UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), DistanceBetween);
+    UE_LOG(LogTemp, Warning, TEXT("Min Distance: %f"), MinTargetDistance);
+    
+    if(DistanceBetween < MinTargetDistance)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("In Range"));
+        TargetObject = nullptr;
+    }
+    
     return false;
+    
 }
 
 void AML_PlayerController::PerformInteractWithTarget()
