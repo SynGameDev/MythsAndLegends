@@ -135,6 +135,10 @@ void AML_PlayerController::PerformInteractWithTarget()
     {
         // TODO: Attack Enemy
     }
+
+
+    TargetObject = nullptr;
+    TargetIsEnemy = false;
 }
 
 

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "MythsAndLegends/Public/Characters/SkillComponent.h"
 #include "BaseCharacter.generated.h"
 
 UCLASS()
@@ -15,11 +16,14 @@ public:
 	// Sets default values for this character's properties
 	ABaseCharacter()
 	{
-		
+		SkillComponent = CreateDefaultSubobject<USkillComponent>(TEXT("Skill Component"));
 	}
+
 
 	FORCEINLINE class UBehaviorTree* GetBT() const { return BehaviorTree; }
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI", meta=(AllowProtectedAccess="true"))
 	class UBehaviorTree* BehaviorTree;
+
+	USkillComponent* SkillComponent;
 };
