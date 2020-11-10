@@ -115,15 +115,11 @@ bool AML_PlayerController::IsTargetInRange()
     if(!TargetObject)
         return false;
 
-    float DistanceBetween = FVector::Dist(TargetObject->GetActorLocation(), GetPawn()->GetActorLocation());
-
-    UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), DistanceBetween);
-    UE_LOG(LogTemp, Warning, TEXT("Min Distance: %f"), MinTargetDistance);
+    float const DistanceBetween = FVector::Dist(TargetObject->GetActorLocation(), GetPawn()->GetActorLocation());
     
     if(DistanceBetween < MinTargetDistance)
     {
-        UE_LOG(LogTemp, Warning, TEXT("In Range"));
-        TargetObject = nullptr;
+        return true;
     }
     
     return false;
@@ -132,7 +128,13 @@ bool AML_PlayerController::IsTargetInRange()
 
 void AML_PlayerController::PerformInteractWithTarget()
 {
-    UE_LOG(LogTemp, Warning, TEXT("Target In Interact Range"));
+    if(!TargetIsEnemy)
+    {
+        // TODO: Loop through all the potenital tags and determine the next course of actions
+    } else
+    {
+        // TODO: Attack Enemy
+    }
 }
 
 
