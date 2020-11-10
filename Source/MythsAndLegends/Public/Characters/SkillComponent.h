@@ -16,8 +16,8 @@ public:
 	// Sets default values for this component's properties
 	USkillComponent();
 
-	void TakeDamage();
-	void CalculateDamage();
+	void TakeDamage(float Damage);
+	float CalculateDamage();
 	
 	// --- GETTERS --- //
 	FORCEINLINE float GetCharacterHealth() const { return CurrentHealth; }

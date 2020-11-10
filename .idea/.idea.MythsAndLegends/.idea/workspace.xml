@@ -24,12 +24,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +291,7 @@
       <updated>1604911309190</updated>
       <workItem from="1604911465768" duration="15638000" />
       <workItem from="1604976911895" duration="11030000" />
-      <workItem from="1604988898336" duration="3133000" />
+      <workItem from="1604988898336" duration="3536000" />
     </task>
     <servers />
   </component>
@@ -327,9 +323,9 @@
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
     <state x="429" y="185" key="SettingsEditor/0.0.1857.1080@0.0.1857.1080" timestamp="1604991718951" />
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1604992208118">
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1604993058307">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1604992208118" />
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1604993058307" />
   </component>
 </project>
