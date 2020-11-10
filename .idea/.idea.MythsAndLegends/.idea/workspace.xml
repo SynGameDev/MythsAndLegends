@@ -21,8 +21,8 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/PlayerAiController.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/PlayerAiController.h" />
       </list>
     </option>
@@ -259,7 +259,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604911309190</updated>
-      <workItem from="1604911465768" duration="8348000" />
+      <workItem from="1604911465768" duration="8651000" />
     </task>
     <servers />
   </component>
