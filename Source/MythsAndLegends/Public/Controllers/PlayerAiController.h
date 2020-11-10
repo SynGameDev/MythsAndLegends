@@ -3,20 +3,18 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AIController.h"
+#include "MythsAndLegends/Public/Controllers/BaseAIController.h"
 #include "PlayerAiController.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class MYTHSANDLEGENDS_API APlayerAiController : public AAIController
+class MYTHSANDLEGENDS_API APlayerAiController : public ABaseAIController
 {
 	GENERATED_BODY()
 public:
     APlayerAiController();
-private:
-    
 
     
 };
