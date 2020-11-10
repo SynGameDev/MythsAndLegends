@@ -4,6 +4,8 @@
 #include "MythsAndLegends/Public/Characters/ML_PlayerController.h"
 #include "MythsAndLegends/Public/Controllers/PlayerAiController.h"
 #include "MythsAndLegends/Public/Characters/PlayerCharacter.h"
+#include "MythsAndLegends/Public/Characters/BaseCharacter.h"
+#include "MythsAndLegends/Public/Characters/NPC.h"
 
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BehaviorTreeComponent.h"
@@ -30,6 +32,12 @@ AML_PlayerController::AML_PlayerController()
 void AML_PlayerController::BeginPlay()
 {
     SetupTree();
+}
+
+void AML_PlayerController::MeleeAttack()
+{
+    ABaseCharacter* const Char = Cast<ABaseCharacter>(GetPawn());
+    UE_LOG(LogTemp, Warning, TEXT("Attack: %f"), Char->GetSkillComponent()->CalculateDamage());
 }
 
 void AML_PlayerController::SetupTree() const
@@ -107,6 +115,16 @@ void AML_PlayerController::MoveToTarget(FVector const Location)
     {
         UE_LOG(LogTemp, Warning, TEXT("Moving To Target"));
         UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, TargetObject->GetActorLocation());
+    } else
+    {
+        if(ANPC* const NPC = Cast<ANPC>(TargetObject))
+        {
+            UAIBlueprintHelperLibrary::SimpleMoveToActor(this, NPC);
+        } else
+        {
+            TargetObject = nullptr;
+            TargetIsEnemy = false;
+        }
     }
 }
 
@@ -130,10 +148,11 @@ void AML_PlayerController::PerformInteractWithTarget()
 {
     if(!TargetIsEnemy)
     {
-        // TODO: Loop through all the potenital tags and determine the next course of actions
+        // TODO: Loop through all the potenial tags and determine the next course of actions
     } else
     {
-        // TODO: Attack Enemy
+        // TODO: Check Attack Type
+        MeleeAttack();
     }
 
 

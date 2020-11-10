@@ -23,6 +23,8 @@ public:
 
     FORCEINLINE class UBlackboardComponent* GetBlackboard() const { return BB_Component; }
 
+    void MeleeAttack();
+
 private:
     void SetupTree() const;
     virtual void SetupInputComponent() override;

@@ -19,6 +19,8 @@ public:
 		SkillComponent = CreateDefaultSubobject<USkillComponent>(TEXT("Skill Component"));
 	}
 
+	FORCEINLINE USkillComponent* GetSkillComponent() const { return SkillComponent; }
+
 
 	FORCEINLINE class UBehaviorTree* GetBT() const { return BehaviorTree; }
 protected:
