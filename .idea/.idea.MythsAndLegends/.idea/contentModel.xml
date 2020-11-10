@@ -43040,6 +43040,9 @@
           <e p="MythsAndLegendsPlayerController.cpp" t="Include" />
           <e p="MythsAndLegendsPlayerController.h" t="Include" />
           <e p="Private" t="Include">
+            <e p="AI_Task" t="Include">
+              <e p="MoveToPositionNode.cpp" t="Include" />
+            </e>
             <e p="Characters" t="Include">
               <e p="ML_PlayerController.cpp" t="Include" />
               <e p="PlayerCharacter.cpp" t="Include" />
@@ -43050,6 +43053,9 @@
             </e>
           </e>
           <e p="Public" t="Include">
+            <e p="AI_Task" t="Include">
+              <e p="MoveToPositionNode.h" t="Include" />
+            </e>
             <e p="Characters" t="Include">
               <e p="BaseCharacter.h" t="Include" />
               <e p="ML_PlayerController.h" t="Include" />
