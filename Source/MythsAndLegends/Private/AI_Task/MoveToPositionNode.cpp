@@ -6,13 +6,3 @@
 
 #include "BehaviorTree/BlackboardComponent.h"
 
-EBTNodeResult::Type UMoveToPositionNode::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
-{
-    // Get the player controller
-   if( APlayerAiController* PlayerController = Cast<APlayerAiController>(OwnerComp.GetAIOwner()))
-   {
-       UBlackboardComponent* BB_Comp = PlayerController->GetBlackboardComponent();
-       
-   }
-    
-}

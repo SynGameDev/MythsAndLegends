@@ -15,8 +15,10 @@ class MYTHSANDLEGENDS_API APlayerAiController : public ABaseAIController
 	GENERATED_BODY()
 public:
     APlayerAiController();
-
+    void SetMoveToLocation(FVector const Position) const;
 private:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI|Blackboard Keys", meta=(AllowPrivateAccess="true"))
     FName MoveToPosition;
+
+    
 };

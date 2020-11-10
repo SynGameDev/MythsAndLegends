@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "MythsAndLegends/Public/Characters/BaseCharacter.h"
+#include "MythsAndLegends/Public/Controllers/PlayerAiController.h"
 #include "PlayerCharacter.generated.h"
 
 /**
@@ -15,8 +16,8 @@ class MYTHSANDLEGENDS_API APlayerCharacter : public ABaseCharacter
 	GENERATED_BODY()
 public:
     APlayerCharacter();
-    FORCEINLINE class APlayerAiController* GetAiController() const { return Cast<APlayerAiController>(GetController()); }
-    
+
+    void Test();
 private:
     // --- COMPONENTS --- //
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))

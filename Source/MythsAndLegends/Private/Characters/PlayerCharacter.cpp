@@ -25,6 +25,11 @@ APlayerCharacter::APlayerCharacter()
     
 }
 
+void APlayerCharacter::Test()
+{
+    
+}
+
 void APlayerCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);

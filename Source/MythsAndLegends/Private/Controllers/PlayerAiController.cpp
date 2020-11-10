@@ -13,3 +13,8 @@ APlayerAiController::APlayerAiController()
     
 }
 
+void APlayerAiController::SetMoveToLocation(FVector const Position) const
+{
+    BB_Component->SetValueAsVector(MoveToPosition, Position);
+}
+
