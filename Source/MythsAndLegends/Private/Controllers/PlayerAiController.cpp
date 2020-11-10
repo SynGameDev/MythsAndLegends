@@ -8,3 +8,7 @@
 #include "BehaviorTree/BehaviorTreeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
+APlayerAiController::APlayerAiController()
+{
+    
+}
