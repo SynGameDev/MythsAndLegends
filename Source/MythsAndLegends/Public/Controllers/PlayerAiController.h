@@ -16,5 +16,7 @@ class MYTHSANDLEGENDS_API APlayerAiController : public ABaseAIController
 public:
     APlayerAiController();
 
-    
+private:
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI|Blackboard Keys", meta=(AllowPrivateAccess="true"))
+    FName MoveToPosition;
 };
