@@ -56,6 +56,18 @@ void AML_PlayerController::MoveToDestination()
     // If we are hitting something than move the character to this position
     if(HitResult.bBlockingHit)
     {
-        UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, HitResult.Location);
+        if(auto* const HitActor = Cast<AActor>(HitResult.Actor))
+        {
+            if(HitActor->ActorHasTag("Landscape"))
+            {
+                UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, HitResult.Location);
+            } else
+            {
+                
+            }
+        } else
+        {
+            
+        }
     }
 }
