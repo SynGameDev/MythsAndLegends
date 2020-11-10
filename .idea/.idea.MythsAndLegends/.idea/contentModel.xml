@@ -43045,6 +43045,7 @@
               <e p="PlayerCharacter.cpp" t="Include" />
             </e>
             <e p="Controllers" t="Include">
+              <e p="BaseAIController.cpp" t="Include" />
               <e p="PlayerAiController.cpp" t="Include" />
             </e>
           </e>
@@ -43055,6 +43056,7 @@
               <e p="PlayerCharacter.h" t="Include" />
             </e>
             <e p="Controllers" t="Include">
+              <e p="BaseAIController.h" t="Include" />
               <e p="PlayerAiController.h" t="Include" />
             </e>
           </e>

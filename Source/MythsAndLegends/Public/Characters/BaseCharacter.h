@@ -17,6 +17,8 @@ public:
 	{
 		
 	}
+
+	FORCEINLINE class UBehaviorTree* GetBT() const { return BehaviorTree; }
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI", meta=(AllowProtectedAccess="true"))
 	class UBehaviorTree* BehaviorTree;
