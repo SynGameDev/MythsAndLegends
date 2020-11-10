@@ -8,6 +8,8 @@
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BehaviorTreeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Blueprint/AIBlueprintHelperLibrary.h"
+#include "Kismet/KismetMathLibrary.h"
 
 AML_PlayerController::AML_PlayerController()
 {
@@ -51,8 +53,9 @@ void AML_PlayerController::MoveToDestination()
     FHitResult HitResult;
     GetHitResultUnderCursor(ECC_Visibility, false, HitResult);
 
+    // If we are hitting something than move the character to this position
     if(HitResult.bBlockingHit)
     {
-        BB_Component->SetValueAsVector(FName("MoveToPosition"), HitResult.ImpactPoint);
+        UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, HitResult.Location);
     }
 }

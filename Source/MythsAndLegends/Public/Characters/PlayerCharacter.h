@@ -16,8 +16,6 @@ class MYTHSANDLEGENDS_API APlayerCharacter : public ABaseCharacter
 	GENERATED_BODY()
 public:
     APlayerCharacter();
-
-    void Test();
 private:
     // --- COMPONENTS --- //
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
@@ -26,6 +24,7 @@ private:
     class USpringArmComponent* CameraBoom;
 
     virtual void Tick(float DeltaSeconds) override;
+    
 
     
 };

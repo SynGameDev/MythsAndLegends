@@ -21,6 +21,8 @@ public:
 
     virtual void BeginPlay() override;
 
+    FORCEINLINE class UBlackboardComponent* GetBlackboard() const { return BB_Component; }
+
 private:
     void SetupTree() const;
     virtual void SetupInputComponent() override;

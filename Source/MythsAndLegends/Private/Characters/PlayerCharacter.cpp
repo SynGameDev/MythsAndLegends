@@ -6,7 +6,8 @@
 
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
-
+#include "Components/StaticMeshComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -22,11 +23,16 @@ APlayerCharacter::APlayerCharacter()
     bUseControllerRotationRoll = false;
     bUseControllerRotationYaw = false;
 
+    // Character Movement Component Rotation
+    GetCharacterMovement()->bOrientRotationToMovement = true;
+    GetCharacterMovement()->bConstrainToPlane = true;
+    GetCharacterMovement()->bSnapToPlaneAtStart = true;
     
-}
-
-void APlayerCharacter::Test()
-{
+    // Camera & Camera Boom Rotation
+    CameraComponent->bUsePawnControlRotation = false;
+    CameraBoom->bInheritPitch = false;
+    CameraBoom->bInheritRoll = false;
+    CameraBoom->bInheritYaw = false;
     
 }
 
