@@ -24,17 +24,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/AI/BP_NPC.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/TEst.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/TEst.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/TEst_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/TEst_BuiltData.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +50,6 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/AiCharacter.cpp" />
@@ -66,6 +57,7 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
       </list>
     </option>
   </component>
@@ -304,7 +296,7 @@
       <updated>1604911309190</updated>
       <workItem from="1604911465768" duration="15638000" />
       <workItem from="1604976911895" duration="11030000" />
-      <workItem from="1604988898336" duration="6456000" />
+      <workItem from="1604988898336" duration="8131000" />
     </task>
     <servers />
   </component>

@@ -2,13 +2,19 @@
 
 USkillComponent::USkillComponent()
 {
-    
+    MaxHealth = 100;
+    CurrentHealth = 100;
 }
 
 void USkillComponent::TakeDamage(float Damage)
 {
     // TODO: Calcutate any damage resistant points due to armour
     CurrentHealth -= Damage;
+
+    if(CurrentHealth <= 0)
+    {
+        GetOwner()->Destroy();
+    }
 }
 
 float USkillComponent::CalculateDamage()

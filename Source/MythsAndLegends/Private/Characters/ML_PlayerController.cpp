@@ -36,8 +36,13 @@ void AML_PlayerController::BeginPlay()
 
 void AML_PlayerController::MeleeAttack()
 {
-    ABaseCharacter* const Char = Cast<ABaseCharacter>(GetPawn());
-    UE_LOG(LogTemp, Warning, TEXT("Attack: %f"), Char->GetSkillComponent()->CalculateDamage());
+    
+    
+    if(ABaseCharacter* const NPC = Cast<ABaseCharacter>(TargetObject))
+    {
+        if(ABaseCharacter* const PlayerCharacter  = Cast<ABaseCharacter>(GetPawn()))
+        NPC->GetSkillComponent()->TakeDamage(PlayerCharacter->GetSkillComponent()->CalculateDamage());
+    }
 }
 
 void AML_PlayerController::SetupTree() const
@@ -98,6 +103,12 @@ void AML_PlayerController::Tick(float DeltaSeconds)
             {
                 PerformInteractWithTarget();
             }
+        } else
+        {
+            if(IsTargetInRange())
+            {
+                PerformInteractWithTarget();
+            }
         }
     }
 }
@@ -117,9 +128,12 @@ void AML_PlayerController::MoveToTarget(FVector const Location)
         UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, TargetObject->GetActorLocation());
     } else
     {
+        UE_LOG(LogTemp, Warning, TEXT("Enemy"))
         if(ANPC* const NPC = Cast<ANPC>(TargetObject))
         {
+            
             UAIBlueprintHelperLibrary::SimpleMoveToActor(this, NPC);
+            UE_LOG(LogTemp, Warning, TEXT("Moving to enemy"));
         } else
         {
             TargetObject = nullptr;
@@ -153,9 +167,9 @@ void AML_PlayerController::PerformInteractWithTarget()
     {
         // TODO: Check Attack Type
         MeleeAttack();
+        
     }
-
-
+    
     TargetObject = nullptr;
     TargetIsEnemy = false;
 }
