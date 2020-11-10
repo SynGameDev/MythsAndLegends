@@ -20,6 +20,9 @@ AML_PlayerController::AML_PlayerController()
     // Setup the tree
     BT_Component = CreateDefaultSubobject<UBehaviorTreeComponent>(TEXT("BT_Component"));
     BB_Component = CreateDefaultSubobject<UBlackboardComponent>(TEXT("BB_Component"));
+
+    TargetObject = nullptr;
+    TargetIsEnemy = false;
 }
 
 
@@ -60,14 +63,61 @@ void AML_PlayerController::MoveToDestination()
         {
             if(HitActor->ActorHasTag("Landscape"))
             {
-                UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, HitResult.Location);
+                MoveToPosition(HitResult.Location);
             } else
             {
-                
+                TargetObject = HitActor;
+                if(HitActor->ActorHasTag("Enemy"))
+                {
+                    TargetIsEnemy = true;
+                }
+                MoveToTarget(HitResult.Location);
             }
-        } else
-        {
-            
         }
     }
 }
+
+void AML_PlayerController::Tick(float DeltaSeconds)
+{
+    Super::Tick(DeltaSeconds);
+
+    if(TargetObject)
+    {
+        if(!TargetIsEnemy)
+        {
+            PerformInteractWithTarget();
+        }
+    }
+}
+
+void AML_PlayerController::MoveToPosition(FVector const MovePosition)
+{
+    UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, MovePosition);
+}
+
+void AML_PlayerController::MoveToTarget(FVector const Location)
+{
+    if(!TargetIsEnemy)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("Moving To Target"));
+        UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, TargetObject->GetActorLocation());
+    }
+}
+
+bool AML_PlayerController::IsTargetInRange()
+{
+    if(FVector::Dist(GetOwner()->GetActorLocation(), TargetObject->GetActorLocation()) < MinTargetDistance)
+        return true;
+
+    return false;
+}
+
+void AML_PlayerController::PerformInteractWithTarget()
+{
+    UE_LOG(LogTemp, Warning, TEXT("Target In Interact Range"));
+}
+
+
+
+
+

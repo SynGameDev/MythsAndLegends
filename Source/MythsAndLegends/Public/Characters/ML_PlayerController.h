@@ -27,4 +27,18 @@ private:
     void SetupTree() const;
     virtual void SetupInputComponent() override;
     void MoveToDestination();
+    virtual void Tick(float DeltaSeconds) override;
+
+    // Target Details
+    class AActor* TargetObject;
+    bool TargetIsEnemy;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI|Target Settings", meta=(AllowPrivateAccess="true"))
+    float MinTargetDistance;
+    
+
+    // Movement Methods
+    void MoveToPosition(FVector const MovePosition);
+    void MoveToTarget(FVector const Location);
+    bool IsTargetInRange();
+    void PerformInteractWithTarget();
 };
