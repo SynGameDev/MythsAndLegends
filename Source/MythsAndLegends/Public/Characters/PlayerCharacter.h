@@ -15,7 +15,8 @@ class MYTHSANDLEGENDS_API APlayerCharacter : public ABaseCharacter
 	GENERATED_BODY()
 public:
     APlayerCharacter();
-
+    FORCEINLINE class APlayerAiController* GetAiController() const { return Cast<APlayerAiController>(GetController()); }
+    
 private:
     // --- COMPONENTS --- //
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
