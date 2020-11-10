@@ -19,14 +19,14 @@ void ABaseAIController::OnPossess(APawn* InPawn)
 {
     Super::OnPossess(InPawn);
     // Cast the InPawn to a base character & make sure that it's valid before continuing.
-    if(ABaseCharacter* const Character = Cast<ABaseCharacter>(InPawn))
+    if(ABaseCharacter* const Char = Cast<ABaseCharacter>(InPawn))
     {
         // Make sure that the character has a black board & Initialize it
-        if(Character->GetBT()->BlackboardAsset)
+        if(Char->GetBT()->BlackboardAsset)
         {
-            BB_Component->InitializeBlackboard(*(Character->GetBT()->BlackboardAsset));
+            BB_Component->InitializeBlackboard(*(Char->GetBT()->BlackboardAsset));
         }
         // Start the BT
-        BT_Component->StartTree(*Character->GetBT());
+        BT_Component->StartTree(*Char->GetBT());
     }
 }
