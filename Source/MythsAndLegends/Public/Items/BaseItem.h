@@ -33,6 +33,8 @@ public:
 
 		// Set the collider to be root component
 		RootComponent = Collider;
+		ItemMesh->SetupAttachment(RootComponent);
+		MeshOutline->SetupAttachment(ItemMesh);
 		
 		// Add tags to this item
 		Tags.Add(FName("Item"));
