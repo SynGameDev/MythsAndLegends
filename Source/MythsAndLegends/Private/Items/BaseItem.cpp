@@ -2,5 +2,4 @@
 
 
 #include "MythsAndLegends/Public/Items/BaseItem.h"
-
 // Sets default values

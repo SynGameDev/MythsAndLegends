@@ -35,13 +35,24 @@ public:
 		RootComponent = Collider;
 		ItemMesh->SetupAttachment(RootComponent);
 		MeshOutline->SetupAttachment(ItemMesh);
+
+		MeshOutline->SetVisibility(false);
 		
 		// Add tags to this item
 		Tags.Add(FName("Item"));
 		Tags.Add(FName("Outline"));
 		Tags.Add(FName("Pickable"));
+
+		IsBeingHovered = false;
 	}
 
+	// Displaying Outline
+	bool IsBeingHovered;
+	void ToggleOutline()
+	{
+		IsBeingHovered = !IsBeingHovered;
+		MeshOutline->SetVisibility(IsBeingHovered);
+	}
 	
 	FORCEINLINE UStaticMeshComponent* GetItemMesh() const { return ItemMesh; }
 protected:
@@ -58,5 +69,7 @@ protected:
 	FText ItemDescription;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item Details", meta=(AllowProtectedAccess="true"))
 	TEnumAsByte<EItemTier> ItemTier;
+
+	
 	
 };
