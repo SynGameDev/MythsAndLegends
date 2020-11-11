@@ -17,7 +17,10 @@ public class MythsAndLegends : ModuleRules
 	        "HeadMountedDisplay", 
 	        "NavigationSystem", 
 	        "AIModule",
-	        "GameplayTasks"
+	        "GameplayTasks",
+	        "UMG",
+	        "Slate",
+	        "SlateCore"
         });
     }
 }
