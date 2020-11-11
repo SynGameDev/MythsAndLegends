@@ -20,7 +20,7 @@ public:
 	void DropItem(class ABaseItem* Item);
 	bool InventoryHasItem(class ABaseItem* Item) const;
 
-
+	FORCEINLINE TArray<class ABaseItem*> GetInventoryItems() const { return Inventory; }
 	
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
