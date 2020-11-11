@@ -43057,6 +43057,9 @@
             <e p="Items" t="Include">
               <e p="BaseItem.cpp" t="Include" />
             </e>
+            <e p="UI" t="Include">
+              <e p="MainHUD.cpp" t="Include" />
+            </e>
           </e>
           <e p="Public" t="Include">
             <e p="AI_Task" t="Include">
@@ -43076,6 +43079,9 @@
             </e>
             <e p="Items" t="Include">
               <e p="BaseItem.h" t="Include" />
+            </e>
+            <e p="UI" t="Include">
+              <e p="MainHUD.h" t="Include" />
             </e>
           </e>
         </e>
