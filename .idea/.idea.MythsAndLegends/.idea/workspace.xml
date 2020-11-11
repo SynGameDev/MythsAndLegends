@@ -24,9 +24,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/UI/InventoryUI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/MythsAndLegends.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/MythsAndLegends.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" afterDir="false" />
@@ -70,6 +67,8 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/MainHUD.h" />
       </list>
     </option>
   </component>
@@ -311,7 +310,7 @@
       <workItem from="1604976911895" duration="11030000" />
       <workItem from="1604988898336" duration="11143000" />
       <workItem from="1605002471971" duration="3453000" />
-      <workItem from="1605052608573" duration="15756000" />
+      <workItem from="1605052608573" duration="16056000" />
     </task>
     <servers />
   </component>
