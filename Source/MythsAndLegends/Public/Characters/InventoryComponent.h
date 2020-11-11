@@ -15,6 +15,10 @@ class MYTHSANDLEGENDS_API UInventoryComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UInventoryComponent();
+
+	void PickupItem(class ABaseItem* Item);
+	void DropItem(class ABaseItem* Item);
+	bool InventoryHasItem(class ABaseItem* Item) const;
 	
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
@@ -26,9 +30,7 @@ private:
 	int32 CurrentInventorySize;
 	
 
-	void PickupItem(class ABaseItem* Item);
-	void DropItem(class ABaseItem* Item);
-	bool InventoryHasItem(class ABaseItem* Item) const;
+	
 	
 		
 };

@@ -34,6 +34,7 @@ private:
     // Target Details
     class AActor* TargetObject;
     bool TargetIsEnemy;
+    bool TargetIsPickable;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI|Target Settings", meta=(AllowPrivateAccess="true"))
     float MinTargetDistance;
 

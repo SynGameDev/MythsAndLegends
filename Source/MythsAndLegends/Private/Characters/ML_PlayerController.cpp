@@ -7,6 +7,7 @@
 #include "MythsAndLegends/Public/Characters/BaseCharacter.h"
 #include "MythsAndLegends/Public/Characters/NPC.h"
 #include "MythsAndLegends/Public/Items/BaseItem.h"
+#include "MythsAndLegends/Public/Characters/InventoryComponent.h"
 
 
 #include "BehaviorTree/BehaviorTree.h"
@@ -98,6 +99,11 @@ void AML_PlayerController::MoveToDestination()
                 if(HitActor->ActorHasTag("Enemy"))
                 {
                     TargetIsEnemy = true;
+                    TargetIsPickable = false;
+                } else if(HitActor->ActorHasTag("Item"))
+                {
+                    TargetIsEnemy = false;
+                    TargetIsPickable = true;
                 }
                 MoveToTarget(HitResult.Location);
             }
@@ -128,6 +134,7 @@ void AML_PlayerController::MoveToPosition(FVector const MovePosition)
     // Set the target to null so we aren't following any target objects & that we are looking for an enemy
     TargetObject = nullptr;
     TargetIsEnemy = false;
+    TargetIsPickable = false;
     // Move to the location
     UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, MovePosition);
 }
@@ -137,7 +144,6 @@ void AML_PlayerController::MoveToTarget(FVector const Location)
     // Check whether we are looking for a enemy or not
     if(!TargetIsEnemy)
     {
-
         // Start Moving towards the location of the target
         // (this target isn't moving so we use simpleMoveToLocation instead of actor)
         UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, TargetObject->GetActorLocation());
@@ -178,7 +184,16 @@ void AML_PlayerController::PerformInteractWithTarget()
 {
     if(!TargetIsEnemy)
     {
-        // TODO: Loop through all the potenial tags and determine the next course of actions
+        if(TargetIsPickable)
+        {
+            UE_LOG(LogTemp, Warning, TEXT("Pickup Item"));
+            if(auto* PlayerChar = Cast<APlayerCharacter>(GetPawn()))
+            {
+                PlayerChar->GetInventoryComponent()->PickupItem(Cast<ABaseItem>(TargetObject));
+                TargetObject = nullptr;
+                TargetIsPickable = false;
+            }
+        }
     } else
     {
         // TODO: Check Attack Type
