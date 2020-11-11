@@ -37,13 +37,14 @@ public:
 		MeshOutline->SetupAttachment(ItemMesh);
 
 		MeshOutline->SetVisibility(false);
+		IsBeingHovered = false;
 		
 		// Add tags to this item
 		Tags.Add(FName("Item"));
 		Tags.Add(FName("Outline"));
 		Tags.Add(FName("Pickable"));
 
-		IsBeingHovered = false;
+		
 	}
 
 	// Displaying Outline
