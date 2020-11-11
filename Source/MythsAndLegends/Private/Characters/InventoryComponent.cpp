@@ -4,6 +4,8 @@
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
 #include "MythsAndLegends/Public/Items/BaseItem.h"
 
+#include "UMG/Public/Blueprint/UserWidget.h"
+
 // Sets default values for this component's properties
 UInventoryComponent::UInventoryComponent()
 {
@@ -63,6 +65,8 @@ bool UInventoryComponent::InventoryHasItem(ABaseItem* Item) const
 
 	return false;
 }
+
+
 
 
 

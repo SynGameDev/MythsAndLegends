@@ -19,6 +19,8 @@ public:
 	void PickupItem(class ABaseItem* Item);
 	void DropItem(class ABaseItem* Item);
 	bool InventoryHasItem(class ABaseItem* Item) const;
+
+
 	
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
@@ -28,7 +30,8 @@ private:
 	int32 InventoryMaxSize;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Inventory Initial Settings", meta=(AllowPrivateAccess="true"))
 	int32 CurrentInventorySize;
-	
+
+
 
 	
 	
