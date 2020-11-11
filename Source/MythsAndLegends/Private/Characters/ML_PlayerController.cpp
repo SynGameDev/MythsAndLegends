@@ -16,6 +16,7 @@
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Components/StaticMeshComponent.h"
+#include "UMG/Public/Blueprint/UserWidget.h"
 
 AML_PlayerController::AML_PlayerController()
 {
@@ -129,6 +130,12 @@ void AML_PlayerController::Tick(float DeltaSeconds)
     TraceOverItem();
 }
 
+void AML_PlayerController::BeginPlayingState()
+{
+    Super::BeginPlayingState();
+    SetupUI();
+}
+
 void AML_PlayerController::MoveToPosition(FVector const MovePosition)
 {
     // Set the target to null so we aren't following any target objects & that we are looking for an enemy
@@ -238,6 +245,17 @@ void AML_PlayerController::TraceOverItem()
             ItemHovering->ToggleOutline();
         
         ItemHovering = nullptr;
+    }
+}
+
+void AML_PlayerController::SetupUI()
+{
+    auto* PlayerChar = Cast<APlayerCharacter>(GetPawn());
+    
+    if(PlayerChar->sub_MainHUD)
+    {
+        PlayerChar->MainHUD = CreateWidget<UUserWidget>(this, PlayerChar->sub_MainHUD);
+        PlayerChar->MainHUD->AddToViewport();
     }
 }
 

@@ -9,6 +9,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "UMG/Public/Blueprint/UserWidget.h"
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -42,3 +43,10 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 }
+
+void APlayerCharacter::BeginPlay()
+{
+    Super::BeginPlay();
+}
+
+
