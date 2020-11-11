@@ -186,7 +186,7 @@ void AML_PlayerController::TraceOverItem()
     {
         if(ABaseItem* const HitItem = Cast<ABaseItem>(HitResult.Actor))
         {
-            HitItem->GetItemMesh()->SetRenderCustomDepth(true);
+            UE_LOG(LogTemp, Warning, TEXT("OVER BASE ITEM"));
         }
     }
 }
