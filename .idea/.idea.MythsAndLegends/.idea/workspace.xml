@@ -23,7 +23,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="" />
+    <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/UI/InventoryUI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_PlayerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/MythsAndLegends.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/MythsAndLegends.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +49,6 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/BaseCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/MythsAndLegends.Build.cs" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/PlayerAiController.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/PlayerAiController.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/MoveToPositionNode.h" />
@@ -50,14 +60,16 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseItem.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/MythsAndLegends.Build.cs" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/MythsAndLegends.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
       </list>
     </option>
   </component>
@@ -70,7 +82,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="C++ Project.MythsAndLegends">
@@ -299,7 +311,7 @@
       <workItem from="1604976911895" duration="11030000" />
       <workItem from="1604988898336" duration="11143000" />
       <workItem from="1605002471971" duration="3453000" />
-      <workItem from="1605052608573" duration="11537000" />
+      <workItem from="1605052608573" duration="15756000" />
     </task>
     <servers />
   </component>
@@ -328,13 +340,13 @@
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
     <state x="642" y="227" key="RiderGenerateDialog/0.0.1857.1080@0.0.1857.1080" timestamp="1605000612533" />
-    <state x="429" y="185" key="SettingsEditor" timestamp="1605052231104">
+    <state x="429" y="185" key="SettingsEditor" timestamp="1605077649101">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state x="429" y="185" key="SettingsEditor/0.0.1857.1080@0.0.1857.1080" timestamp="1605052231104" />
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605068480331">
+    <state x="429" y="185" key="SettingsEditor/0.0.1857.1080@0.0.1857.1080" timestamp="1605077649101" />
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605076268592">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1605068480331" />
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1605076268592" />
   </component>
 </project>
