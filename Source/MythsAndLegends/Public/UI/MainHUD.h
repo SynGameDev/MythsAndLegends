@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+
+
 #include "MainHUD.generated.h"
 
 /**
@@ -14,8 +16,21 @@ class MYTHSANDLEGENDS_API UMainHUD : public UUserWidget
 {
 	GENERATED_BODY()
 public:
-    UMainHUD();
+
+    UMainHUD(const FObjectInitializer& ObjectInitializer);
+    
+    UFUNCTION(BlueprintCallable)
+    void OpenInventory(class APlayerController* Controller);
     
 private:
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI Widgets", meta=(AllowPrivateAccess="true"))
+    class USizeBox* InventoryContainer;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Inventory|Variables", meta=(AllowPrivateAccess="true"))
+    bool IsInventoryOpen = false;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Inventory|Variables", meta=(AllowPrivateAccess="true"))
+    TSubclassOf<UUserWidget> InventoryWidgetClass;
+    class UWidget* InventoryWidget;
     
 };

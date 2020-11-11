@@ -55,6 +55,7 @@ private:
 
     // --- UI --- //
     void SetupUI();
+    void ToggleInventoryUI();
     
 
     

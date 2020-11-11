@@ -8,6 +8,7 @@
 #include "MythsAndLegends/Public/Characters/NPC.h"
 #include "MythsAndLegends/Public/Items/BaseItem.h"
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
+#include "MythsAndLegends/Public/UI/MainHUD.h"
 
 
 #include "BehaviorTree/BehaviorTree.h"
@@ -72,6 +73,7 @@ void AML_PlayerController::SetupInputComponent()
 {
     Super::SetupInputComponent();
     InputComponent->BindAction("SetDestination", IE_Pressed, this, &AML_PlayerController::MoveToDestination);
+    InputComponent->BindAction("Inventory", IE_Pressed, this, &AML_PlayerController::ToggleInventoryUI);
 }
 
 void AML_PlayerController::MoveToDestination()
@@ -256,6 +258,19 @@ void AML_PlayerController::SetupUI()
     {
         PlayerChar->MainHUD = CreateWidget<UUserWidget>(this, PlayerChar->sub_MainHUD);
         PlayerChar->MainHUD->AddToViewport();
+    }
+}
+
+void AML_PlayerController::ToggleInventoryUI()
+{
+    // Validate the Pawn as player Character 
+    if(auto* PlayerChar = Cast<APlayerCharacter>(GetPawn()))
+    {
+        // Validate the HUD as a MainHUD and toggle the inventory
+        if(UMainHUD* HUD = Cast<UMainHUD>(PlayerChar->GetMainUI()))
+        {
+            HUD->OpenInventory(this);
+        }
     }
 }
 
