@@ -27,9 +27,12 @@ public:
 
 private:
     void SetupTree() const;
+    
     virtual void SetupInputComponent() override;
     void MoveToDestination();
+    
     virtual void Tick(float DeltaSeconds) override;
+    virtual void BeginPlayingState() override;
 
     // Target Details
     class AActor* TargetObject;
@@ -49,6 +52,10 @@ private:
 
     // --- TRACES --- //
     void TraceOverItem();
+
+    // --- UI --- //
+    void SetupUI();
+    
 
     
 };

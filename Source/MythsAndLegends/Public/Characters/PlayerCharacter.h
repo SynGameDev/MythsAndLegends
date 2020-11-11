@@ -18,6 +18,10 @@ public:
     APlayerCharacter();
 
     FORCEINLINE class UInventoryComponent* GetInventoryComponent() const { return InventoryComponent; }
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI", meta=(AllowPrivateAccess="true"))
+    TSubclassOf<class UUserWidget> sub_MainHUD;
+    class UUserWidget* MainHUD;
 private:
     // --- COMPONENTS --- //
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
@@ -28,7 +32,9 @@ private:
     class UInventoryComponent* InventoryComponent;
 
     virtual void Tick(float DeltaSeconds) override;
-    
+    virtual void BeginPlay() override;
 
+    
+    
     
 };
