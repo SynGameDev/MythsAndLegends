@@ -36,6 +36,8 @@ private:
     bool TargetIsEnemy;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI|Target Settings", meta=(AllowPrivateAccess="true"))
     float MinTargetDistance;
+
+    class ABaseItem* ItemHovering;
     
 
     // Movement Methods
