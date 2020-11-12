@@ -15,7 +15,7 @@ class MYTHSANDLEGENDS_API UInventoryItemButton : public UUserWidget
 	GENERATED_BODY()
 public:
     
-    FORCEINLINE void Setup(class ABaseItem* lItem, FName lItemName) { Item = lItem; ItemName = lItemName; }
+    FORCEINLINE void Setup(class ABaseItem* lItem, FName lItemName) { Item = lItem; ItemName = lItemName; UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(lItemName.ToString())); }
     FName GetItemName() const { return ItemName; }
 
     UFUNCTION(BlueprintCallable)
