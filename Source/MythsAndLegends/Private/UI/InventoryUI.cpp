@@ -46,10 +46,12 @@ void UInventoryUI::SelectItem(ABaseItem* SelectedItem)
 {
     if(!SelectedItemUI_Class)
         return;
+    
     if(auto* const PlayerChar = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0)))
     {
         if(SelectedItem != CurrentSelectedItem)
         {
+            CurrentSelectedItem = SelectedItem;
             if(SelectedItemUI == nullptr)
             {
                 SelectedItemUI = WidgetTree->ConstructWidget<UWidget>(SelectedItemUI_Class);
