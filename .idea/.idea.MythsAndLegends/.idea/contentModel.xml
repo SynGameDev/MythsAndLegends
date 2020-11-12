@@ -43058,6 +43058,7 @@
               <e p="BaseItem.cpp" t="Include" />
             </e>
             <e p="UI" t="Include">
+              <e p="InventoryItemButton.cpp" t="Include" />
               <e p="InventoryUI.cpp" t="Include" />
               <e p="MainHUD.cpp" t="Include" />
             </e>
@@ -43082,6 +43083,7 @@
               <e p="BaseItem.h" t="Include" />
             </e>
             <e p="UI" t="Include">
+              <e p="InventoryItemButton.h" t="Include" />
               <e p="InventoryUI.h" t="Include" />
               <e p="MainHUD.h" t="Include" />
             </e>

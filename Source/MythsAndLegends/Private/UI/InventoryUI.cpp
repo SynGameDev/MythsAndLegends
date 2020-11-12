@@ -9,6 +9,8 @@
 #include "Kismet/GameplayStatics.h"
 #include "UMG/Public/Blueprint/WidgetTree.h"
 #include "Components/WrapBox.h"
+#include "UI/InventoryItemButton.h"
+
 void UInventoryUI::GetInventoryItems()
 {
     if(!ItemButtonClass)
@@ -29,6 +31,7 @@ void UInventoryUI::GetInventoryItems()
                     {
                         ItemButtonsInInventory.Add(NewItem);
                         SizeBoxList->AddChild(NewItem);
+                        Cast<UInventoryItemButton>(NewItem)->Setup(item, item->GetItemName());
                     }
                 }
             }
