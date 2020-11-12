@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Items/BaseItem.h"
-#include "BaseSword.generated.h"
+#include "BaseWeapon.generated.h"
 
 UENUM()
 enum EWeaponType
@@ -23,14 +23,14 @@ class MYTHSANDLEGENDS_API ABaseWeapon : public ABaseItem
 {
 	GENERATED_BODY()
 public:
-	
+	ABaseWeapon();
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowPrivateAccess="true"))
 	float MinDamage;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowPrivateAccess="true"))
 	float MaxDamage;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowPrivateAccess="true"))
-	TArray<class UAnimMontage> AttackMontages;
+	TArray<class UAnimMontage*> AttackMontages;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowPrivateAccess="true"))
 	TEnumAsByte<EWeaponType> SwordType;
