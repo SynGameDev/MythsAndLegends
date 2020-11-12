@@ -20,8 +20,11 @@ public:
 	void DropItem(class ABaseItem* Item);
 	bool InventoryHasItem(class ABaseItem* Item) const;
 
+	void EquipItem(class ABaseItem* const Item);
+
 	FORCEINLINE TArray<class ABaseItem*> GetInventoryItems() const { return Inventory; }
-	
+	FORCEINLINE class ABaseItem* GetEquippedWeapon() const { return EquippedItem; }
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
 	TArray<class ABaseItem*> Inventory;
@@ -31,9 +34,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Inventory Initial Settings", meta=(AllowPrivateAccess="true"))
 	int32 CurrentInventorySize;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="HAND", meta=(AllowPrivateAccess="true"))
+	class ABaseItem* EquippedItem;
 
-
-	
 	
 		
 };

@@ -66,6 +66,16 @@ bool UInventoryComponent::InventoryHasItem(ABaseItem* Item) const
 	return false;
 }
 
+void UInventoryComponent::EquipItem(ABaseItem* const Item)
+{
+	// TODO: Check that item is equipable
+	if(Item)
+	{
+		EquippedItem = Item;
+		// TODO: Spawn Item In Hand
+	}
+}
+
 
 
 

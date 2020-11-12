@@ -61,6 +61,7 @@ void UInventoryUI::SelectItem(ABaseItem* SelectedItem)
             if(auto* wid = Cast<USelectedInventoryItem>(SelectedItemUI))
             {
                 wid->SetValues(SelectedItem->GetItemName(), SelectedItem->GetItemDesc());
+                wid->InventoryWidget = this;
             }
         } else
         {

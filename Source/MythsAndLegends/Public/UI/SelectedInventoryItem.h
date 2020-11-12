@@ -19,8 +19,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item Details")
 	FText ItemDesc;
 
+	UWidget* InventoryWidget;
+
 	UFUNCTION(BlueprintCallable)
 	void SetValues(FName const Name, FText const Desc);
-	
+
+	UFUNCTION(BlueprintCallable)
+	void EquipItem();
+
+	UFUNCTION(BlueprintCallable)
+	void DropItem();
 	
 };

@@ -21,6 +21,7 @@ public:
     void SelectItem(class ABaseItem* SelectedItem);
 
     FORCEINLINE UWidget* GetSelectedItemWidget() const { return SelectedItemUI; }
+    FORCEINLINE class ABaseItem* GetSelectedItem() const { return CurrentSelectedItem; }
 
 private:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI Widgets", meta=(AllowPrivateAccess="true"))
