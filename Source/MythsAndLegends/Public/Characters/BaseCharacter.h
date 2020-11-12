@@ -17,16 +17,30 @@ public:
 	ABaseCharacter()
 	{
 		SkillComponent = CreateDefaultSubobject<USkillComponent>(TEXT("Skill Component"));
+		WeaponMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Weapon Mesh"));
+		WeaponMesh->SetupAttachment(GetMesh());
+	}
+
+	void Attack()
+	{
+		PlayAnimMontage(AttackAnim);
 	}
 
 	FORCEINLINE USkillComponent* GetSkillComponent() const { return SkillComponent; }
 
 
 	FORCEINLINE class UBehaviorTree* GetBT() const { return BehaviorTree; }
+	FORCEINLINE UStaticMeshComponent* GetWeaponMesh() const { return WeaponMesh; }
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI", meta=(AllowProtectedAccess="true"))
 	class UBehaviorTree* BehaviorTree;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Skills", meta=(AllowProtectedAccess="true"))
 	USkillComponent* SkillComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Attack Anim", meta=(AllowProtectedAccess="true"));
+	UAnimMontage* AttackAnim;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon Mesh", meta=(AllowProtectedAccess="true"))
+	UStaticMeshComponent* WeaponMesh;
 };
