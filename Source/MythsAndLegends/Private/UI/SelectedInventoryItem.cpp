@@ -16,13 +16,17 @@ void USelectedInventoryItem::SetValues(FName const Name, FText const Desc)
 
 void USelectedInventoryItem::EquipItem()
 {
+    UE_LOG(LogTemp, Warning, TEXT("1"));
     if(auto* const PlayerChar = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(
         this, 0)))
     {
+        UE_LOG(LogTemp, Warning, TEXT("2"));
         if(ABaseItem* const item = Cast<UInventoryUI>(InventoryWidget)->GetSelectedItem())
         {
+            UE_LOG(LogTemp, Warning, TEXT("3"));
             if(auto* const Inv = PlayerChar->GetInventoryComponent())
             {
+                UE_LOG(LogTemp, Warning, TEXT("4"));
                 Inv->EquipItem(item);
             }
         }

@@ -228,15 +228,15 @@ void AML_PlayerController::TraceOverItem()
         if(ABaseItem* const HitItem = Cast<ABaseItem>(HitResult.Actor))
         {
             if(ItemHovering && ItemHovering != HitItem)
-                ItemHovering->ToggleOutline();
+                ItemHovering->HideOutline();
 
             ItemHovering = HitItem;
-            ItemHovering->ToggleOutline();
+            ItemHovering->ShowOutline();
         } else
         {
             // If we aren't hitting an item than if a item is assign remove the outline
             if(ItemHovering)
-                ItemHovering->ToggleOutline();
+                ItemHovering->HideOutline();
             
             ItemHovering = nullptr;
         }
@@ -244,7 +244,7 @@ void AML_PlayerController::TraceOverItem()
     {
         // If we aren't hitting an item than if a item is assign remove the outline
         if(ItemHovering)
-            ItemHovering->ToggleOutline();
+            ItemHovering->HideOutline();
         
         ItemHovering = nullptr;
     }

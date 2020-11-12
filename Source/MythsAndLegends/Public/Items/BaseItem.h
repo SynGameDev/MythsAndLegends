@@ -49,11 +49,16 @@ public:
 
 	// Displaying Outline
 	bool IsBeingHovered;
-	void ToggleOutline()
+	void ShowOutline()
 	{
-		IsBeingHovered = !IsBeingHovered;
-		MeshOutline->SetVisibility(IsBeingHovered);
+		MeshOutline->SetVisibility(true);
 	}
+
+	void HideOutline()
+	{
+		MeshOutline->SetVisibility(false);
+	}
+	
 	
 	FORCEINLINE UStaticMeshComponent* GetItemMesh() const { return ItemMesh; }
 	FORCEINLINE FName GetItemName() const { return ItemName; }
