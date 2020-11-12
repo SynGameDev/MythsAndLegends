@@ -51,7 +51,10 @@ void AML_PlayerController::MeleeAttack()
         // Valid data that we are the player & deriving from the base character class
         // Than Apply the damage to the NPC
         if(ABaseCharacter* const PlayerCharacter  = Cast<ABaseCharacter>(GetPawn()))
+        {
+            PlayerCharacter->Attack();
             NPC->GetSkillComponent()->TakeDamage(PlayerCharacter->GetSkillComponent()->CalculateDamage());
+        }
     }
 }
 
@@ -101,6 +104,7 @@ void AML_PlayerController::MoveToDestination()
                 TargetObject = HitActor;
                 if(HitActor->ActorHasTag("Enemy"))
                 {
+                    UE_LOG(LogTemp, Warning, TEXT("Hello World"));
                     TargetIsEnemy = true;
                     TargetIsPickable = false;
                 } else if(HitActor->ActorHasTag("Item"))
@@ -121,6 +125,12 @@ void AML_PlayerController::Tick(float DeltaSeconds)
     if(TargetObject)
     {
         if(!TargetIsEnemy)
+        {
+            if(IsTargetInRange())
+            {
+                PerformInteractWithTarget();
+            }
+        } else
         {
             if(IsTargetInRange())
             {
@@ -198,14 +208,16 @@ void AML_PlayerController::PerformInteractWithTarget()
             UE_LOG(LogTemp, Warning, TEXT("Pickup Item"));
             if(auto* PlayerChar = Cast<APlayerCharacter>(GetPawn()))
             {
+                UE_LOG(LogTemp, Warning, TEXT("Attacking"));
                 PlayerChar->GetInventoryComponent()->PickupItem(Cast<ABaseItem>(TargetObject));
+                
                 TargetObject = nullptr;
                 TargetIsPickable = false;
             }
         }
     } else
     {
-        // TODO: Check Attack Type
+            
         MeleeAttack();
         
     }
