@@ -58,7 +58,7 @@ public:
 	{
 		MeshOutline->SetVisibility(false);
 	}
-	
+
 	
 	FORCEINLINE UStaticMeshComponent* GetItemMesh() const { return ItemMesh; }
 	FORCEINLINE FName GetItemName() const { return ItemName; }
