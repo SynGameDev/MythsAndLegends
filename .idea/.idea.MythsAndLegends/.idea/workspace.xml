@@ -28,6 +28,7 @@
       <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryItemButton.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/UI/InventoryItem.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/UI/InventoryItem.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" afterDir="false" />
     </list>
@@ -70,8 +71,8 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryItemButton.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryItemButton.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryItemButton.h" />
       </list>
     </option>
   </component>
@@ -314,7 +315,7 @@
       <workItem from="1604988898336" duration="11143000" />
       <workItem from="1605002471971" duration="3453000" />
       <workItem from="1605052608573" duration="22457000" />
-      <workItem from="1605096146152" duration="931000" />
+      <workItem from="1605096146152" duration="1409000" />
     </task>
     <servers />
   </component>
