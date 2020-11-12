@@ -25,6 +25,7 @@ public:
     FORCEINLINE class UUserWidget* GetMainUI() const { return MainHUD; }
 
     
+    
 private:
     // --- COMPONENTS --- //
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
