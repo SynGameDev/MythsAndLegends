@@ -43056,7 +43056,7 @@
             </e>
             <e p="Items" t="Include">
               <e p="BaseItem.cpp" t="Include" />
-              <e p="BaseSword.cpp" t="Include" />
+              <e p="BaseWeapon.cpp" t="Include" />
             </e>
             <e p="UI" t="Include">
               <e p="InventoryItemButton.cpp" t="Include" />
