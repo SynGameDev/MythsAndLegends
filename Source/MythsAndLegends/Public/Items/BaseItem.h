@@ -57,6 +57,7 @@ public:
 	
 	FORCEINLINE UStaticMeshComponent* GetItemMesh() const { return ItemMesh; }
 	FORCEINLINE FName GetItemName() const { return ItemName; }
+	FORCEINLINE FText GetItemDesc() const { return ItemDescription; }
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
 	UStaticMeshComponent* ItemMesh;

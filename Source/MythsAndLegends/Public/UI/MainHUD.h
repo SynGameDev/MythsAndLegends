@@ -21,6 +21,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void OpenInventory(class APlayerController* Controller);
+
+    FORCEINLINE class USizeBox* GetSelectedItemPoint() const { return SelectedItemPoint; }
+    FORCEINLINE UWidget* GetInventoryWidget() const { return InventoryWidget; }
     
 private:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI Widgets", meta=(AllowPrivateAccess="true"))
@@ -32,5 +35,8 @@ private:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Inventory|Variables", meta=(AllowPrivateAccess="true"))
     TSubclassOf<UUserWidget> InventoryWidgetClass;
     class UWidget* InventoryWidget;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Inventory|Variables", meta=(AllowPrivateAccess="true"))
+    class USizeBox* SelectedItemPoint;
     
 };

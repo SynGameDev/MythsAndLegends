@@ -17,6 +17,9 @@ public:
     
     FORCEINLINE void Setup(class ABaseItem* lItem, FName lItemName) { Item = lItem; ItemName = lItemName; }
     FName GetItemName() const { return ItemName; }
+
+    UFUNCTION(BlueprintCallable)
+    void ViewItem();
     
 private:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item", meta=(AllowPrivateAccess="true"))
