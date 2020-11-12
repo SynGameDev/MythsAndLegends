@@ -2,6 +2,8 @@
 
 
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
+
+#include "Characters/BaseCharacter.h"
 #include "MythsAndLegends/Public/Items/BaseItem.h"
 
 #include "UMG/Public/Blueprint/UserWidget.h"
@@ -72,7 +74,10 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 	if(Item)
 	{
 		EquippedItem = Item;
-		// TODO: Spawn Item In Hand
+		if(auto* const CharOwner = Cast<ABaseCharacter>(GetOwner()))
+		{
+			CharOwner->GetWeaponMesh()->SetStaticMesh(Item->GetItemMesh()->GetStaticMesh());
+		}
 	}
 }
 
