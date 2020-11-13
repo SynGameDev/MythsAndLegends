@@ -52,6 +52,7 @@ void AML_PlayerController::MeleeAttack()
         // Than Apply the damage to the NPC
         if(ABaseCharacter* const PlayerCharacter  = Cast<ABaseCharacter>(GetPawn()))
         {
+            
             PlayerCharacter->Attack();
             NPC->GetSkillComponent()->TakeDamage(PlayerCharacter->GetSkillComponent()->CalculateDamage());
         }
@@ -104,9 +105,18 @@ void AML_PlayerController::MoveToDestination()
                 TargetObject = HitActor;
                 if(HitActor->ActorHasTag("Enemy"))
                 {
-                    UE_LOG(LogTemp, Warning, TEXT("Hello World"));
+                    // Set the booleans 
                     TargetIsEnemy = true;
                     TargetIsPickable = false;
+                    // Get the player character & than the UI to make sure it's valid,
+                    // Then set the target of the enemy
+                    if(auto* const PlayerChar = Cast<APlayerCharacter>(GetPawn()))
+                    {
+                        if(auto* UI = Cast<UMainHUD>(PlayerChar->GetMainUI()))
+                        {
+                            UI->SetEnemyTarget(Cast<ABaseCharacter>(HitActor)->GetSkillComponent());
+                        }
+                    }
                 } else if(HitActor->ActorHasTag("Item"))
                 {
                     TargetIsEnemy = false;
@@ -135,6 +145,13 @@ void AML_PlayerController::Tick(float DeltaSeconds)
             if(IsTargetInRange())
             {
                 PerformInteractWithTarget();
+                if(auto* PlayerChar = Cast<APlayerCharacter>(GetPawn()))
+                {
+                    if(auto* UI = Cast<UMainHUD>(PlayerChar->GetMainUI()))
+                    {
+                        UI->StartEnemyTargetTimer();
+                    }
+                }
             }
         }
     }
@@ -156,6 +173,14 @@ void AML_PlayerController::MoveToPosition(FVector const MovePosition)
     TargetIsPickable = false;
     // Move to the location
     UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, MovePosition);
+
+    if(auto* PlayerChar = Cast<APlayerCharacter>(GetPawn()))
+    {
+        if(auto* UI = Cast<UMainHUD>(PlayerChar->GetMainUI()))
+        {
+            UI->UnsetEnemyTarget();
+        }
+    }
 }
 
 void AML_PlayerController::MoveToTarget(FVector const Location)
@@ -215,7 +240,7 @@ void AML_PlayerController::PerformInteractWithTarget()
             }
         }
     } else
-    {  
+    {
         MeleeAttack();
     }
     
