@@ -6,6 +6,15 @@
 #include "AIController.h"
 #include "BaseAIController.generated.h"
 
+UENUM()
+enum EEnemyStatus
+{
+	WANDER,
+	FOLLOW,
+	ATTACK,
+	QUEST
+};
+
 /**
  * 
  */
@@ -16,11 +25,22 @@ class MYTHSANDLEGENDS_API ABaseAIController : public AAIController
 public:
 	ABaseAIController();
 	FORCEINLINE class UBlackboardComponent* GetBlackboardComponent() const { return BB_Component; }
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys")
+	FName Target = "Target";
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackbaord Keys")
+	FName Key_EnemyStatus = "EnemyStatus";
+	
+
+	void SetOnSeenTarget(APawn* Pawn);
+	TEnumAsByte<EEnemyStatus> EnemyStatus;
     
 protected:
 	class UBehaviorTreeComponent* BT_Component;
 	class UBlackboardComponent* BB_Component;
 	
 	virtual void OnPossess(APawn* InPawn) override;
+
+	
 	
 };
