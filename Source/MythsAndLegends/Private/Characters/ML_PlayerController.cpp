@@ -205,10 +205,9 @@ void AML_PlayerController::PerformInteractWithTarget()
     {
         if(TargetIsPickable)
         {
-            UE_LOG(LogTemp, Warning, TEXT("Pickup Item"));
-            if(auto* PlayerChar = Cast<APlayerCharacter>(GetPawn()))
+
+            if(auto* PlayerChar = Cast<ABaseCharacter>(GetPawn()))
             {
-                UE_LOG(LogTemp, Warning, TEXT("Attacking"));
                 PlayerChar->GetInventoryComponent()->PickupItem(Cast<ABaseItem>(TargetObject));
                 
                 TargetObject = nullptr;
@@ -216,10 +215,8 @@ void AML_PlayerController::PerformInteractWithTarget()
             }
         }
     } else
-    {
-            
+    {  
         MeleeAttack();
-        
     }
     
     TargetObject = nullptr;
