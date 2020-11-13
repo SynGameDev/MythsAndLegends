@@ -15,4 +15,15 @@ class MYTHSANDLEGENDS_API ANPC : public ABaseCharacter
 	GENERATED_BODY()
 public:
     ANPC();
+
+
+    virtual void BeginPlay() override;
+    
+private:
+    UFUNCTION()
+    void OnSeePlayer(APawn* Pawn);
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI|Sense", meta=(AllowPrivateAccess="true"))
+    class UPawnSensingComponent* PawnSensingComponent;
+
 };
