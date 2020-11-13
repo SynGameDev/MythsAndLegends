@@ -30,3 +30,12 @@ void ABaseAIController::OnPossess(APawn* InPawn)
         BT_Component->StartTree(*Char->GetBT());
     }
 }
+
+void ABaseAIController::SetOnSeenTarget(APawn* SeenPawn)
+{
+    if(BB_Component)
+    {
+        BB_Component->SetValueAsObject(Target, SeenPawn);
+        BB_Component->SetValueAsEnum(Key_EnemyStatus, EEnemyStatus::ATTACK);
+    }
+}
