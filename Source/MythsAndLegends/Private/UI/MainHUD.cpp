@@ -77,5 +77,5 @@ void UMainHUD::UpdateEnemyHealth()
     if(!TargetSkillComponent)
         return;
 
-    EnemyHealthBar->Percent = TargetSkillComponent->GetCharacterHealth() / 100;
+    EnemyHealth = TargetSkillComponent->GetCharacterHealth() / 100;
 }

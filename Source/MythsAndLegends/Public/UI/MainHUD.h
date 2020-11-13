@@ -61,7 +61,9 @@ private:
     class USkillComponent* TargetSkillComponent;
     UFUNCTION(BlueprintCallable)
     void UpdateEnemyHealth();
-
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemies", meta=(AllowPrivateAccess="true"))
+    float EnemyHealth;
+    
     // --- TIMERS --- //
     FTimerHandle ThEnemyTarget;
         
