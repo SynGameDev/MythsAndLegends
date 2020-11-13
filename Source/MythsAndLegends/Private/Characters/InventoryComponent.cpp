@@ -5,7 +5,7 @@
 
 #include "Characters/BaseCharacter.h"
 #include "MythsAndLegends/Public/Items/BaseItem.h"
-
+#include "Components/SkeletalMeshComponent.h"
 #include "UMG/Public/Blueprint/UserWidget.h"
 
 // Sets default values for this component's properties
@@ -77,6 +77,8 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 		if(auto* const CharOwner = Cast<ABaseCharacter>(GetOwner()))
 		{
 			CharOwner->GetWeaponMesh()->SetStaticMesh(Item->GetItemMesh()->GetStaticMesh());
+			CharOwner->GetWeaponMesh()->AttachToComponent(CharOwner->GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale,
+				Cast<ABaseWeapon>(Item)->GetSocketName());
 		}
 	}
 }
