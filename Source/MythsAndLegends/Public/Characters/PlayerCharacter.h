@@ -17,7 +17,7 @@ class MYTHSANDLEGENDS_API APlayerCharacter : public ABaseCharacter
 public:
     APlayerCharacter();
 
-    FORCEINLINE class UInventoryComponent* GetInventoryComponent() const { return InventoryComponent; }
+    
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI", meta=(AllowPrivateAccess="true"))
     TSubclassOf<class UUserWidget> sub_MainHUD;
@@ -32,8 +32,7 @@ private:
     class UCameraComponent* CameraComponent;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
     class USpringArmComponent* CameraBoom;
-    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
-    class UInventoryComponent* InventoryComponent;
+   
 
     virtual void Tick(float DeltaSeconds) override;
     virtual void BeginPlay() override;

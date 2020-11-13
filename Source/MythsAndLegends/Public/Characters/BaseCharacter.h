@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "MythsAndLegends/Public/Characters/SkillComponent.h"
+#include "MythsAndLegends/Public/Characters/InventoryComponent.h"
+#include "MythsAndLegends/Public/Items/BaseWeapon.h"
 #include "BaseCharacter.generated.h"
 
 UCLASS()
@@ -19,15 +21,23 @@ public:
 		SkillComponent = CreateDefaultSubobject<USkillComponent>(TEXT("Skill Component"));
 		WeaponMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Weapon Mesh"));
 		WeaponMesh->SetupAttachment(GetMesh());
+
+		InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("Inventory"));
 	}
 
 	void Attack()
 	{
-		PlayAnimMontage(AttackAnim);
+		if(InventoryComponent->GetEquippedWeapon())
+		{
+			if(auto* const Weapon = Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon()))
+			{
+				PlayAnimMontage(Weapon->GetAttackAnimation());
+			}
+		}
 	}
 
 	FORCEINLINE USkillComponent* GetSkillComponent() const { return SkillComponent; }
-
+	FORCEINLINE UInventoryComponent* GetInventoryComponent() const { return InventoryComponent; }
 
 	FORCEINLINE class UBehaviorTree* GetBT() const { return BehaviorTree; }
 	FORCEINLINE UStaticMeshComponent* GetWeaponMesh() const { return WeaponMesh; }
@@ -43,4 +53,7 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon Mesh", meta=(AllowProtectedAccess="true"))
 	UStaticMeshComponent* WeaponMesh;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowProtectedAccess="true"))
+	UInventoryComponent* InventoryComponent;
 };

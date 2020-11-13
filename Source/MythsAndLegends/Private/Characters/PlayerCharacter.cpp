@@ -19,7 +19,6 @@ APlayerCharacter::APlayerCharacter()
     CameraBoom->SetupAttachment(RootComponent);
     CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FOLLOW CAMERA"));
     CameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
-    InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("Inventory Component"));
 
     // Don't Rotate the player
     bUseControllerRotationPitch = false;
