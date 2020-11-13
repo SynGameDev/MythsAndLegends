@@ -72,3 +72,9 @@ void UInventoryUI::SelectItem(ABaseItem* SelectedItem)
         }
     }
 }
+
+void UInventoryUI::CloseAllUI()
+{
+    CurrentSelectedItem = nullptr;
+    
+}
