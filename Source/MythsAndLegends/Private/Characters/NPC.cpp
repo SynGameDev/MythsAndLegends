@@ -23,11 +23,17 @@ void ANPC::BeginPlay()
     }
 }
 
+void ANPC::Attack()
+{
+    
+}
+
 void ANPC::OnSeePlayer(APawn* Pawn)
 {
     UE_LOG(LogTemp, Warning, TEXT("SEEN PAWN"));
     if(auto* const AI_Con = Cast<ABaseAIController>(GetController()))
     {
+        // TODO: Filter through the seen target to see if it's an enemy
         if(auto* PlayerChar = Cast<APlayerCharacter>(Pawn))
         {
             AI_Con->SetOnSeenTarget(Pawn);
