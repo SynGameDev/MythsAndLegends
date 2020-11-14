@@ -43041,6 +43041,7 @@
           <e p="MythsAndLegendsPlayerController.h" t="Include" />
           <e p="Private" t="Include">
             <e p="AI_Task" t="Include">
+              <e p="AttackEnemy.cpp" t="Include" />
               <e p="MoveToPositionNode.cpp" t="Include" />
             </e>
             <e p="BotTargetPoint.cpp" t="Include" />
@@ -43068,6 +43069,7 @@
           </e>
           <e p="Public" t="Include">
             <e p="AI_Task" t="Include">
+              <e p="AttackEnemy.h" t="Include" />
               <e p="MoveToPositionNode.h" t="Include" />
             </e>
             <e p="BotTargetPoint.h" t="Include" />

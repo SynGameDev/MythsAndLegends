@@ -24,22 +24,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/BP_Ai_Controller.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/BP_NPC.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BB.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/BotTargetPoint.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/BotTargetPoint.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/AttackEnemy.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/BP_NPC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/BP_NPC.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/UI/PlayerHUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/UI/PlayerHUD.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/BP_NPC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/BP_NPC.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/TEst.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/TEst.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/TEst_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/TEst_BuiltData.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,24 +69,26 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseSword.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryItemButton.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/MainHUD.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/AttackEnemy.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" />
       </list>
     </option>
   </component>
@@ -335,6 +337,8 @@
       <workItem from="1605171230888" duration="6615000" />
       <workItem from="1605233934853" duration="11164000" />
       <workItem from="1605274514913" duration="1558000" />
+      <workItem from="1605278515789" duration="1759000" />
+      <workItem from="1605285886259" duration="4171000" />
     </task>
     <servers />
   </component>
@@ -371,9 +375,9 @@
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
     <state x="585" y="250" key="run.anything.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1605142434882" />
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605163072549">
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605286441207">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1605163072549" />
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1605286441207" />
   </component>
 </project>
