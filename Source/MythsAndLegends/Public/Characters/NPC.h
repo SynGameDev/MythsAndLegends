@@ -18,12 +18,18 @@ public:
 
 
     virtual void BeginPlay() override;
-    
+    FORCEINLINE float GetMinAttackDistance() const { return AttackDistance; }
+
+    virtual void Attack() override;
 private:
+    
     UFUNCTION()
     void OnSeePlayer(APawn* Pawn);
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI|Sense", meta=(AllowPrivateAccess="true"))
     class UPawnSensingComponent* PawnSensingComponent;
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Attack Settings", meta=(AllowPrivateAccess="true"))
+    float AttackDistance;
 
 };
