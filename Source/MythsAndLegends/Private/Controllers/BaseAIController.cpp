@@ -15,6 +15,12 @@ ABaseAIController::ABaseAIController()
     
 }
 
+void ABaseAIController::Tick(float DeltaSeconds)
+{
+    Super::Tick(DeltaSeconds);
+
+}
+
 void ABaseAIController::OnPossess(APawn* InPawn)
 {
     Super::OnPossess(InPawn);
@@ -35,6 +41,7 @@ void ABaseAIController::SetOnSeenTarget(APawn* SeenPawn)
 {
     if(BB_Component)
     {
+        TargetObject = Cast<ABaseCharacter>(SeenPawn);
         BB_Component->SetValueAsObject(Target, SeenPawn);
         BB_Component->SetValueAsEnum(Key_EnemyStatus, EEnemyStatus::ATTACK);
     }
