@@ -83,6 +83,15 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 	}
 }
 
+void UInventoryComponent::BeginPlay()
+{
+	Super::BeginPlay();
+	if(SpawnWithWeapon && EquippedItem)
+	{
+		EquipItem(EquippedItem);
+	}
+}
+
 
 
 

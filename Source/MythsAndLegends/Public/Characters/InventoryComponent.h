@@ -25,6 +25,8 @@ public:
 	FORCEINLINE TArray<class ABaseItem*> GetInventoryItems() const { return Inventory; }
 	FORCEINLINE class ABaseItem* GetEquippedWeapon() const { return EquippedItem; }
 
+	virtual void BeginPlay() override;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
 	TArray<class ABaseItem*> Inventory;
@@ -34,7 +36,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Inventory Initial Settings", meta=(AllowPrivateAccess="true"))
 	int32 CurrentInventorySize;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="HAND", meta=(AllowPrivateAccess="true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Hand", meta=(AllowPrivateAccess="true"))
+	bool SpawnWithWeapon;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Hand", meta=(AllowPrivateAccess="true", EditCondition="SpawnWithWeapon"))
 	class ABaseItem* EquippedItem;
 
 	
