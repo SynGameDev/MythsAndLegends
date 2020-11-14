@@ -25,7 +25,7 @@ public:
 		InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("Inventory"));
 	}
 
-	void Attack()
+	virtual void Attack()
 	{
 		if(InventoryComponent->GetEquippedWeapon())
 		{
