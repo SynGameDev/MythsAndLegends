@@ -26,7 +26,7 @@ public:
 	ABaseWeapon();
 	FORCEINLINE float GetMinDamage() const { return MinDamage; }
 	FORCEINLINE float GetMaxDamage() const { return MaxDamage; }
-	FORCEINLINE UAnimMontage* GetAttackAnimation() const { return AttackMontages[FMath::RandRange(0, AttackMontages.Num())]; }
+	FORCEINLINE UAnimMontage* GetAttackAnimation() const { return AttackMontages[FMath::RandRange(0, AttackMontages.Num() - 1)]; }
 	FORCEINLINE FName GetSocketName() const { return SocketName; }
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
