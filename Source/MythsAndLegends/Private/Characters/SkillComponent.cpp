@@ -15,6 +15,8 @@ void USkillComponent::TakeDamage(float Damage)
     {
         GetOwner()->Destroy();
     }
+
+    UE_LOG(LogTemp, Warning, TEXT("Taking Damage"));
 }
 
 float USkillComponent::CalculateDamage()
