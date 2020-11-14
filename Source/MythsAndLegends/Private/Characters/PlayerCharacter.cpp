@@ -35,6 +35,8 @@ APlayerCharacter::APlayerCharacter()
     CameraBoom->bInheritPitch = false;
     CameraBoom->bInheritRoll = false;
     CameraBoom->bInheritYaw = false;
+
+    CameraBoom->bDoCollisionTest = false;
     
 }
 
