@@ -50,4 +50,21 @@ void APlayerCharacter::BeginPlay()
     Super::BeginPlay();
 }
 
+void APlayerCharacter::TraceToHideWall()
+{
+    FHitResult HitResult;
+    FCollisionObjectQueryParams COQP;
+    FCollisionQueryParams CQP;
+    CQP.AddIgnoredActor(this);
+    GetWorld()->LineTraceSingleByObjectType(HitResult, CameraComponent->GetRelativeLocation(), GetMesh()->GetRelativeLocation(), COQP, CQP);
+
+    if(HitResult.bBlockingHit)
+    {
+        if(HitResult.GetActor()->ActorHasTag("HideWall"))
+        {
+            HitResult.GetActor()->SetHidden(true);
+        }
+    }
+}
+
 
