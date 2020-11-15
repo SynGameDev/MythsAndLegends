@@ -43030,6 +43030,14 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Source" t="Include">
         <e p="MythsAndLegends" t="Include">
+          <e p=".VSCodeCounter" t="Include">
+            <e p="2020-11-14_12-16-31" t="Include">
+              <e p="details.md" t="Include" />
+              <e p="results.csv" t="Include" />
+              <e p="results.md" t="Include" />
+              <e p="results.txt" t="Include" />
+            </e>
+          </e>
           <e p="MythsAndLegends.Build.cs" t="Include" />
           <e p="MythsAndLegends.cpp" t="Include" />
           <e p="MythsAndLegends.h" t="Include" />
@@ -43060,6 +43068,9 @@
               <e p="BaseItem.cpp" t="Include" />
               <e p="BaseWeapon.cpp" t="Include" />
             </e>
+            <e p="Levels" t="Include">
+              <e p="BaseLevelScript.cpp" t="Include" />
+            </e>
             <e p="UI" t="Include">
               <e p="InventoryItemButton.cpp" t="Include" />
               <e p="InventoryUI.cpp" t="Include" />
@@ -43088,6 +43099,9 @@
             <e p="Items" t="Include">
               <e p="BaseItem.h" t="Include" />
               <e p="BaseWeapon.h" t="Include" />
+            </e>
+            <e p="Levels" t="Include">
+              <e p="BaseLevelScript.h" t="Include" />
             </e>
             <e p="UI" t="Include">
               <e p="InventoryItemButton.h" t="Include" />
