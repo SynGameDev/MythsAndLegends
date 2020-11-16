@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Characters/BaseCharacter.h"
+#include "MythsAndLegends/Public/AI_Task/AITargetPoint.h"
 #include "NPC.generated.h"
 
 /**
@@ -17,10 +18,14 @@ public:
     ANPC();
 
 
-    virtual void BeginPlay() override;
+    virtual void BeginPlay() override; 
     FORCEINLINE float GetMinAttackDistance() const { return AttackDistance; }
 
     virtual void Attack() override;
+
+    FORCEINLINE AAITargetPoint* GetPatrolPoints() const { return PatrolPoint;}
+    FORCEINLINE int32 GetCurrentTargetIndex() const { return CurrentTargetIndex; }
+    FORCEINLINE void SetNextTarget(bool const increment) { if(increment) { CurrentTargetIndex++; } else { CurrentTargetIndex--; }}
 private:
     
     UFUNCTION()
@@ -31,5 +36,10 @@ private:
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Attack Settings", meta=(AllowPrivateAccess="true"))
     float AttackDistance;
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement|Targets", meta=(AllowPrivateAccess="true"))
+    AAITargetPoint* PatrolPoint;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement", meta=(AllowPrivateAccess="true"))
+    int32 CurrentTargetIndex;
 
 };
