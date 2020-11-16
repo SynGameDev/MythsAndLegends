@@ -27,17 +27,20 @@ public:
 	FORCEINLINE class UBlackboardComponent* GetBlackboardComponent() const { return BB_Component; }
 
 	virtual void Tick(float DeltaSeconds) override;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys")
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|General")
+	FName Key_MovementState = "MovementState";
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Targets")
 	FName Target = "Target";
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackbaord Keys")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackbaord Keys|Targets")
 	FName Key_EnemyStatus = "EnemyStatus";
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Targets")
 	FName Key_TargetDistance;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Path")
 	FName Key_TargetIndex = "TargetIndex";
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Path")
 	FName Key_TargetLocation = "TargetLocation";
+	
 
 	// --- TARGETS --- //
 	class ABaseCharacter* TargetObject;

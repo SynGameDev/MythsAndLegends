@@ -7,9 +7,14 @@
 #include "MythsAndLegends/Public/AI_Task/AITargetPoint.h"
 #include "NPC.generated.h"
 
-/**
- * 
- */
+UENUM(Blueprintable)
+enum EMovementState
+{
+    Wander,
+    Follow,
+    Path,
+    Attack
+};
 UCLASS()
 class MYTHSANDLEGENDS_API ANPC : public ABaseCharacter
 {
@@ -26,6 +31,8 @@ public:
     FORCEINLINE AAITargetPoint* GetPatrolPoints() const { return PatrolPoint;}
     FORCEINLINE int32 GetCurrentTargetIndex() const { return CurrentTargetIndex; }
     FORCEINLINE void SetNextTarget(bool const increment) { if(increment) { CurrentTargetIndex++; } else { CurrentTargetIndex--; }}
+    FORCEINLINE EMovementState GetMovementState() const { return MovementState; }
+    void SetMovementState(EMovementState const NewState);
 private:
     
     UFUNCTION()
@@ -37,9 +44,12 @@ private:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Attack Settings", meta=(AllowPrivateAccess="true"))
     float AttackDistance;
 
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement", meta=(AllowPrivateAccess="true"))
+    TEnumAsByte<EMovementState> MovementState;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement|Targets", meta=(AllowPrivateAccess="true"))
     AAITargetPoint* PatrolPoint;
-    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement", meta=(AllowPrivateAccess="true"))
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement|Targets", meta=(AllowPrivateAccess="true"))
     int32 CurrentTargetIndex;
+    
 
 };

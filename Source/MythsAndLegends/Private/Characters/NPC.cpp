@@ -6,6 +6,8 @@
 #include "MythsAndLegends/Public/Controllers/BaseAIController.h"
 #include "MythsAndLegends/Public/Characters/PlayerCharacter.h"
 
+#include "BehaviorTree/BlackboardComponent.h"
+
 ANPC::ANPC()
 {
     PrimaryActorTick.bCanEverTick = true;
@@ -26,6 +28,15 @@ void ANPC::BeginPlay()
 void ANPC::Attack()
 {
     
+}
+
+void ANPC::SetMovementState(EMovementState const NewState)
+{
+    MovementState = NewState;
+    if(auto* const Con = Cast<ABaseAIController>(GetController()))
+    {
+        Con->GetBlackboardComponent()->SetValueAsEnum(Con->Key_MovementState, NewState);
+    }
 }
 
 void ANPC::OnSeePlayer(APawn* Pawn)
