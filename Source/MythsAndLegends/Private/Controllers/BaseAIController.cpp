@@ -43,6 +43,5 @@ void ABaseAIController::SetOnSeenTarget(APawn* SeenPawn)
     {
         TargetObject = Cast<ABaseCharacter>(SeenPawn);
         BB_Component->SetValueAsObject(Target, SeenPawn);
-        BB_Component->SetValueAsEnum(Key_EnemyStatus, EEnemyStatus::ATTACK);
     }
 }

@@ -6,15 +6,6 @@
 #include "AIController.h"
 #include "BaseAIController.generated.h"
 
-UENUM()
-enum EEnemyStatus
-{
-	WANDER,
-	FOLLOW,
-	ATTACK,
-	QUEST
-};
-
 /**
  * 
  */
@@ -40,19 +31,22 @@ public:
 	FName Key_TargetIndex = "TargetIndex";
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Path")
 	FName Key_TargetLocation = "TargetLocation";
+
+	
 	
 
 	// --- TARGETS --- //
 	class ABaseCharacter* TargetObject;
 
 	void SetOnSeenTarget(APawn* Pawn);
-	TEnumAsByte<EEnemyStatus> EnemyStatus;
     
 protected:
 	class UBehaviorTreeComponent* BT_Component;
 	class UBlackboardComponent* BB_Component;
 	
 	virtual void OnPossess(APawn* InPawn) override;
+
+	
 
 	
 	

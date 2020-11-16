@@ -23,6 +23,9 @@ void ANPC::BeginPlay()
     {
         PawnSensingComponent->OnSeePawn.AddDynamic(this, &ANPC::OnSeePlayer);
     }
+
+    // We run this to setup the blackboard
+    SetMovementState(MovementState);
 }
 
 void ANPC::Attack()
@@ -48,6 +51,7 @@ void ANPC::OnSeePlayer(APawn* Pawn)
         if(auto* PlayerChar = Cast<APlayerCharacter>(Pawn))
         {
             AI_Con->SetOnSeenTarget(Pawn);
+            SetMovementState(EMovementState::Attack);
         }
     }
 }
