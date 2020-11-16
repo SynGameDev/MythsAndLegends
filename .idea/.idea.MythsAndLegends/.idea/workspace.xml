@@ -24,20 +24,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/AI/BP_PatrolPoits.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AITargetPoint.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/AITargetPoint.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/IncrementPathIndex.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BB.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BB.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/TEst.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/TEst.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/TEst_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/TEst_BuiltData.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +65,6 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
@@ -93,6 +80,7 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/IncrementPathIndex.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
       </list>
     </option>
   </component>
@@ -107,6 +95,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="ToolWindowExplorer.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -345,7 +334,7 @@
       <workItem from="1605285886259" duration="6355000" />
       <workItem from="1605320136699" duration="110000" />
       <workItem from="1605320319364" duration="2287000" />
-      <workItem from="1605481216728" duration="6729000" />
+      <workItem from="1605481216728" duration="7561000" />
     </task>
     <servers />
   </component>

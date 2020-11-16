@@ -11,7 +11,7 @@ ANPC::ANPC()
     PrimaryActorTick.bCanEverTick = true;
 
     PawnSensingComponent = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("Pawn Sense Component"));
-    PawnSensingComponent->SetPeripheralVisionAngle(90.0f);
+    PawnSensingComponent->SetPeripheralVisionAngle(50.0f);
 }
 
 void ANPC::BeginPlay()
