@@ -34,6 +34,10 @@ public:
 	FName Key_EnemyStatus = "EnemyStatus";
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys")
 	FName Key_TargetDistance;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys")
+	FName Key_TargetIndex = "TargetIndex";
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys")
+	FName Key_TargetLocation = "TargetLocation";
 
 	// --- TARGETS --- //
 	class ABaseCharacter* TargetObject;
