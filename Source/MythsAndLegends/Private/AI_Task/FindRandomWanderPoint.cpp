@@ -20,33 +20,37 @@ UFindRandomWanderPoint::UFindRandomWanderPoint()
 
 EBTNodeResult::Type UFindRandomWanderPoint::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
+    // Get the NPC Character & Controller, Make sure that they are valid
     if(auto* const NPC_Controller = Cast<ABaseAIController>(OwnerComp.GetOwner()))
     {
         if(auto* const NPC_Character = Cast<ANPC>(NPC_Controller->GetPawn()))
         {
             if(LimitedSearch)
             {
+                // Get the Origin point of the NPC & create  a nav location
                 FVector const NPC_OriginPoint = NPC_Character->GetActorLocation();
                 FNavLocation Location;
 
+                // Get the current Navigation System and set a random point within the radius, set this point on the blackboard
                 UNavigationSystemV1* const NavSystem = UNavigationSystemV1::GetCurrent(GetWorld());
                 if(NavSystem->GetRandomPointInNavigableRadius(NPC_OriginPoint, SearchRadius, Location, nullptr))
                 {
                     if(auto* const BB = NPC_Controller->GetBlackboardComponent())
                     {
-                        UE_LOG(LogTemp, Warning, TEXT("Blackboard"))
                         BB->SetValueAsVector(NPC_Controller->TargetLocation, Location.Location);
-                        
                     }
                     else
                     {
                         UE_LOG(LogTemp, Warning, TEXT("NO BLACKBOARD"))
                     }
+                } else
+                {
+                    // TODO: Wander Around point instead of the characters origin
                 }
             }
         }
     }
-
+    // Return the task completed
     FinishLatentTask(OwnerComp, EBTNodeResult::Succeeded);
     return EBTNodeResult::Succeeded;
 }

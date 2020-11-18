@@ -17,15 +17,15 @@ UMoveToPositionNode::UMoveToPositionNode()
 
 EBTNodeResult::Type UMoveToPositionNode::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
-   UE_LOG(LogTemp, Warning, TEXT("Starting Task"));
+
    if(auto* const NPC_Con = Cast<ABaseAIController>(OwnerComp.GetOwner()))
    {
-      UE_LOG(LogTemp, Warning, TEXT("Got Controller"));
+
       if(auto* const NPC_Char = Cast<ANPC>(NPC_Con->GetPawn()))
       {
          if(auto* const PatrolPath = NPC_Char->GetPatrolPoints())
          {
-            UE_LOG(LogTemp, Warning, TEXT("Got Pawn"));
+
             // Get the current target index
             int32 const TargetIndex = NPC_Con->GetBlackboardComponent()->GetValueAsInt(NPC_Con->TargetIndex);
             // Get the location of that target point & Convert it to world space
