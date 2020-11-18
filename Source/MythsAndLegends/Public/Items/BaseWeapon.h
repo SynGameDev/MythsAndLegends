@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Items/BaseItem.h"
+#include "Engine/DataTable.h"
 #include "BaseWeapon.generated.h"
 
 UENUM()
@@ -13,6 +14,35 @@ enum EWeaponType
 	TWO_HAND,
 	RANGED,
 	STAFF
+};
+
+USTRUCT(BlueprintType)
+struct FAttackAnimation
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere)
+	class UAnimMontage* AttackAnimation;
+	UPROPERTY(EditAnywhere)
+	float AnimationTime;
+};
+
+USTRUCT(BlueprintType)
+struct FWeaponTable : public FTableRowBase
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere)
+	float MinDamage;
+	UPROPERTY(EditAnywhere)
+	float MaxDamage;
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<EWeaponType> WeaponType;
+	UPROPERTY(EditAnywhere)
+	TArray<FAttackAnimation> AttackAnimations;
+	UPROPERTY(EditAnywhere)
+	FName SocketAttachmentName;
+	
 };
 
 /**

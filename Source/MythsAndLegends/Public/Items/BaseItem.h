@@ -6,16 +6,49 @@
 #include "GameFramework/Actor.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/BoxComponent.h"
+#include "Engine/DataTable.h"
 #include "BaseItem.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EItemTier
 {
 	COMMON,
-	UNCOMMON,
-	RARE,
-	LEGENDARY
+    UNCOMMON,
+    RARE,
+    LEGENDARY
 };
+
+UENUM(BlueprintType)
+enum EItemType
+{
+	Consumable,
+	Weapon,
+	Crafting,
+	Misc
+};
+
+USTRUCT(BlueprintType)
+struct FItemDataTable : public FTableRowBase
+{
+	GENERATED_BODY()
+public:
+	// --- ITEM DETAILS --- //
+	UPROPERTY(EditAnywhere)
+	FString ItemID;
+	UPROPERTY(EditAnywhere)
+	FName ItemName;
+	UPROPERTY(EditAnywhere)
+	FText ItemDescription;
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<EItemTier> ItemTier;
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<EItemType> ItemType;
+
+	// --- ITEM MESH --- //
+	UPROPERTY(EditAnywhere)
+	class UStaticMesh* ItemMesh;
+};
+
 
 UCLASS()
 class MYTHSANDLEGENDS_API ABaseItem : public AActor
