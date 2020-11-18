@@ -35,18 +35,24 @@ AML_PlayerController::AML_PlayerController()
     MinTargetDistance = 120.0f;
 
     ItemHovering = nullptr;
+    CanAttack = true;
 }
 
 
 void AML_PlayerController::BeginPlay()
 {
+    Super::BeginPlay();
     SetupTree();
+    
 }
 
 void AML_PlayerController::MeleeAttack()
 {
+    if(!CanAttack)
+        return;
+    
     // Get the players current target and Insure that it's a NPC
-    if(ABaseCharacter* const NPC = Cast<ABaseCharacter>(TargetObject))
+    if(ABaseCharacter* const NPC = Cast<ABaseCharacter>(TargetObject) )
     {
         // Valid data that we are the player & deriving from the base character class
         // Than Apply the damage to the NPC
@@ -55,8 +61,17 @@ void AML_PlayerController::MeleeAttack()
             
             PlayerCharacter->Attack();
             NPC->GetSkillComponent()->TakeDamage(PlayerCharacter->GetSkillComponent()->CalculateDamage());
+            float const Cooldown = Cast<ABaseWeapon>(PlayerCharacter->GetInventoryComponent()->GetEquippedWeapon())->GetAttackCooldown();
+            UE_LOG(LogTemp, Warning, TEXT("Cooldown: %f"), Cooldown);
+            CanAttack = false;
+            GetWorld()->GetTimerManager().SetTimer(AttackCooldownTh, this, &AML_PlayerController::ResetCanAttack, Cooldown, false);
         }
     }
+}
+
+void AML_PlayerController::ResetCanAttack()
+{
+    CanAttack = true;
 }
 
 void AML_PlayerController::SetupTree() const

@@ -22,17 +22,19 @@ class MYTHSANDLEGENDS_API ANPC : public ABaseCharacter
 public:
     ANPC();
 
-
     virtual void BeginPlay() override; 
     FORCEINLINE float GetMinAttackDistance() const { return AttackDistance; }
-
-    virtual void Attack() override;
 
     FORCEINLINE AAITargetPoint* GetPatrolPoints() const { return PatrolPoint;}
     FORCEINLINE int32 GetCurrentTargetIndex() const { return CurrentTargetIndex; }
     FORCEINLINE void SetNextTarget(bool const increment) { if(increment) { CurrentTargetIndex++; } else { CurrentTargetIndex--; }}
     FORCEINLINE EMovementState GetMovementState() const { return MovementState; }
     void SetMovementState(EMovementState const NewState);
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Testing|Attack System")
+    bool WillAttackPlayer;
+
+    
 private:
     
     UFUNCTION()
@@ -50,6 +52,8 @@ private:
     AAITargetPoint* PatrolPoint;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement|Targets", meta=(AllowPrivateAccess="true"))
     int32 CurrentTargetIndex;
+
+    
     
 
 };

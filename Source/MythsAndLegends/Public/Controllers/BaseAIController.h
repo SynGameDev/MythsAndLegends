@@ -6,6 +6,14 @@
 #include "AIController.h"
 #include "BaseAIController.generated.h"
 
+USTRUCT(BlueprintType)
+struct FBlackboardKeys
+{
+	GENERATED_BODY()
+public:
+	
+};
+
 /**
  * 
  */
@@ -18,23 +26,25 @@ public:
 	FORCEINLINE class UBlackboardComponent* GetBlackboardComponent() const { return BB_Component; }
 
 	virtual void Tick(float DeltaSeconds) override;
-	
+
+	// --- BLACKBOARD KEYS --- //
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|General")
-	FName Key_MovementState = "MovementState";
+	FName MovementState = "MovementState";
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Targets")
 	FName Target = "Target";
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackbaord Keys|Targets")
-	FName Key_EnemyStatus = "EnemyStatus";
+	FName EnemyStatus = "EnemyStatus";
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Targets")
-	FName Key_TargetDistance;
+	FName TargetDistance;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Path")
-	FName Key_TargetIndex = "TargetIndex";
+	FName TargetIndex = "TargetIndex";
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Path")
-	FName Key_TargetLocation = "TargetLocation";
-
+	FName TargetLocation = "TargetLocation";
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Combat")
+	FName AttackCooldown = "AttackCooldown";
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Testing")
+	FName TEST_PT_WillAttack = "PT_WillAttack";
 	
-	
-
 	// --- TARGETS --- //
 	class ABaseCharacter* TargetObject;
 

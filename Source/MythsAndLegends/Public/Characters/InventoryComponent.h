@@ -23,7 +23,7 @@ public:
 	void EquipItem(class ABaseItem* const Item);
 
 	FORCEINLINE TArray<class ABaseItem*> GetInventoryItems() const { return Inventory; }
-	FORCEINLINE class ABaseItem* GetEquippedWeapon() const { return EquippedItem; }
+	FORCEINLINE class ABaseItem* GetEquippedWeapon() const { UE_LOG(LogTemp, Warning, TEXT("GettingWeapon")); return EquippedItem; }
 
 	virtual void BeginPlay() override;
 

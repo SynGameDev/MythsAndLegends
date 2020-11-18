@@ -27,7 +27,7 @@ EBTNodeResult::Type UMoveToPositionNode::ExecuteTask(UBehaviorTreeComponent& Own
          {
             UE_LOG(LogTemp, Warning, TEXT("Got Pawn"));
             // Get the current target index
-            int32 const TargetIndex = NPC_Con->GetBlackboardComponent()->GetValueAsInt(NPC_Con->Key_TargetIndex);
+            int32 const TargetIndex = NPC_Con->GetBlackboardComponent()->GetValueAsInt(NPC_Con->TargetIndex);
             // Get the location of that target point & Convert it to world space
             
             FVector const TargetLocation = PatrolPath->GetTargetPointPosition(TargetIndex);
@@ -36,7 +36,7 @@ EBTNodeResult::Type UMoveToPositionNode::ExecuteTask(UBehaviorTreeComponent& Own
          
             //UE_LOG(LogTemp, Warning, TEXT("Location: %s"), *TargetLocation.ToString());
 
-            NPC_Con->GetBlackboardComponent()->SetValueAsVector(NPC_Con->Key_TargetLocation, WorldTargetLocation);  
+            NPC_Con->GetBlackboardComponent()->SetValueAsVector(NPC_Con->TargetIndex, WorldTargetLocation);  
          }
       }
    }

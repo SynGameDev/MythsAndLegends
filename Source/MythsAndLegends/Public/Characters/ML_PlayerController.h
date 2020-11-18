@@ -25,6 +25,8 @@ public:
 
     void MeleeAttack();
 
+    
+
 private:
     void SetupTree() const;
     
@@ -56,6 +58,11 @@ private:
     // --- UI --- //
     void SetupUI();
     void ToggleInventoryUI();
+
+    // --- ATTACK VARIABLES --- //
+    bool CanAttack;
+    FTimerHandle AttackCooldownTh;
+    void ResetCanAttack();
     
 
     

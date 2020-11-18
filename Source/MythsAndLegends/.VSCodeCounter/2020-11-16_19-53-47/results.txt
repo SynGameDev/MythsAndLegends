@@ -1,0 +1,87 @@
+Date : 2020-11-16 19:53:47
+Directory : c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends
+Total : 48 files,  1595 codes, 224 comments, 539 blanks, all 2358 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C++      |         47 |      1,573 |        223 |        535 |      2,331 |
+| C#       |          1 |         22 |          1 |          4 |         27 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                        | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                           |         48 |      1,595 |        224 |        539 |      2,358 |
+| Private                                                                                                                     |         19 |        793 |         95 |        230 |      1,118 |
+| Private\AI_Task                                                                                                             |          4 |        111 |          9 |         42 |        162 |
+| Private\Characters                                                                                                          |          5 |        421 |         63 |        114 |        598 |
+| Private\Controllers                                                                                                         |          2 |         46 |          5 |         18 |         69 |
+| Private\Items                                                                                                               |          2 |          5 |          3 |          8 |         16 |
+| Private\Levels                                                                                                              |          1 |         16 |          1 |          6 |         23 |
+| Private\UI                                                                                                                  |          4 |        193 |         13 |         38 |        244 |
+| Public                                                                                                                      |         20 |        550 |         86 |        232 |        868 |
+| Public\AI_Task                                                                                                              |          4 |         52 |         14 |         22 |         88 |
+| Public\Characters                                                                                                           |          6 |        218 |         21 |        104 |        343 |
+| Public\Controllers                                                                                                          |          2 |         48 |          9 |         24 |         81 |
+| Public\Items                                                                                                                |          2 |         93 |         10 |         27 |        130 |
+| Public\Levels                                                                                                               |          1 |         16 |          4 |          4 |         24 |
+| Public\UI                                                                                                                   |          4 |        114 |         24 |         46 |        184 |
++-----------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                                    | language | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\MythsAndLegends.Build.cs                   | C#       |         22 |          1 |          4 |         27 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\MythsAndLegends.cpp                        | C++      |          4 |          1 |          4 |          9 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\MythsAndLegends.h                          | C++      |          3 |          1 |          4 |          8 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\MythsAndLegendsCharacter.cpp               | C++      |         72 |          8 |         11 |         91 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\MythsAndLegendsCharacter.h                 | C++      |         22 |          8 |         11 |         41 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\MythsAndLegendsGameMode.cpp                | C++      |         13 |          3 |          3 |         19 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\MythsAndLegendsGameMode.h                  | C++      |         11 |          1 |          8 |         20 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\MythsAndLegendsPlayerController.cpp        | C++      |         84 |         11 |         18 |        113 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\MythsAndLegendsPlayerController.h          | C++      |         21 |          9 |         14 |         44 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\AI_Task\AITargetPoint.cpp          | C++      |         11 |          3 |         11 |         25 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\AI_Task\AttackEnemy.cpp            | C++      |         38 |          1 |         10 |         49 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\AI_Task\IncrementPathIndex.cpp     | C++      |         30 |          1 |         11 |         42 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\AI_Task\MoveToPositionNode.cpp     | C++      |         32 |          4 |         10 |         46 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\BotTargetPoint.cpp                 | C++      |          1 |          1 |          4 |          6 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Characters\InventoryComponent.cpp  | C++      |         67 |          8 |         24 |         99 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Characters\ML_PlayerController.cpp | C++      |        231 |         38 |         46 |        315 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Characters\NPC.cpp                 | C++      |         45 |          4 |         15 |         64 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Characters\PlayerCharacter.cpp     | C++      |         50 |          5 |         16 |         71 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Characters\SkillComponent.cpp      | C++      |         28 |          8 |         13 |         49 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Controllers\BaseAIController.cpp   | C++      |         34 |          4 |         10 |         48 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Controllers\PlayerAiController.cpp | C++      |         12 |          1 |          8 |         21 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Items\BaseItem.cpp                 | C++      |          1 |          2 |          3 |          6 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Items\BaseWeapon.cpp               | C++      |          4 |          1 |          5 |         10 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\Levels\BaseLevelScript.cpp         | C++      |         16 |          1 |          6 |         23 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\UI\InventoryItemButton.cpp         | C++      |         22 |          1 |          4 |         27 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\UI\InventoryUI.cpp                 | C++      |         70 |          1 |         10 |         81 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\UI\MainHUD.cpp                     | C++      |         55 |         10 |         17 |         82 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Private\UI\SelectedInventoryItem.cpp       | C++      |         46 |          1 |          7 |         54 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\AI_Task\AITargetPoint.h             | C++      |         16 |          2 |          8 |         26 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\AI_Task\AttackEnemy.h               | C++      |         12 |          4 |          4 |         20 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\AI_Task\IncrementPathIndex.h        | C++      |         12 |          4 |          5 |         21 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\AI_Task\MoveToPositionNode.h        | C++      |         12 |          4 |          5 |         21 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\BotTargetPoint.h                    | C++      |          9 |          4 |          5 |         18 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Characters\BaseCharacter.h          | C++      |         45 |          2 |         13 |         60 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Characters\InventoryComponent.h     | C++      |         29 |          2 |         16 |         47 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Characters\ML_PlayerController.h    | C++      |         35 |          8 |         20 |         63 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Characters\NPC.h                    | C++      |         43 |          1 |         18 |         62 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Characters\PlayerCharacter.h        | C++      |         24 |          5 |         16 |         45 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Characters\SkillComponent.h         | C++      |         42 |          3 |         21 |         66 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Controllers\BaseAIController.h      | C++      |         33 |          5 |         18 |         56 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Controllers\PlayerAiController.h    | C++      |         15 |          4 |          6 |         25 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Items\BaseItem.h                    | C++      |         59 |          6 |         19 |         84 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Items\BaseWeapon.h                  | C++      |         34 |          4 |          8 |         46 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\Levels\BaseLevelScript.h            | C++      |         16 |          4 |          4 |         24 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\UI\InventoryItemButton.h            | C++      |         19 |          4 |          7 |         30 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\UI\InventoryUI.h                    | C++      |         31 |          4 |         14 |         49 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\UI\MainHUD.h                        | C++      |         43 |         12 |         16 |         71 |
+| c:\Users\KAMil\OneDrive\Documents\UE_4.25\MythsAndLegends\Source\MythsAndLegends\Public\UI\SelectedInventoryItem.h          | C++      |         21 |          4 |          9 |         34 |
+| Total                                                                                                                       |          |      1,595 |        224 |        539 |      2,358 |
++-----------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

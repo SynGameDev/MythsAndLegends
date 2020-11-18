@@ -28,6 +28,7 @@ public:
 	FORCEINLINE float GetMaxDamage() const { return MaxDamage; }
 	FORCEINLINE UAnimMontage* GetAttackAnimation() const { return AttackMontages[FMath::RandRange(0, AttackMontages.Num() - 1)]; }
 	FORCEINLINE FName GetSocketName() const { return SocketName; }
+	FORCEINLINE float GetAttackCooldown() const { return AttackCooldownTime; }
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	float MinDamage;
@@ -35,6 +36,8 @@ protected:
 	float MaxDamage;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	TArray<class UAnimMontage*> AttackMontages;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
+	float AttackCooldownTime;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	TEnumAsByte<EWeaponType> SwordType;

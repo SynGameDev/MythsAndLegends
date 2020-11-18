@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
 #include "GameFramework/Character.h"
 #include "MythsAndLegends/Public/Characters/SkillComponent.h"
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
@@ -41,6 +42,8 @@ public:
 
 	FORCEINLINE class UBehaviorTree* GetBT() const { return BehaviorTree; }
 	FORCEINLINE UStaticMeshComponent* GetWeaponMesh() const { return WeaponMesh; }
+
+	
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI", meta=(AllowProtectedAccess="true"))
 	class UBehaviorTree* BehaviorTree;
@@ -56,4 +59,12 @@ protected:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowProtectedAccess="true"))
 	UInventoryComponent* InventoryComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement", meta=(AllowProtectedAccess="true"))
+	float WalkSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement", meta=(AllowProtectedAccess="true"))
+	float RunSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement", meta=(AllowProtectedAccess="true"))
+	float CrouchSpeed;
+	
 };

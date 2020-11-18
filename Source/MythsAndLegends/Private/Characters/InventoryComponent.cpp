@@ -4,9 +4,13 @@
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
 
 #include "Characters/BaseCharacter.h"
+#include "Characters/NPC.h"
 #include "MythsAndLegends/Public/Items/BaseItem.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Controllers/BaseAIController.h"
 #include "UMG/Public/Blueprint/UserWidget.h"
+
+#include "BehaviorTree/BlackboardComponent.h"
 
 // Sets default values for this component's properties
 UInventoryComponent::UInventoryComponent()
@@ -79,6 +83,15 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 			CharOwner->GetWeaponMesh()->SetStaticMesh(Item->GetItemMesh()->GetStaticMesh());
 			CharOwner->GetWeaponMesh()->AttachToComponent(CharOwner->GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale,
 				Cast<ABaseWeapon>(Item)->GetSocketName());
+
+			if(auto* const NPC = Cast<ANPC>(CharOwner))
+			{
+				if(auto* const NPC_Controller = Cast<ABaseAIController>(CharOwner->GetController()))
+				{
+					NPC_Controller->GetBlackboardComponent()->SetValueAsFloat(NPC_Controller->AttackCooldown,
+						Cast<ABaseWeapon>(Item)->GetAttackCooldown());
+				}
+			}
 		}
 	}
 }

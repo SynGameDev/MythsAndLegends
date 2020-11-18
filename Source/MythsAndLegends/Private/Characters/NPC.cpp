@@ -14,6 +14,8 @@ ANPC::ANPC()
 
     PawnSensingComponent = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("Pawn Sense Component"));
     PawnSensingComponent->SetPeripheralVisionAngle(50.0f);
+
+    WillAttackPlayer = true;
 }
 
 void ANPC::BeginPlay()
@@ -24,13 +26,11 @@ void ANPC::BeginPlay()
         PawnSensingComponent->OnSeePawn.AddDynamic(this, &ANPC::OnSeePlayer);
     }
 
-    // We run this to setup the blackboard
     SetMovementState(MovementState);
-}
-
-void ANPC::Attack()
-{
-    
+    if(auto* const NPC_Controller = Cast<ABaseAIController>(GetController()))
+    {
+        NPC_Controller->GetBlackboardComponent()->SetValueAsBool(NPC_Controller->TEST_PT_WillAttack, WillAttackPlayer);
+    }
 }
 
 void ANPC::SetMovementState(EMovementState const NewState)
@@ -38,7 +38,7 @@ void ANPC::SetMovementState(EMovementState const NewState)
     MovementState = NewState;
     if(auto* const Con = Cast<ABaseAIController>(GetController()))
     {
-        Con->GetBlackboardComponent()->SetValueAsEnum(Con->Key_MovementState, NewState);
+        Con->GetBlackboardComponent()->SetValueAsEnum(Con->MovementState, NewState);
     }
 }
 

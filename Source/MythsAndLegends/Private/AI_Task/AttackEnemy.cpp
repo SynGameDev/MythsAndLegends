@@ -29,7 +29,7 @@ EBTNodeResult::Type UAttackEnemy::ExecuteTask(UBehaviorTreeComponent& OwnerComp,
             float Distance = FVector::Dist(NPC_Controller->GetPawn()->GetActorLocation(), PawnTarget->GetActorLocation());
             if(Distance < Cast<ANPC>(NPC_Controller->GetPawn())->GetMinAttackDistance())
             {
-                Cast<ABaseCharacter>(NPC_Controller->GetPawn())->Attack();
+                NPC->Attack();
                 PawnTarget->GetSkillComponent()->TakeDamage(NPC->GetSkillComponent()->CalculateDamage());
 
                 if(auto* const PlayerChar = Cast<APlayerCharacter>(PawnTarget))
