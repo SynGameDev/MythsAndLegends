@@ -54,9 +54,19 @@ class MYTHSANDLEGENDS_API ABaseWeapon : public ABaseItem
 	GENERATED_BODY()
 public:
 	ABaseWeapon();
+
+	void SpawnWeapon();
+	void SpawnWeapon(FName WeaponName);
+	void SpawnWeapon(bool Spawn);
+	void SpawnWeapon(FName WeaponName, bool Spawn);
+	virtual void BeginPlay() override;
+	
+	UPROPERTY(EditAnywhere)
+	class UDataTable* WeaponDataTable;
+	
 	FORCEINLINE float GetMinDamage() const { return MinDamage; }
 	FORCEINLINE float GetMaxDamage() const { return MaxDamage; }
-	FORCEINLINE UAnimMontage* GetAttackAnimation() const { return AttackMontages[FMath::RandRange(0, AttackMontages.Num() - 1)]; }
+	FORCEINLINE FAttackAnimation GetAttackAnimation() const { return AttackMontages[FMath::RandRange(0, AttackMontages.Num() - 1)]; }
 	FORCEINLINE FName GetSocketName() const { return SocketName; }
 	FORCEINLINE float GetAttackCooldown() const { return AttackCooldownTime; }
 protected:
@@ -65,14 +75,16 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	float MaxDamage;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
-	TArray<class UAnimMontage*> AttackMontages;
+	TArray<FAttackAnimation> AttackMontages;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	float AttackCooldownTime;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
-	TEnumAsByte<EWeaponType> SwordType;
+	TEnumAsByte<EWeaponType> WeaponType;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Attachment|Socket", meta=(AllowPrivateAccess="true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Attachment|Socket", meta=(AllowProtectedAccess="true"))
 	FName SocketName;
+	
+
 	
 };

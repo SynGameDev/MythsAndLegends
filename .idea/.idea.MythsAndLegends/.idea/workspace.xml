@@ -32,8 +32,7 @@
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Barbarous.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Barbarous.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" afterDir="false" />
     </list>
@@ -62,7 +61,6 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/SelectedInventoryItem.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseSword.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryItemButton.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" />
@@ -99,6 +97,7 @@
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
         <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
+        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" />
       </list>
     </option>
   </component>
@@ -360,7 +359,7 @@
       <workItem from="1605591197330" duration="5643000" />
       <workItem from="1605612393079" duration="2689000" />
       <workItem from="1605615862536" duration="6544000" />
-      <workItem from="1605674202543" duration="4703000" />
+      <workItem from="1605674202543" duration="7463000" />
     </task>
     <servers />
   </component>
@@ -413,9 +412,9 @@
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
     <state x="585" y="250" key="run.anything.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1605613725286" />
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605681420385">
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605687551406">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1605681420385" />
+    <state x="591" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1857.1080@0.0.1857.1080" timestamp="1605687551406" />
   </component>
 </project>

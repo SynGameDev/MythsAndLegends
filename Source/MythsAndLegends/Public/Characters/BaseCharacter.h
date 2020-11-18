@@ -32,7 +32,7 @@ public:
 		{
 			if(auto* const Weapon = Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon()))
 			{
-				PlayAnimMontage(Weapon->GetAttackAnimation());
+				//PlayAnimMontage(Weapon->GetAttackAnimation());
 			}
 		}
 	}

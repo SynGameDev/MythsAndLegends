@@ -59,6 +59,12 @@ public:
 	// Sets default values for this actor's properties
 	ABaseItem()
 	{
+		static ConstructorHelpers::FObjectFinder<UDataTable> DataTable (TEXT("DataTable'/Game/DataTables/WeaponDataTable.WeaponDataTable'"));
+		if(DataTable.Succeeded())
+		{
+			ItemDataTable = DataTable.Object;
+		}
+		
 		// Create the objects
 		Collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Collider"));
 		ItemMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ItemMesh"));
@@ -110,6 +116,14 @@ protected:
 	FText ItemDescription;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item Details", meta=(AllowProtectedAccess="true"))
 	TEnumAsByte<EItemTier> ItemTier;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Spawn Details", meta=(AllowProtectedAccess="true"))
+	FName SpawnItemID;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Spawn Details", meta=(AllowProtectedAccess="true"))
+	bool SpawnInWorld;
+
+	class UDataTable* ItemDataTable;
 
 	
 	
