@@ -32,12 +32,6 @@
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Service/ChangeSpeed.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Service/ChangeSpeed.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AITargetPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AITargetPoint.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,7 +356,7 @@
       <workItem from="1605591197330" duration="5643000" />
       <workItem from="1605612393079" duration="2689000" />
       <workItem from="1605615862536" duration="6544000" />
-      <workItem from="1605674202543" duration="1095000" />
+      <workItem from="1605674202543" duration="2045000" />
     </task>
     <servers />
   </component>
