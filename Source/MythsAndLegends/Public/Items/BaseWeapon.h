@@ -42,6 +42,8 @@ public:
 	TArray<FAttackAnimation> AttackAnimations;
 	UPROPERTY(EditAnywhere)
 	FName SocketAttachmentName;
+	UPROPERTY(EditAnywhere)
+	float MinAttackDistance;
 	
 };
 
@@ -69,6 +71,7 @@ public:
 	FORCEINLINE FAttackAnimation GetAttackAnimation() const { return AttackMontages[FMath::RandRange(0, AttackMontages.Num() - 1)]; }
 	FORCEINLINE FName GetSocketName() const { return SocketName; }
 	FORCEINLINE float GetAttackCooldown() const { return AttackCooldownTime; }
+	FORCEINLINE float GetMinAttackDistance() const { return MinAttackDistance; }
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	float MinDamage;
@@ -78,6 +81,8 @@ protected:
 	TArray<FAttackAnimation> AttackMontages;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	float AttackCooldownTime;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
+	float MinAttackDistance;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	TEnumAsByte<EWeaponType> WeaponType;
