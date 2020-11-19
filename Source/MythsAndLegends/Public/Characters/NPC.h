@@ -23,7 +23,6 @@ public:
     ANPC();
 
     virtual void BeginPlay() override; 
-    FORCEINLINE float GetMinAttackDistance() const { return AttackDistance; }
 
     FORCEINLINE AAITargetPoint* GetPatrolPoints() const { return PatrolPoint;}
     FORCEINLINE int32 GetCurrentTargetIndex() const { return CurrentTargetIndex; }
