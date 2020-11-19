@@ -64,11 +64,22 @@ public:
 		}
 	}
 
+	virtual float GetMinAttackDistance() const
+	{
+		if(InventoryComponent)
+		{
+			return Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon())->GetMinAttackDistance();
+		}
+
+		return 120.0f;
+	}
+
 	FORCEINLINE USkillComponent* GetSkillComponent() const { return SkillComponent; }
 	FORCEINLINE UInventoryComponent* GetInventoryComponent() const { return InventoryComponent; }
 
 	FORCEINLINE class UBehaviorTree* GetBT() const { return BehaviorTree; }
 	FORCEINLINE UStaticMeshComponent* GetWeaponMesh() const { return WeaponMesh; }
+
 
 	
 protected:
