@@ -3,6 +3,8 @@
 
 #include "MythsAndLegends/Public/Items/BaseWeapon.h"
 
+#include "Materials/MaterialInstanceConstant.h"
+
 ABaseWeapon::ABaseWeapon()
 {
     static ConstructorHelpers::FObjectFinder<UDataTable> DataTable (TEXT("DataTable'/Game/DataTables/WeaponDataTable.WeaponDataTable'"));
@@ -39,7 +41,7 @@ void ABaseWeapon::SpawnWeapon()
             ItemTier = ItemData->ItemTier;
             ItemMesh->SetStaticMesh(ItemData->ItemMesh);
             MeshOutline->SetStaticMesh(ItemData->ItemMesh);
-            // TODO: Add Outline Material
+            MeshOutline->SetMaterial(0, ItemData->OutlineMaterial);
             // --- WEAPON DETAILS --- //
             MinDamage = WeaponData->MinDamage;
             MaxDamage = WeaponData->MaxDamage;
