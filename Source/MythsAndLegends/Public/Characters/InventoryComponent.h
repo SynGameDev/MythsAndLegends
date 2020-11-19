@@ -36,9 +36,13 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Inventory Initial Settings", meta=(AllowPrivateAccess="true"))
 	int32 CurrentInventorySize;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Hand", meta=(AllowPrivateAccess="true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Spawning|Weapon", meta=(AllowPrivateAccess="true"))
 	bool SpawnWithWeapon;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Hand", meta=(AllowPrivateAccess="true", EditCondition="SpawnWithWeapon"))
+	/* ID of the weapon we want to spawn */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Spawning|Weapon", meta=(AllowPrivateAccess="true", EditCondition="SpawnWithWeapon"))
+	FName WeaponToSpawn;
+
+	// --- IN HAND --- //
 	class ABaseItem* EquippedItem;
 
 	

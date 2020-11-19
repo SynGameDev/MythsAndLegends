@@ -6,7 +6,6 @@
 #include "Characters/BaseCharacter.h"
 #include "Characters/NPC.h"
 #include "MythsAndLegends/Public/Items/BaseItem.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "Controllers/BaseAIController.h"
 #include "UMG/Public/Blueprint/UserWidget.h"
 
@@ -24,14 +23,35 @@ UInventoryComponent::UInventoryComponent()
 
 }
 
+void UInventoryComponent::BeginPlay()
+{
+	Super::BeginPlay();
+	// If we are spawning with a weapon in the world, pickup the weapon and then equip it.
+	if(SpawnWithWeapon)
+	{
+		FActorSpawnParameters const SpawnInfo;
+		if(auto* const SpawnedWeapon = GetWorld()->SpawnActor<ABaseWeapon>(ABaseWeapon::StaticClass(), GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation(), SpawnInfo))
+		{
+			SpawnedWeapon->SpawnWeapon(WeaponToSpawn);
+			PickupItem(Cast<ABaseItem>(SpawnedWeapon));
+			EquipItem(Cast<ABaseItem>(SpawnedWeapon));
+		}
+		
+	}
+}
+
 void UInventoryComponent::PickupItem(ABaseItem* Item)
 {
+	// if inventory is at max cap don't run this function
+	// TODO: Display a message on screen
 	if(CurrentInventorySize >= InventoryMaxSize)
 		return;
 
+	// If the inventory doesn't have this item than increment the inventory
 	if(!InventoryHasItem(Item))
 		CurrentInventorySize++;
 
+	// Add the item to the inventory & attach it to the character
 	Inventory.Add(Item);
 	Item->AttachToActor(GetOwner(), FAttachmentTransformRules::KeepRelativeTransform);
 	// Hide the Item
@@ -95,16 +115,6 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 		}
 	}
 }
-
-void UInventoryComponent::BeginPlay()
-{
-	Super::BeginPlay();
-	if(SpawnWithWeapon && EquippedItem)
-	{
-		EquipItem(EquippedItem);
-	}
-}
-
 
 
 
