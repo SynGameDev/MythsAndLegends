@@ -47,6 +47,8 @@ public:
 	// --- ITEM MESH --- //
 	UPROPERTY(EditAnywhere)
 	class UStaticMesh* ItemMesh;
+	UPROPERTY(EditAnywhere)
+	UMaterialInterface* OutlineMaterial;
 };
 
 
@@ -59,7 +61,7 @@ public:
 	// Sets default values for this actor's properties
 	ABaseItem()
 	{
-		static ConstructorHelpers::FObjectFinder<UDataTable> DataTable (TEXT("DataTable'/Game/DataTables/WeaponDataTable.WeaponDataTable'"));
+		static ConstructorHelpers::FObjectFinder<UDataTable> DataTable (TEXT("DataTable'/Game/DataTables/ItemDataTable.ItemDataTable'"));
 		if(DataTable.Succeeded())
 		{
 			ItemDataTable = DataTable.Object;
@@ -122,8 +124,8 @@ protected:
 	FName SpawnItemID;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Spawn Details", meta=(AllowProtectedAccess="true"))
 	bool SpawnInWorld;
-
 	class UDataTable* ItemDataTable;
+	
 
 	
 	
