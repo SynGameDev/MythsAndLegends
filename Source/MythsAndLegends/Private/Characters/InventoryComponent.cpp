@@ -35,6 +35,9 @@ void UInventoryComponent::BeginPlay()
 			SpawnedWeapon->SpawnWeapon(WeaponToSpawn);
 			PickupItem(Cast<ABaseItem>(SpawnedWeapon));
 			EquipItem(Cast<ABaseItem>(SpawnedWeapon));
+		} else
+		{
+			UE_LOG(LogTemp, Error, TEXT("WEAPON NOT SPAWNED"));
 		}
 		
 	}
@@ -104,6 +107,7 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 			CharOwner->GetWeaponMesh()->AttachToComponent(CharOwner->GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale,
 				Cast<ABaseWeapon>(Item)->GetSocketName());
 
+			
 			if(auto* const NPC = Cast<ANPC>(CharOwner))
 			{
 				if(auto* const NPC_Controller = Cast<ABaseAIController>(CharOwner->GetController()))
@@ -112,6 +116,7 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 						Cast<ABaseWeapon>(Item)->GetAttackCooldown());
 				}
 			}
+			
 		}
 	}
 }

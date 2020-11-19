@@ -33,7 +33,6 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Testing|Attack System")
     bool WillAttackPlayer;
-
     
 private:
     

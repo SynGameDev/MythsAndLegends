@@ -4,11 +4,19 @@
 
 #include "CoreMinimal.h"
 
+
+
+#include "ML_PlayerController.h"
+#include "Controllers/BaseAIController.h"
 #include "GameFramework/Character.h"
 #include "MythsAndLegends/Public/Characters/SkillComponent.h"
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
 #include "MythsAndLegends/Public/Items/BaseWeapon.h"
+#include "BehaviorTree/BlackboardComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "TimerManager.h"
 #include "BaseCharacter.generated.h"
+
 
 UCLASS()
 class MYTHSANDLEGENDS_API ABaseCharacter : public ACharacter
@@ -28,11 +36,30 @@ public:
 
 	virtual void Attack()
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Attacking"));
 		if(InventoryComponent->GetEquippedWeapon())
 		{
 			if(auto* const Weapon = Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon()))
 			{
-				//PlayAnimMontage(Weapon->GetAttackAnimation());
+				FAttackAnimation const AttackAnim = Weapon->GetAttackAnimation();
+				UE_LOG(LogTemp, Warning, TEXT("Time: %f"), AttackAnim.AnimationTime);
+				PlayAnimMontage(AttackAnim.AttackAnimation);
+				if(auto* const NPC_Controller = Cast<ABaseAIController>(GetController()))
+				{
+					NPC_Controller->GetBlackboardComponent()->SetValueAsFloat(NPC_Controller->AttackCooldown, AttackAnim.AnimationTime);
+				} else if(auto* const PlayerController = Cast<AML_PlayerController>(UGameplayStatics::GetPlayerController(this, 0)))
+				{
+					PlayerController->SetAttackCooldown(AttackAnim.AnimationTime);	
+				}
+			}
+		} else
+		{
+			if(auto* const NPC_Controller = Cast<ABaseAIController>(GetController()))
+			{
+				NPC_Controller->GetBlackboardComponent()->SetValueAsFloat(NPC_Controller->AttackCooldown, 2.5f);
+			} else if(auto* const PlayerController = Cast<AML_PlayerController>(UGameplayStatics::GetPlayerController(this, 0)))
+			{
+				PlayerController->SetAttackCooldown(2.0f);
 			}
 		}
 	}
@@ -50,9 +77,6 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Skills", meta=(AllowProtectedAccess="true"))
 	USkillComponent* SkillComponent;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Attack Anim", meta=(AllowProtectedAccess="true"));
-	UAnimMontage* AttackAnim;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon Mesh", meta=(AllowProtectedAccess="true"))
 	UStaticMeshComponent* WeaponMesh;

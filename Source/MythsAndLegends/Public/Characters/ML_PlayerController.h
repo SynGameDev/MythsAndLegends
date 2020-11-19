@@ -25,7 +25,7 @@ public:
 
     void MeleeAttack();
 
-    
+    void SetAttackCooldown(float const Time);
 
 private:
     void SetupTree() const;
@@ -62,6 +62,7 @@ private:
     // --- ATTACK VARIABLES --- //
     bool CanAttack;
     FTimerHandle AttackCooldownTh;
+    
     void ResetCanAttack();
     
 

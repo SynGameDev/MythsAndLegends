@@ -43,8 +43,7 @@ private:
 	FName WeaponToSpawn;
 
 	// --- IN HAND --- //
-	class ABaseItem* EquippedItem;
-
-	
+	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess="true"))
+	class ABaseItem* EquippedItem;	
 		
 };
