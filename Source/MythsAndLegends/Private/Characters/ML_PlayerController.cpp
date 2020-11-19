@@ -231,9 +231,19 @@ bool AML_PlayerController::IsTargetInRange()
 
     // Get the distance between the player & the target object, if we are within range than return true otherwise false
     float const DistanceBetween = FVector::Dist(TargetObject->GetActorLocation(), GetPawn()->GetActorLocation());
-    if(DistanceBetween < MinTargetDistance)
+
+    if(TargetIsEnemy)
     {
-        return true;
+        if(DistanceBetween < Cast<ABaseCharacter>(GetPawn())->GetMinAttackDistance())
+        {
+            return true;
+        }
+    } else
+    {
+        if(DistanceBetween < MinTargetDistance)
+        {
+            return true;
+        }
     }
     
     return false;
