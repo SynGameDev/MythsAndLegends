@@ -36,7 +36,6 @@ EBTNodeResult::Type UAttackEnemy::ExecuteTask(UBehaviorTreeComponent& OwnerComp,
             {
                 NPC->Attack();
                 PawnTarget->GetSkillComponent()->TakeDamage(NPC->GetSkillComponent()->CalculateDamage());
-
                 // If the pawn target is the player than cast the UI to get the UI and enemy the enemy health bar
                 if(auto* const PlayerChar = Cast<APlayerCharacter>(PawnTarget))
                 {
