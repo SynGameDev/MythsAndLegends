@@ -68,6 +68,7 @@ public:
 	{
 		if(InventoryComponent)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon())->GetMinAttackDistance());
 			return Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon())->GetMinAttackDistance();
 		}
 
