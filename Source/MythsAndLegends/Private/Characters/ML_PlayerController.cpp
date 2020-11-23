@@ -237,6 +237,7 @@ bool AML_PlayerController::IsTargetInRange()
     {
         if(DistanceBetween < Cast<ABaseCharacter>(GetPawn())->GetMinAttackDistance())
         {
+            
             return true;
         }
     } else
@@ -253,6 +254,7 @@ bool AML_PlayerController::IsTargetInRange()
 
 void AML_PlayerController::PerformInteractWithTarget()
 {
+    UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, this->GetPawn()->GetActorLocation());
     if(!TargetIsEnemy)
     {
         if(TargetIsPickable)
