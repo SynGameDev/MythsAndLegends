@@ -49,6 +49,7 @@ void ABaseWeapon::SpawnWeapon()
             WeaponType = WeaponData->WeaponType;
             SocketName = WeaponData->SocketAttachmentName;
             AttackMontages = WeaponData->AttackAnimations;
+            MinAttackDistance = WeaponData->MinAttackDistance;
         }
     }
 }
