@@ -43598,6 +43598,7 @@
             </e>
             <e p="BotTargetPoint.cpp" t="Include" />
             <e p="Characters" t="Include">
+              <e p="CharacterAnimInstance.cpp" t="Include" />
               <e p="InventoryComponent.cpp" t="Include" />
               <e p="ML_PlayerController.cpp" t="Include" />
               <e p="NPC.cpp" t="Include" />
@@ -43644,6 +43645,7 @@
             <e p="BotTargetPoint.h" t="Include" />
             <e p="Characters" t="Include">
               <e p="BaseCharacter.h" t="Include" />
+              <e p="CharacterAnimInstance.h" t="Include" />
               <e p="InventoryComponent.h" t="Include" />
               <e p="ML_PlayerController.h" t="Include" />
               <e p="NPC.h" t="Include" />
