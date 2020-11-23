@@ -35,6 +35,7 @@
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Developer/PerforceSourceControl" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Developer/PlasticSourceControl" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Developer/RenderDocPlugin" />
+    <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Developer/RiderLink" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Developer/RiderSourceCodeAccess" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Developer/SubversionSourceControl" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Developer/TraceDataFiltering" />
@@ -144,7 +145,9 @@
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Lumin/MagicLeapScreens" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Lumin/MagicLeapSharedFile" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Lumin/MagicLeapTablet" />
+    <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Marketplace/EditorCustomize" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Marketplace/Restart" />
+    <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Marketplace/UIWS" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Media/AjaMedia" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Media/AndroidCamera" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Media/AndroidMedia" />
@@ -165,6 +168,7 @@
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Media/TimecodeSynchronizer" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Media/WebMMedia" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Media/WmfMedia" />
+    <content url="file://$MODULE_DIR$/../../../Engine/Plugins/MegascansPlugin" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/MeshPainting" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Messaging/MessagingDebugger" />
     <content url="file://$MODULE_DIR$/../../../Engine/Plugins/Messaging/TcpMessaging" />

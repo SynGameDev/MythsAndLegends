@@ -42,6 +42,7 @@ void ABaseWeapon::SpawnWeapon()
             ItemMesh->SetStaticMesh(ItemData->ItemMesh);
             MeshOutline->SetStaticMesh(ItemData->ItemMesh);
             MeshOutline->SetMaterial(0, ItemData->OutlineMaterial);
+            ItemImage = ItemData->ItemIcon;    
             // --- WEAPON DETAILS --- //
             MinDamage = WeaponData->MinDamage;
             MaxDamage = WeaponData->MaxDamage;

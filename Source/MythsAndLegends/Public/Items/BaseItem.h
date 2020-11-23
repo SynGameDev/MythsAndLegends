@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/BoxComponent.h"
+#include "Components/Image.h"
 #include "Engine/DataTable.h"
 #include "BaseItem.generated.h"
 
@@ -43,6 +44,8 @@ public:
 	TEnumAsByte<EItemTier> ItemTier;
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<EItemType> ItemType;
+	UPROPERTY(EditAnywhere)
+	UImage* ItemIcon;
 
 	// --- ITEM MESH --- //
 	UPROPERTY(EditAnywhere)
@@ -118,6 +121,8 @@ protected:
 	FText ItemDescription;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item Details", meta=(AllowProtectedAccess="true"))
 	TEnumAsByte<EItemTier> ItemTier;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item Details", meta=(AllowProtectedAccess="true"))
+	UImage* ItemImage;
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Spawn Details", meta=(AllowProtectedAccess="true"))

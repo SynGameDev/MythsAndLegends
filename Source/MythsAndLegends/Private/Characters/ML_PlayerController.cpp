@@ -9,7 +9,7 @@
 #include "MythsAndLegends/Public/Items/BaseItem.h"
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
 #include "MythsAndLegends/Public/UI/MainHUD.h"
-
+#include "MythsAndLegends/Public/Properties/PropertyManager.h"
 
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BehaviorTreeComponent.h"
@@ -17,6 +17,7 @@
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Components/StaticMeshComponent.h"
+#include "Properties/PropertyManager.h"
 #include "UMG/Public/Blueprint/UserWidget.h"
 
 AML_PlayerController::AML_PlayerController()
@@ -263,6 +264,13 @@ void AML_PlayerController::PerformInteractWithTarget()
                 
                 TargetObject = nullptr;
                 TargetIsPickable = false;
+            }
+        } else if(TargetObject->ActorHasTag("Property"))
+        {
+            UE_LOG(LogTemp, Warning, TEXT("Property"));
+            if(APropertyManager* const Property = Cast<APropertyManager>(TargetObject))
+            {
+               Property->ToggleProperty();
             }
         }
     } else
