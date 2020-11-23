@@ -43610,6 +43610,7 @@
               <e p="PlayerAiController.cpp" t="Include" />
             </e>
             <e p="Items" t="Include">
+              <e p="ArrowProjectile.cpp" t="Include" />
               <e p="BaseItem.cpp" t="Include" />
               <e p="BaseWeapon.cpp" t="Include" />
               <e p="BowAndArrow.cpp" t="Include" />
@@ -43657,6 +43658,7 @@
               <e p="PlayerAiController.h" t="Include" />
             </e>
             <e p="Items" t="Include">
+              <e p="ArrowProjectile.h" t="Include" />
               <e p="BaseItem.h" t="Include" />
               <e p="BaseWeapon.h" t="Include" />
               <e p="BowAndArrow.h" t="Include" />
