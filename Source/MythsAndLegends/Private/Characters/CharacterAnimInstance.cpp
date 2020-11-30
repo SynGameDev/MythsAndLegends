@@ -5,6 +5,7 @@
 #include "MythsAndLegends/Public/Characters/BaseCharacter.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
+#include "Animation/AnimMontage.h"
 #include "MythsAndLegends/Public/Items/BaseWeapon.h"
 
 
@@ -54,6 +55,11 @@ bool UCharacterAnimInstance::CheckIfGrounded() const
     return OwningCharacter->GetCharacterMovement()->IsFalling();
 
     
+}
+
+void UCharacterAnimInstance::PlayMontage(UAnimMontage* const Montage) const
+{
+    PlayMontage(Montage);
 }
 
 void UCharacterAnimInstance::ShootArrow()
