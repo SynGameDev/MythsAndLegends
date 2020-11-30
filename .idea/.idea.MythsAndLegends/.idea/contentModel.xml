@@ -43558,6 +43558,7 @@
         <e p="UE4.vcxproj" t="IncludeRecursive" />
       </e>
       <e p="MythsAndLegends.sln" t="IncludeFlat" />
+      <e p="MythsAndLegends.sln.DotSettings.user" t="Include" />
       <e p="MythsAndLegends.uproject" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Source" t="Include">
@@ -43611,6 +43612,7 @@
             </e>
             <e p="Items" t="Include">
               <e p="ArrowProjectile.cpp" t="Include" />
+              <e p="BaseConsumable.cpp" t="Include" />
               <e p="BaseItem.cpp" t="Include" />
               <e p="BaseWeapon.cpp" t="Include" />
               <e p="BowAndArrow.cpp" t="Include" />
@@ -43659,6 +43661,7 @@
             </e>
             <e p="Items" t="Include">
               <e p="ArrowProjectile.h" t="Include" />
+              <e p="BaseConsumable.h" t="Include" />
               <e p="BaseItem.h" t="Include" />
               <e p="BaseWeapon.h" t="Include" />
               <e p="BowAndArrow.h" t="Include" />
