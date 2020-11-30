@@ -64,3 +64,12 @@ void ABaseConsumable::SpawnWeapon(FName WeaponName, bool Spawn)
 	SpawnItemID = WeaponName;
 	SpawnWeapon();
 }
+
+void ABaseConsumable::BeginPlay()
+{
+	Super::BeginPlay();
+	if(SpawnInWorld)
+	{
+		SpawnWeapon();
+	}
+}

@@ -36,6 +36,7 @@ public:
 	void SpawnWeapon(bool Spawn);
 	void SpawnWeapon(FName WeaponName);
 	void SpawnWeapon(FName WeaponName, bool Spawn);
+	virtual void BeginPlay() override;
 
 private:
 	UPROPERTY(EditAnywhere, Category="General", BlueprintReadOnly, meta=(AllowPrivateAccess="true"))

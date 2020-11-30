@@ -31,11 +31,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +56,10 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -335,7 +332,7 @@
       <workItem from="1606645496814" duration="196000" />
       <workItem from="1606646035728" duration="802000" />
       <workItem from="1606647729090" duration="1780000" />
-      <workItem from="1606713615597" duration="9911000" />
+      <workItem from="1606713615597" duration="10662000" />
     </task>
     <servers />
   </component>
