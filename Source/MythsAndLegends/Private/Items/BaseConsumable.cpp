@@ -2,6 +2,7 @@
 
 
 #include "MythsAndLegends/Public/Items/BaseConsumable.h"
+#include "MythsAndLegends/Public/Characters/SkillComponent.h"
 
 ABaseConsumable::ABaseConsumable()
 {
@@ -35,12 +36,16 @@ void ABaseConsumable::SpawnWeapon()
 			MeshOutline->SetMaterial(0, ItemData->OutlineMaterial);
 			ItemImage = ItemData->ItemIcon;
 			// --- CONSUMABLE DETAILS --- //
+			// General Details
 			ConsumingAnimation = ConsumableData->ConsumingAnimation;
-			
+			ConsumableTypes = ConsumableData->ConsumableTypes;
 			// Health Details
 			IsHealthConsumable = ConsumableData->IsHealthConsumable;
 			HealthIncrement = ConsumableData->HealthIncrement;
 			DefenceIncrement = ConsumableData->DefenceIncrement;
+
+			
+			
 
 		}
 	}
@@ -71,5 +76,33 @@ void ABaseConsumable::BeginPlay()
 	if(SpawnInWorld)
 	{
 		SpawnWeapon();
+	}
+}
+
+void ABaseConsumable::UseItem(USkillComponent* const CharacterSkillComponent)
+{
+	auto const ConsumableTypeLength = ConsumableTypes.Num();
+	for(int i = 0; i < ConsumableTypeLength - 1; i++)
+	{
+		switch(ConsumableTypes[i])
+		{
+			case Health:
+				UseHealthPotion(CharacterSkillComponent);
+				break;
+			default:
+				break;
+		}
+	}
+
+}
+
+void ABaseConsumable::UseHealthPotion(USkillComponent* const CharacterSkillComponent)
+{
+	if(!ConsumableTypes.Contains(Health))
+		return;
+
+	if(CharacterSkillComponent)
+	{
+		CharacterSkillComponent->AddHealth(HealthIncrement);
 	}
 }
