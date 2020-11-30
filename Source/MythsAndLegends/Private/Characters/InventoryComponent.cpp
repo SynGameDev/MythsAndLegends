@@ -8,6 +8,8 @@
 #include "MythsAndLegends/Public/Items/BaseItem.h"
 #include "Controllers/BaseAIController.h"
 #include "UMG/Public/Blueprint/UserWidget.h"
+#include "MythsAndLegends/Public/Items/BaseConsumable.h"
+#include "MythsAndLegends/Public/Characters/SkillComponent.h"
 
 #include "BehaviorTree/BlackboardComponent.h"
 
@@ -100,24 +102,35 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 	// TODO: Check that item is equipable
 	if(Item)
 	{
-		EquippedItem = Item;
-		if(auto* const CharOwner = Cast<ABaseCharacter>(GetOwner()))
+		if(auto* const Weapon = Cast<ABaseWeapon>(Item))
 		{
-			CharOwner->GetWeaponMesh()->SetStaticMesh(Item->GetItemMesh()->GetStaticMesh());
-			CharOwner->GetWeaponMesh()->AttachToComponent(CharOwner->GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale,
-				Cast<ABaseWeapon>(Item)->GetSocketName());
+			EquippedItem = Item;
+			if(auto* const CharOwner = Cast<ABaseCharacter>(GetOwner()))
+			{
+				CharOwner->GetWeaponMesh()->SetStaticMesh(Item->GetItemMesh()->GetStaticMesh());
+				CharOwner->GetWeaponMesh()->AttachToComponent(CharOwner->GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale,
+                    Cast<ABaseWeapon>(Item)->GetSocketName());
 
 			
-			if(auto* const NPC = Cast<ANPC>(CharOwner))
-			{
-				if(auto* const NPC_Controller = Cast<ABaseAIController>(CharOwner->GetController()))
+				if(auto* const NPC = Cast<ANPC>(CharOwner))
 				{
-					NPC_Controller->GetBlackboardComponent()->SetValueAsFloat(NPC_Controller->AttackCooldown,
-						Cast<ABaseWeapon>(Item)->GetAttackCooldown());
+					if(auto* const NPC_Controller = Cast<ABaseAIController>(CharOwner->GetController()))
+					{
+						NPC_Controller->GetBlackboardComponent()->SetValueAsFloat(NPC_Controller->AttackCooldown,
+                            Cast<ABaseWeapon>(Item)->GetAttackCooldown());
+					}
 				}
-			}
 			
+			}
+		} else if(auto* const Consumable = Cast<ABaseConsumable>(Item))
+		{
+			if(auto* const CharOwner = Cast<ABaseCharacter>(GetOwner()))
+			{
+				
+				Consumable->UseItem(CharOwner->GetSkillComponent());
+			}
 		}
+		
 	}
 }
 
