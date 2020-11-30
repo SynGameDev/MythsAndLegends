@@ -26,16 +26,19 @@ EBTNodeResult::Type UIncrementPathIndex::ExecuteTask(UBehaviorTreeComponent& Own
         // Get the NPC Character and make sure that it's valid
         if(auto* const NPC_Char = Cast<ANPC>(NPC_Con->GetPawn()))
         {
-            // If we are at the max index, then set it to zero otherwise increment it
-            if((NPC_Char->GetPatrolPoints()->GetTargetPoints().Num() - 1) == CurrentIndex)
+            if (!NPC_Char->IsCharacterDead())
             {
-                CurrentIndex = 0;
-            } else
-            {
-                CurrentIndex++;
+                // If we are at the max index, then set it to zero otherwise increment it
+                if((NPC_Char->GetPatrolPoints()->GetTargetPoints().Num() - 1) == CurrentIndex)
+                {
+                    CurrentIndex = 0;
+                } else
+                {
+                    CurrentIndex++;
+                }
+                // Set the blackboard
+                NPC_Con->GetBlackboardComponent()->SetValueAsInt(NPC_Con->TargetIndex, CurrentIndex);
             }
-            // Set the blackboard
-            NPC_Con->GetBlackboardComponent()->SetValueAsInt(NPC_Con->TargetIndex, CurrentIndex);
         }
     }
 

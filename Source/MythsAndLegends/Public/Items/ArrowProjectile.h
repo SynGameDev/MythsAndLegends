@@ -12,4 +12,15 @@ class MYTHSANDLEGENDS_API AArrowProjectile : public AActor
 public:
     // Sets default values for this actor's properties
     AArrowProjectile();
+
+    void FireArrow(const FVector& FireDirection);
+
+private:
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
+    class UCapsuleComponent* CapsuleComponent;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
+    class UStaticMeshComponent* ProjectileMesh;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
+    class UProjectileMovementComponent* ProjectileMovementComponent;
+    
 };

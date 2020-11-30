@@ -62,6 +62,8 @@ public:
 	void SpawnWeapon(bool Spawn);
 	void SpawnWeapon(FName WeaponName, bool Spawn);
 	virtual void BeginPlay() override;
+
+	void ShootArrow(const FVector FireDirection);
 	
 	UPROPERTY(EditAnywhere)
 	class UDataTable* WeaponDataTable;
@@ -72,6 +74,8 @@ public:
 	FORCEINLINE FName GetSocketName() const { return SocketName; }
 	FORCEINLINE float GetAttackCooldown() const { return AttackCooldownTime; }
 	FORCEINLINE float GetMinAttackDistance() const { return MinAttackDistance; }
+	FORCEINLINE EWeaponType GetWeaponType() const { return WeaponType; }
+	
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	float MinDamage;
@@ -89,6 +93,11 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Attachment|Socket", meta=(AllowProtectedAccess="true"))
 	FName SocketName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Bow And Arrow", meta=(AllowPrivateAccess="true"))
+	TSubclassOf<class AArrowProjectile> ArrowProjectile;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Bow And Arrow", meta=(AllowPrivateAccess="true"))
+	FVector FirePoint;
 	
 
 	

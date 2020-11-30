@@ -31,12 +31,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MythsAndLegends.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/ArrowProjectile.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/ArrowProjectile.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Death.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Custom_Anim/AnimBP_CharacterAnim.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Sprites/HID/Modern-Warfare-Setup.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Sprites/HID/Speakeasy_v2.0.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Sprites/HID/Sword And Shield Death.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Sprites/HID/VoiceAttackInstaller64__Beta.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/BP_NPC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/BP_NPC.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BB.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BB.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_Player.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_Player.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Propeties/BP_Property_1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/DataTables/WeaponDataTable.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/DataTables/WeaponDataTable.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Map_1.umap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Map_1_BuiltData.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Map_1_sharedassets/Cliff_LayerInfo.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Prototype/Room_1.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_2.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Prototype/Room_2.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_3.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Prototype/Room_3.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mannequin/Animations/AM_ShootArrow.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/AM_ShootArrow.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Meshes/Houses/Property_1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Meshes/Houses/property_open.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AITargetPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AITargetPoint.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/CharacterAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/CharacterAnimInstance.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/ArrowProjectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/ArrowProjectile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/CharacterAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/CharacterAnimInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/ArrowProjectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/ArrowProjectile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,61 +81,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/MythsAndLegends.Build.cs" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/MythsAndLegends.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryItemButton.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/SelectedInventoryItem.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseSword.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryItemButton.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/MainHUD.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/AttackEnemy.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/PlayerCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Levels/BaseLevelScript.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Levels/BaseLevelScript.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/AITargetPoint.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/IncrementPathIndex.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/Test.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/Tst.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/HelloWorld.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/Test.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Task/FindRandomWanderPoint.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Service/ChangeSpeed.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Service/ChangeSpeed.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AITargetPoint.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Properties/PropertyManager.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Properties/PropertyManager.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BowAndArrow.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/CharacterAnimInstance.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/CharacterAnimInstance.cpp" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/ArrowProjectile.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/ArrowProjectile.h" />
-        <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/ArrowProjectile.cpp" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/CharacterAnimInstance.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AITargetPoint.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
   <component name="ProjectLevelVcsManager">
@@ -367,7 +358,13 @@
       <workItem from="1605615862536" duration="6544000" />
       <workItem from="1605674202543" duration="19560000" />
       <workItem from="1606044760038" duration="2472000" />
-      <workItem from="1606106496360" duration="12739000" />
+      <workItem from="1606106496360" duration="16567000" />
+      <workItem from="1606305093309" duration="901000" />
+      <workItem from="1606381378929" duration="3132000" />
+      <workItem from="1606645496814" duration="196000" />
+      <workItem from="1606646035728" duration="802000" />
+      <workItem from="1606647729090" duration="1780000" />
+      <workItem from="1606713615597" duration="2937000" />
     </task>
     <servers />
   </component>
@@ -405,6 +402,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="607" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606645501408">
+      <screen x="0" y="0" width="1855" height="1080" />
+    </state>
+    <state x="607" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1855.1080@0.0.1855.1080" timestamp="1606645501408" />
     <state x="610" y="353" key="LayersDialog" timestamp="1605587099200">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>

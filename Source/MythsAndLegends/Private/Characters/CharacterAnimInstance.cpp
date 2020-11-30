@@ -4,6 +4,9 @@
 #include "MythsAndLegends/Public/Characters/CharacterAnimInstance.h"
 #include "MythsAndLegends/Public/Characters/BaseCharacter.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "MythsAndLegends/Public/Characters/InventoryComponent.h"
+#include "MythsAndLegends/Public/Items/BaseWeapon.h"
+
 
 UCharacterAnimInstance::UCharacterAnimInstance()
 {
@@ -22,6 +25,9 @@ void UCharacterAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
     if(!OwningCharacter)
         OwningCharacter = GetOwningCharacter();
 
+    if(OwningCharacter->IsCharacterDead())
+        return;
+
     Speed = GetCurrentSpeed();
     IsGrounded = CheckIfGrounded();
     
@@ -37,7 +43,7 @@ float UCharacterAnimInstance::GetCurrentSpeed() const
 
 ABaseCharacter* UCharacterAnimInstance::GetOwningCharacter() const
 {
-    return Cast<ABaseCharacter>(GetOwningCharacter());
+    return Cast<ABaseCharacter>(GetOwningActor());
 }
 
 bool UCharacterAnimInstance::CheckIfGrounded() const
@@ -48,4 +54,18 @@ bool UCharacterAnimInstance::CheckIfGrounded() const
     return OwningCharacter->GetCharacterMovement()->IsFalling();
 
     
+}
+
+void UCharacterAnimInstance::ShootArrow()
+{
+    if(!OwningCharacter)
+        return;
+
+    if(auto* const Weapon = Cast<ABaseWeapon>(OwningCharacter->GetInventoryComponent()->GetEquippedWeapon()))
+    {
+        if(Weapon->GetWeaponType() == EWeaponType::RANGED)
+        {
+            Weapon->ShootArrow(OwningCharacter->GetActorForwardVector());
+        }
+    }
 }

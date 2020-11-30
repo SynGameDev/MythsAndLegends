@@ -32,6 +32,8 @@ public:
 		WeaponMesh->SetupAttachment(GetMesh());
 
 		InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("Inventory"));
+
+		IsDead = false;
 	}
 
 	virtual void Attack()
@@ -81,7 +83,8 @@ public:
 	FORCEINLINE class UBehaviorTree* GetBT() const { return BehaviorTree; }
 	FORCEINLINE UStaticMeshComponent* GetWeaponMesh() const { return WeaponMesh; }
 
-
+	FORCEINLINE virtual void PlayerDead() { IsDead = true; }
+	FORCEINLINE bool IsCharacterDead() const { return IsDead; }
 	
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI", meta=(AllowProtectedAccess="true"))
@@ -102,5 +105,8 @@ protected:
 	float RunSpeed;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement", meta=(AllowProtectedAccess="true"))
 	float CrouchSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Character Status", meta=(AllowPrivateAccess="true"))
+	bool IsDead;
 	
 };

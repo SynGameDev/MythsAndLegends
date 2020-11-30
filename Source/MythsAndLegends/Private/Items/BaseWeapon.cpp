@@ -4,7 +4,7 @@
 #include "MythsAndLegends/Public/Items/BaseWeapon.h"
 
 #include "Materials/MaterialInstanceConstant.h"
-
+#include "MythsAndLegends/Public/Items/ArrowProjectile.h"
 ABaseWeapon::ABaseWeapon()
 {
     static ConstructorHelpers::FObjectFinder<UDataTable> DataTable (TEXT("DataTable'/Game/DataTables/WeaponDataTable.WeaponDataTable'"));
@@ -79,5 +79,14 @@ void ABaseWeapon::BeginPlay()
     if(SpawnInWorld)
     {
         SpawnWeapon();
+    }
+}
+
+void ABaseWeapon::ShootArrow(const FVector FireDirection)
+{
+    FActorSpawnParameters SpawnInfo;
+    if(AArrowProjectile* Arrow = GetWorld()->SpawnActor<AArrowProjectile>(ArrowProjectile, FirePoint, GetActorRotation(), SpawnInfo))
+    {
+        Arrow->FireArrow(FireDirection);
     }
 }

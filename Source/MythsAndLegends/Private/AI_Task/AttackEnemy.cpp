@@ -25,27 +25,30 @@ EBTNodeResult::Type UAttackEnemy::ExecuteTask(UBehaviorTreeComponent& OwnerComp,
         // Get the character from the Controller
         ABaseCharacter* const NPC = Cast<ABaseCharacter>(NPC_Controller->GetPawn());
 
-        // Get the target from the blackboard & make sure that it's a BaseCharcter prior to proceeding
-        if(auto* PawnTarget = Cast<ABaseCharacter>(
-            NPC_Controller->GetBlackboardComponent()->GetValueAsObject(NPC_Controller->Target)))
+        if(!NPC->IsCharacterDead())
         {
-            // Get the distance from between the NPC & the target character
-            float Distance = FVector::Dist(NPC_Controller->GetPawn()->GetActorLocation(), PawnTarget->GetActorLocation());
-            // If the the distance is within the target range, make the NPC attack and apply damage to the Target
-            if(Distance < Cast<ANPC>(NPC_Controller->GetPawn())->GetMinAttackDistance())
+            // Get the target from the blackboard & make sure that it's a BaseCharcter prior to proceeding
+            if(auto* PawnTarget = Cast<ABaseCharacter>(
+                NPC_Controller->GetBlackboardComponent()->GetValueAsObject(NPC_Controller->Target)))
             {
-                NPC->Attack();
-                PawnTarget->GetSkillComponent()->TakeDamage(NPC->GetSkillComponent()->CalculateDamage());
-                // If the pawn target is the player than cast the UI to get the UI and enemy the enemy health bar
-                if(auto* const PlayerChar = Cast<APlayerCharacter>(PawnTarget))
+                // Get the distance from between the NPC & the target character
+                float Distance = FVector::Dist(NPC_Controller->GetPawn()->GetActorLocation(), PawnTarget->GetActorLocation());
+                // If the the distance is within the target range, make the NPC attack and apply damage to the Target
+                if(Distance < Cast<ANPC>(NPC_Controller->GetPawn())->GetMinAttackDistance())
                 {
-                    if(auto* const UI = Cast<UMainHUD>(PlayerChar->GetMainUI()))
+                    NPC->Attack();
+                    PawnTarget->GetSkillComponent()->TakeDamage(NPC->GetSkillComponent()->CalculateDamage());
+                    // If the pawn target is the player than cast the UI to get the UI and enemy the enemy health bar
+                    if(auto* const PlayerChar = Cast<APlayerCharacter>(PawnTarget))
                     {
-                        UI->SetEnemyTarget(NPC->GetSkillComponent());
+                        if(auto* const UI = Cast<UMainHUD>(PlayerChar->GetMainUI()))
+                        {
+                            UI->SetEnemyTarget(NPC->GetSkillComponent());
+                        }
                     }
-                }
-            }   
+                }   
             
+            }
         }
     }
     // Return the task completed

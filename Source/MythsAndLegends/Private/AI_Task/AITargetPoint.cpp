@@ -13,6 +13,7 @@ AAITargetPoint::AAITargetPoint()
 
 FVector AAITargetPoint::GetTargetPointPosition(int32 TargetPointIndex)
 {
+	
 	// TODO: Implement Bidirectional trigger
 	// check whether the target index is at the last index, if it is than set it to zero
 	if(TargetPointIndex > TargetPoints.Num())

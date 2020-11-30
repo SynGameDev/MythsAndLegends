@@ -30,6 +30,8 @@ public:
 	// --- BLACKBOARD KEYS --- //
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|General")
 	FName MovementState = "MovementState";
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|General")
+	FName IsCharacterDead = "IsCharacterDead";
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackboard Keys|Targets")
 	FName Target = "Target";
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Blackbaord Keys|Targets")

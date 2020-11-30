@@ -42,6 +42,15 @@ void ANPC::SetMovementState(EMovementState const NewState)
     }
 }
 
+void ANPC::PlayerDead()
+{
+    Super::PlayerDead();
+    if(auto* const Contr = Cast<ABaseAIController>(GetController()))
+    {
+        Contr->GetBlackboardComponent()->SetValueAsBool(Contr->IsCharacterDead, true);
+    }
+}
+
 void ANPC::OnSeePlayer(APawn* Pawn)
 {
     UE_LOG(LogTemp, Warning, TEXT("SEEN PAWN"));

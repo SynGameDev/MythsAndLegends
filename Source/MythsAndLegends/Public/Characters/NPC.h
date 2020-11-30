@@ -32,6 +32,8 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Testing|Attack System")
     bool WillAttackPlayer;
+
+    virtual void PlayerDead() override;
     
 private:
     

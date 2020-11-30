@@ -25,7 +25,7 @@ EBTNodeResult::Type UFindRandomWanderPoint::ExecuteTask(UBehaviorTreeComponent& 
     {
         if(auto* const NPC_Character = Cast<ANPC>(NPC_Controller->GetPawn()))
         {
-            if(LimitedSearch)
+            if(LimitedSearch && !NPC_Character->IsCharacterDead())
             {
                 // Get the Origin point of the NPC & create  a nav location
                 FVector const NPC_OriginPoint = NPC_Character->GetActorLocation();
