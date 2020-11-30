@@ -31,46 +31,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Death.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Custom_Anim/AnimBP_CharacterAnim.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Sprites/HID/Modern-Warfare-Setup.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Sprites/HID/Speakeasy_v2.0.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Sprites/HID/Sword And Shield Death.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Sprites/HID/VoiceAttackInstaller64__Beta.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/BP_NPC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/BP_NPC.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BB.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BB.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_Player.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/Player/BP_Player.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Propeties/BP_Property_1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DataTables/WeaponDataTable.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/DataTables/WeaponDataTable.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Map_1.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Map_1_BuiltData.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Map_1_sharedassets/Cliff_LayerInfo.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Prototype/Room_1.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_2.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Prototype/Room_2.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_3.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Prototype/Room_3.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Mannequin/Animations/AM_ShootArrow.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/AM_ShootArrow.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Meshes/Houses/Property_1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Meshes/Houses/property_open.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AITargetPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AITargetPoint.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/AttackEnemy.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/CharacterAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/CharacterAnimInstance.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/ArrowProjectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/ArrowProjectile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/CharacterAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/CharacterAnimInstance.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Controllers/BaseAIController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/ArrowProjectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/ArrowProjectile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +59,8 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -364,7 +333,7 @@
       <workItem from="1606645496814" duration="196000" />
       <workItem from="1606646035728" duration="802000" />
       <workItem from="1606647729090" duration="1780000" />
-      <workItem from="1606713615597" duration="2937000" />
+      <workItem from="1606713615597" duration="5247000" />
     </task>
     <servers />
   </component>

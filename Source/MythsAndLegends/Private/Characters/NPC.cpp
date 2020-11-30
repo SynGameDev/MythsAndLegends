@@ -48,6 +48,7 @@ void ANPC::PlayerDead()
     if(auto* const Contr = Cast<ABaseAIController>(GetController()))
     {
         Contr->GetBlackboardComponent()->SetValueAsBool(Contr->IsCharacterDead, true);
+        UE_LOG(LogTemp, Warning, TEXT("Set blackboard Value"));
     }
 }
 

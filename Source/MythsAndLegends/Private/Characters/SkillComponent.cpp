@@ -22,6 +22,7 @@ void USkillComponent::TakeDamage(float Damage)
             if(auto* const AnimRef = Cast<UCharacterAnimInstance>(OwningCharacter->GetMesh()->GetAnimInstance()))
             {
                 AnimRef->SetWeaponInstance(EEquippedWeaponInstance::Dead);
+                OwningCharacter->PlayerDead();
             }
         }
     }
@@ -31,13 +32,14 @@ void USkillComponent::TakeDamage(float Damage)
 
 float USkillComponent::CalculateDamage()
 {
-    // ** THIS WILL BE REPLACED ONCE THEIR IS AN EQUIPPED WEAPON
 
     if(auto* const Character = Cast<ABaseCharacter>(GetOwner()))
     {
+        // Set the default values
         float MinDmg = 7;
         float MaxDmg = 13;
 
+        // Get the weapon and make sure it's valid, if it is than update the values based on the weapons
         if(auto* const Weapon = Cast<ABaseWeapon>(Character->GetInventoryComponent()->GetEquippedWeapon()))
         {
             MinDmg = Weapon->GetMinDamage();
@@ -63,8 +65,7 @@ float USkillComponent::CalculateDamage()
         // Return the damage to apply
         return DamageToApply;
     }
-    
-    
-    
+
+    return 3.0f;
     
 }

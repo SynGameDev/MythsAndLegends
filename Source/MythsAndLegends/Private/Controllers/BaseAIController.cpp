@@ -7,6 +7,7 @@
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BehaviorTreeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Characters/NPC.h"
 
 ABaseAIController::ABaseAIController()
 {
@@ -39,9 +40,16 @@ void ABaseAIController::OnPossess(APawn* InPawn)
 
 void ABaseAIController::SetOnSeenTarget(APawn* SeenPawn)
 {
-    if(BB_Component)
+    if(auto* const NPC = Cast<ANPC>(GetPawn()))
     {
-        TargetObject = Cast<ABaseCharacter>(SeenPawn);
-        BB_Component->SetValueAsObject(Target, SeenPawn);
+        if(NPC->IsCharacterDead())
+            return;
+        
+        if(BB_Component)
+        {
+            TargetObject = Cast<ABaseCharacter>(SeenPawn);
+            BB_Component->SetValueAsObject(Target, SeenPawn);
+        }
     }
+    
 }

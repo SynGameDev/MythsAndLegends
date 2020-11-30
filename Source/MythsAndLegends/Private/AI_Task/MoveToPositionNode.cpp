@@ -23,20 +23,23 @@ EBTNodeResult::Type UMoveToPositionNode::ExecuteTask(UBehaviorTreeComponent& Own
 
       if(auto* const NPC_Char = Cast<ANPC>(NPC_Con->GetPawn()))
       {
-         if(auto* const PatrolPath = NPC_Char->GetPatrolPoints())
+         if (NPC_Char->IsCharacterDead())
          {
+            if(auto* const PatrolPath = NPC_Char->GetPatrolPoints())
+            {
 
-            // Get the current target index
-            int32 const TargetIndex = NPC_Con->GetBlackboardComponent()->GetValueAsInt(NPC_Con->TargetIndex);
-            // Get the location of that target point & Convert it to world space
+               // Get the current target index
+               int32 const TargetIndex = NPC_Con->GetBlackboardComponent()->GetValueAsInt(NPC_Con->TargetIndex);
+               // Get the location of that target point & Convert it to world space
             
-            FVector const TargetLocation = PatrolPath->GetTargetPointPosition(TargetIndex);
-            FVector const WorldTargetLocation = PatrolPath->GetActorLocation() + TargetLocation;
+               FVector const TargetLocation = PatrolPath->GetTargetPointPosition(TargetIndex);
+               FVector const WorldTargetLocation = PatrolPath->GetActorLocation() + TargetLocation;
 
          
-            //UE_LOG(LogTemp, Warning, TEXT("Location: %s"), *TargetLocation.ToString());
+               //UE_LOG(LogTemp, Warning, TEXT("Location: %s"), *TargetLocation.ToString());
 
-            NPC_Con->GetBlackboardComponent()->SetValueAsVector(NPC_Con->TargetIndex, WorldTargetLocation);  
+               NPC_Con->GetBlackboardComponent()->SetValueAsVector(NPC_Con->TargetIndex, WorldTargetLocation);  
+            }
          }
       }
    }
