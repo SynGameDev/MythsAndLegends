@@ -69,3 +69,17 @@ float USkillComponent::CalculateDamage()
     return 3.0f;
     
 }
+
+bool USkillComponent::AddHealth(float const HealthAmount)
+{
+    // Check if we are already at max health, if we are than don't use the potion
+    if(CurrentHealth == MaxHealth - 5)
+        return false;
+
+    // Otherwise, add the health amount, if it goes over the max than reset it
+    CurrentHealth += HealthAmount;
+    if(CurrentHealth > MaxHealth)
+        CurrentHealth = MaxHealth;
+    
+    return true;
+}
