@@ -29,6 +29,8 @@ public:
 	FORCEINLINE float GetCharisma() const { return Charisma; }
 	FORCEINLINE float GetIntelligence() const { return Intelligence; }
 
+	FORCEINLINE bool AddHealth(float const HealthAmount);
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Skills|Basic Details|Base Details", meta=(AllowPrivateAccess="true"))
 	FName CharacterName;
