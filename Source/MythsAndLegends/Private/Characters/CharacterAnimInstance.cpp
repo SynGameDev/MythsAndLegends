@@ -57,11 +57,6 @@ bool UCharacterAnimInstance::CheckIfGrounded() const
     
 }
 
-void UCharacterAnimInstance::PlayMontage(UAnimMontage* const Montage) const
-{
-    PlayMontage(Montage);
-}
-
 void UCharacterAnimInstance::ShootArrow()
 {
     if(!OwningCharacter)
