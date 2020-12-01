@@ -13,7 +13,7 @@ enum EConsumableType
 	Health,
 	Mana,
 	Defence,
-	Attack,
+	Strength,
 	Stamina
 };
 
