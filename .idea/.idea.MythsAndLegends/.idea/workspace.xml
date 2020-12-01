@@ -31,12 +31,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/CharacterAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/CharacterAnimInstance.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/CharacterAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/CharacterAnimInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" afterDir="false" />
     </list>
@@ -64,11 +61,12 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/CharacterAnimInstance.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/CharacterAnimInstance.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -341,7 +339,7 @@
       <workItem from="1606645496814" duration="196000" />
       <workItem from="1606646035728" duration="802000" />
       <workItem from="1606647729090" duration="1780000" />
-      <workItem from="1606713615597" duration="15646000" />
+      <workItem from="1606713615597" duration="17014000" />
     </task>
     <servers />
   </component>
