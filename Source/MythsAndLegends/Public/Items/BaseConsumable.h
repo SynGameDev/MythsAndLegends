@@ -7,6 +7,16 @@
 #include "Engine/DataTable.h"
 #include "BaseConsumable.generated.h"
 
+UENUM(BlueprintType)
+enum EConsumableType
+{
+	Health,
+	Mana,
+	Defence,
+	Attack,
+	Stamina
+};
+
 USTRUCT(BlueprintType)
 struct FConsumableDataTable : public FTableRowBase
 {
@@ -16,7 +26,9 @@ public:
 	class UAnimMontage* ConsumingAnimation;
 	UPROPERTY(EditAnywhere)
 	bool IsHealthConsumable;
-
+	UPROPERTY(EditAnywhere)
+	TArray<TEnumAsByte<EConsumableType>> ConsumableTypes;
+	
 	UPROPERTY(EditAnywhere, Category="Health Boost", meta=(EditCondition="IsHealthConsumable"))
 	float HealthIncrement;
 	UPROPERTY(EditAnywhere, Category="Health Boost", meta=(EditCondition="IsHealthConsumable"))
@@ -38,11 +50,22 @@ public:
 	void SpawnWeapon(FName WeaponName, bool Spawn);
 	virtual void BeginPlay() override;
 
+	
+
+	void UseItem(class USkillComponent* const CharacterSkillComponent);
+	void UseHealthPotion(class USkillComponent* const CharacterSkillComponent);
+
+	FORCEINLINE class UAnimMontage* GetAnimMontage() const { return ConsumingAnimation; }
+
+	
+
 private:
 	UPROPERTY(EditAnywhere, Category="General", BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
 	class UAnimMontage* ConsumingAnimation;
 	UPROPERTY(EditAnywhere, Category="General", BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
 	bool IsHealthConsumable;
+	UPROPERTY(EditAnywhere, Category="General", BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
+	TArray<TEnumAsByte<EConsumableType>> ConsumableTypes;
 
 	UPROPERTY(EditAnywhere, Category="Health Boost", BlueprintReadOnly, meta=(EditCondition="IsHealthConsumable", AllowPrivateAccess="true"))
 	float HealthIncrement;
