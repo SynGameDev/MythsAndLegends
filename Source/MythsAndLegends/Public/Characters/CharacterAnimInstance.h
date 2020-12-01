@@ -31,6 +31,8 @@ public:
     class ABaseCharacter* GetOwningCharacter() const;
     bool CheckIfGrounded() const;
 
+    void PlayMontage(class UAnimMontage* const Montage) const;
+
     
 
     FORCEINLINE void SetWeaponInstance(EEquippedWeaponInstance const NewInst) { WeaponInstance = NewInst; }
