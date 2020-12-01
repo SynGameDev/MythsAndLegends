@@ -10,6 +10,7 @@
 #include "UMG/Public/Blueprint/UserWidget.h"
 #include "MythsAndLegends/Public/Items/BaseConsumable.h"
 #include "MythsAndLegends/Public/Characters/SkillComponent.h"
+#include "Animation/AnimMontage.h"
 
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Characters/CharacterAnimInstance.h"
@@ -144,9 +145,7 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 		{
 			if(auto* const CharOwner = Cast<ABaseCharacter>(GetOwner()))
 			{
-				// Get the anim instance & make sure it is valid, than play the anim montage
-				if(auto* const AnimRef = Cast<UCharacterAnimInstance>(CharOwner->GetMesh()->GetAnimInstance()))
-					AnimRef->PlayMontage(Cast<ABaseConsumable>(Item)->GetAnimMontage());
+				CharOwner->PlayAnimMontage(Consumable->GetAnimMontage());
 
 				// Use the consumable
 				Consumable->UseItem(CharOwner->GetSkillComponent());
