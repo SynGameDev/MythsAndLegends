@@ -12,6 +12,7 @@
 #include "MythsAndLegends/Public/Characters/SkillComponent.h"
 
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Characters/CharacterAnimInstance.h"
 
 // Sets default values for this component's properties
 UInventoryComponent::UInventoryComponent()
@@ -23,6 +24,18 @@ UInventoryComponent::UInventoryComponent()
 	CurrentInventorySize = 0;
 	InventoryMaxSize = 30;
 
+}
+
+void UInventoryComponent::DestroyItem(ABaseItem* Item)
+{
+	// Make sure that the item is valid before running the code
+	if(!Item || !InventoryHasItem(Item))
+		return;
+
+	// Reduce the inventory size, remove the item from the inventory & destroy the item.
+	CurrentInventorySize--;
+	Inventory.Remove(Item);
+	Item->Destroy();
 }
 
 void UInventoryComponent::BeginPlay()
@@ -37,11 +50,7 @@ void UInventoryComponent::BeginPlay()
 			SpawnedWeapon->SpawnWeapon(WeaponToSpawn);
 			PickupItem(Cast<ABaseItem>(SpawnedWeapon));
 			EquipItem(Cast<ABaseItem>(SpawnedWeapon));
-		} else
-		{
-			UE_LOG(LogTemp, Error, TEXT("WEAPON NOT SPAWNED"));
 		}
-		
 	}
 }
 
@@ -70,13 +79,15 @@ void UInventoryComponent::DropItem(ABaseItem* Item)
 	// TODO: Count item
 	if(InventoryHasItem(Item))
 	{
+		// Remove the item from the inventory
 		CurrentInventorySize--;
 		Inventory.Remove(Item);
-
+		// Create a new position for the item when dropped
 		float const NewX = GetOwner()->GetActorLocation().X + FMath::RandRange(-15.0f, +15.0f);
 		float const NewY = GetOwner()->GetActorLocation().Y + FMath::RandRange(-15.0f, +15.0f);
 		// TODO: Get Ground location
 
+		// Setup the item & display in world
 		Item->SetActorLocation(FVector(NewX, NewY, GetOwner()->GetActorLocation().Z));
 		Item->SetActorEnableCollision(true);
 		Item->SetActorTickEnabled(true);
@@ -85,8 +96,11 @@ void UInventoryComponent::DropItem(ABaseItem* Item)
 	}
 }
 
+
+
 bool UInventoryComponent::InventoryHasItem(ABaseItem* Item) const
 {
+	// Loop though the inventory, if the item is found than return true otherwise false
 	for (auto* Element : Inventory)
 	{
 		if(Element == Item)
@@ -99,19 +113,23 @@ bool UInventoryComponent::InventoryHasItem(ABaseItem* Item) const
 
 void UInventoryComponent::EquipItem(ABaseItem* const Item)
 {
-	// TODO: Check that item is equipable
+	// Make sure that the item is valid
 	if(Item)
 	{
+		// Cast the item to check if it's a weapon
 		if(auto* const Weapon = Cast<ABaseWeapon>(Item))
 		{
+			// Equip the item
 			EquippedItem = Item;
+			// Get the base character & make sure it's valid
 			if(auto* const CharOwner = Cast<ABaseCharacter>(GetOwner()))
 			{
+				// Set the weapon mesh & set the attachment
 				CharOwner->GetWeaponMesh()->SetStaticMesh(Item->GetItemMesh()->GetStaticMesh());
 				CharOwner->GetWeaponMesh()->AttachToComponent(CharOwner->GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale,
                     Cast<ABaseWeapon>(Item)->GetSocketName());
 
-			
+				// Check if the owner character is a NPC if it is than set the attack cooldown
 				if(auto* const NPC = Cast<ANPC>(CharOwner))
 				{
 					if(auto* const NPC_Controller = Cast<ABaseAIController>(CharOwner->GetController()))
@@ -126,8 +144,14 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 		{
 			if(auto* const CharOwner = Cast<ABaseCharacter>(GetOwner()))
 			{
-				
+				// Get the anim instance & make sure it is valid, than play the anim montage
+				if(auto* const AnimRef = Cast<UCharacterAnimInstance>(CharOwner->GetMesh()->GetAnimInstance()))
+					AnimRef->PlayMontage(Cast<ABaseConsumable>(Item)->GetAnimMontage());
+
+				// Use the consumable
 				Consumable->UseItem(CharOwner->GetSkillComponent());
+				// Destroy the consumable
+				DestroyItem(Item);
 			}
 		}
 		

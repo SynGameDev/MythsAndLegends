@@ -25,6 +25,8 @@ public:
 	FORCEINLINE TArray<class ABaseItem*> GetInventoryItems() const { return Inventory; }
 	FORCEINLINE class ABaseItem* GetEquippedWeapon() const { UE_LOG(LogTemp, Warning, TEXT("GettingWeapon")); return EquippedItem; }
 
+	void DestroyItem(class ABaseItem* Item);
+
 	virtual void BeginPlay() override;
 
 private:
