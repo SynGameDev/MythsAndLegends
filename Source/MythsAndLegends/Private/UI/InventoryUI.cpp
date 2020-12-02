@@ -78,3 +78,8 @@ void UInventoryUI::CloseAllUI()
     CurrentSelectedItem = nullptr;
     
 }
+
+void UInventoryUI::NativeConstruct()
+{
+    GetInventoryItems();
+}

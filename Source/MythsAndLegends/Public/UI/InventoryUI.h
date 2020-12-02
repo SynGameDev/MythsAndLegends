@@ -26,6 +26,8 @@ public:
     FORCEINLINE UWidget* GetSelectedItemWidget() const { return SelectedItemUI; }
     FORCEINLINE class ABaseItem* GetSelectedItem() const { return CurrentSelectedItem; }
 
+	virtual void NativeConstruct() override;
+
 private:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI Widgets", meta=(AllowPrivateAccess="true"))
     class UWrapBox* SizeBoxList;
@@ -34,15 +36,19 @@ private:
     TSubclassOf<UUserWidget> SelectedItemUI_Class;
     UWidget* SelectedItemUI;
     bool IsInView = false;
-    
-
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI Widgets", meta=(AllowPrivateAccess="true"))
     TSubclassOf<UUserWidget> ItemButtonClass;
     UWidget* ItemButton;
-
     TArray<UWidget*> ItemButtonsInInventory;
-
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI Instanced", meta=(AllowPrivateAccess="true"))
     class ABaseItem* CurrentSelectedItem;
+
+protected:
+	UPROPERTY(meta=(BindWidget))
+	class UImage* BackgroundImage;
+	UPROPERTY(meta=(BindWidget))
+	class UTextBlock* Title;
+	UPROPERTY(meta=(BindWidget))
+	class UWrapBox* InventoryContent;
     
 };
