@@ -41,7 +41,7 @@ public:
 	FName ItemName;
 	// Name of the item that will be displayed in the UI
 	UPROPERTY(EditAnywhere)
-	FText ItemUIName;
+	FString ItemUIName;
 	UPROPERTY(EditAnywhere)
 	FText ItemDescription;
 	UPROPERTY(EditAnywhere)
@@ -123,7 +123,7 @@ protected:
 	TSubclassOf<UUserWidget> GodItemWidget;
 
 	// UI Data
-	FText ItemUIName;
+	FString ItemUIName;
 	
 	UWidgetComponent* ItemWidget;
 
