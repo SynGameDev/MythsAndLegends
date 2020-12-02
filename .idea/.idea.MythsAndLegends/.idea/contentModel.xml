@@ -43626,13 +43626,10 @@
             <e p="UI" t="Include">
               <e p="InventoryItemButton.cpp" t="Include" />
               <e p="InventoryUI.cpp" t="Include" />
+              <e p="ItemUIClass.cpp" t="Include" />
               <e p="MainHUD.cpp" t="Include" />
               <e p="SelectedInventoryItem.cpp" t="Include" />
             </e>
-          </e>
-          <e p="Property" t="Include">
-            <e p="PropertyBase.cpp" t="Include" />
-            <e p="PropertyBase.h" t="Include" />
           </e>
           <e p="Public" t="Include">
             <e p="AI_Service" t="Include">
@@ -43675,6 +43672,7 @@
             <e p="UI" t="Include">
               <e p="InventoryItemButton.h" t="Include" />
               <e p="InventoryUI.h" t="Include" />
+              <e p="ItemUIClass.h" t="Include" />
               <e p="MainHUD.h" t="Include" />
               <e p="SelectedInventoryItem.h" t="Include" />
             </e>
