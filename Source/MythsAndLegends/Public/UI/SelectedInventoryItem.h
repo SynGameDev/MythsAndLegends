@@ -29,5 +29,25 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void DropItem();
+
+protected:
+	UPROPERTY(meta=(BindWidget))
+	class UImage* BackgroundImage;
+	UPROPERTY(meta=(BindWidget))
+	class UImage* ItemIcon;
+	UPROPERTY(meta=(BindWidget))
+	class UTextBlock* ItemNameBlock;
+	UPROPERTY(meta=(BindWidget))
+	class UTextBlock* ItemDescription;
+	UPROPERTY(meta=(BindWidget))
+	class UHorizontalBox* ButtonContainer;
+	UPROPERTY(meta=(BindWidget))
+	class UButton* ActionButton;
+	UPROPERTY(meta=(BindWidget))
+	class Ubutton* DropButton;
+	UPROPERTY(meta=(BindWidget))
+	class UButton* QuickSlotButton;
+	UPROPERTY(meta=(BindWidget))
+	class UTextBlock* ActionText;
 	
 };
