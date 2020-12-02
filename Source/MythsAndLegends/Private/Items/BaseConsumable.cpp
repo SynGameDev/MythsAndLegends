@@ -82,7 +82,7 @@ void ABaseConsumable::BeginPlay()
 void ABaseConsumable::UseItem(USkillComponent* const CharacterSkillComponent)
 {
 	auto const ConsumableTypeLength = ConsumableTypes.Num();
-	for(int i = 0; i < ConsumableTypeLength - 1; i++)
+	for(int i = 0; i < ConsumableTypeLength; i++)
 	{
 		switch(ConsumableTypes[i])
 		{
