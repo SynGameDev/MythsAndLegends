@@ -80,6 +80,8 @@ void ABaseWeapon::BeginPlay()
     {
         SpawnWeapon();
     }
+
+    SetupCommonDetails();
 }
 
 void ABaseWeapon::ShootArrow(const FVector FireDirection)

@@ -77,6 +77,8 @@ void ABaseConsumable::BeginPlay()
 	{
 		SpawnWeapon();
 	}
+
+	SetupCommonDetails();
 }
 
 void ABaseConsumable::UseItem(USkillComponent* const CharacterSkillComponent)
