@@ -43622,6 +43622,8 @@
             </e>
             <e p="Properties" t="Include">
               <e p="PropertyManager.cpp" t="Include" />
+              <e p="PropertyUIWidget.cpp" t="Include" />
+              <e p="UI_PropertyItemWidget.cpp" t="Include" />
             </e>
             <e p="UI" t="Include">
               <e p="InventoryItemButton.cpp" t="Include" />
@@ -43668,6 +43670,8 @@
             </e>
             <e p="Properties" t="Include">
               <e p="PropertyManager.h" t="Include" />
+              <e p="PropertyUIWidget.h" t="Include" />
+              <e p="UI_PropertyItemWidget.h" t="Include" />
             </e>
             <e p="UI" t="Include">
               <e p="InventoryItemButton.h" t="Include" />
