@@ -7,6 +7,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/BoxComponent.h"
 #include "Components/Image.h"
+#include "Components/WidgetComponent.h"
 #include "Engine/DataTable.h"
 #include "BaseItem.generated.h"
 
@@ -38,6 +39,9 @@ public:
 	FString ItemID;
 	UPROPERTY(EditAnywhere)
 	FName ItemName;
+	// Name of the item that will be displayed in the UI
+	UPROPERTY(EditAnywhere)
+	FText ItemUIName;
 	UPROPERTY(EditAnywhere)
 	FText ItemDescription;
 	UPROPERTY(EditAnywhere)
@@ -46,6 +50,8 @@ public:
 	TEnumAsByte<EItemType> ItemType;
 	UPROPERTY(EditAnywhere)
 	UImage* ItemIcon;
+
+
 
 	// --- ITEM MESH --- //
 	UPROPERTY(EditAnywhere)
@@ -62,46 +68,16 @@ class MYTHSANDLEGENDS_API ABaseItem : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
-	ABaseItem()
-	{
-		static ConstructorHelpers::FObjectFinder<UDataTable> DataTable (TEXT("DataTable'/Game/DataTables/ItemDataTable.ItemDataTable'"));
-		if(DataTable.Succeeded())
-		{
-			ItemDataTable = DataTable.Object;
-		}
-		
-		// Create the objects
-		Collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Collider"));
-		ItemMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ItemMesh"));
-		MeshOutline = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Outline Mesh"));
-
-		// Set the collider to be root component
-		RootComponent = Collider;
-		ItemMesh->SetupAttachment(RootComponent);
-		MeshOutline->SetupAttachment(ItemMesh);
-
-		MeshOutline->SetVisibility(false);
-		IsBeingHovered = false;
-		
-		// Add tags to this item
-		Tags.Add(FName("Item"));
-		Tags.Add(FName("Outline"));
-		Tags.Add(FName("Pickable"));
-
-		
-	}
+	ABaseItem();
 
 	// Displaying Outline
 	bool IsBeingHovered;
-	void ShowOutline()
-	{
-		MeshOutline->SetVisibility(true);
-	}
+	void ShowOutline();
 
-	void HideOutline()
-	{
-		MeshOutline->SetVisibility(false);
-	}
+	void HideOutline();
+
+	
+	
 
 
 	
@@ -109,6 +85,11 @@ public:
 	FORCEINLINE FName GetItemName() const { return ItemName; }
 	FORCEINLINE FText GetItemDesc() const { return ItemDescription; }
 protected:
+
+
+	virtual void BeginPlay() override;
+    void SetupCommonDetails();
+    	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
 	UStaticMeshComponent* ItemMesh;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
@@ -131,7 +112,20 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Spawn Details", meta=(AllowProtectedAccess="true"))
 	bool SpawnInWorld;
 	class UDataTable* ItemDataTable;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI Containers", meta=(AllowPrivateAccess="true"))
+	TSubclassOf<UUserWidget> CommonItemWidget;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI Containers", meta=(AllowPrivateAccess="true"))
+	TSubclassOf<UUserWidget> UncommonItemWidget;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI Containers", meta=(AllowPrivateAccess="true"))
+	TSubclassOf<UUserWidget> RareItemWidget;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI Containers", meta=(AllowPrivateAccess="true"))
+	TSubclassOf<UUserWidget> GodItemWidget;
+
+	// UI Data
+	FText ItemUIName;
 	
+	UWidgetComponent* ItemWidget;
 
 	
 	
