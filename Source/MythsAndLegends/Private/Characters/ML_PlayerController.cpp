@@ -138,6 +138,13 @@ void AML_PlayerController::MoveToDestination()
                 {
                     TargetIsEnemy = false;
                     TargetIsPickable = true;
+                } else if(HitActor->ActorHasTag("Property"))
+                {
+                    // Toggle the property
+                    Cast<APropertyManager>(HitActor)->ToggleProperty();
+                    // Move to the position of the house
+                    MoveToPosition(Cast<APropertyManager>(HitActor)->GetEntryPosition());
+                    return;
                 }
                 MoveToTarget(HitResult.Location);
             }
@@ -242,6 +249,7 @@ bool AML_PlayerController::IsTargetInRange()
         }
     } else
     {
+        
         if(DistanceBetween < MinTargetDistance)
         {
             return true;
@@ -272,7 +280,7 @@ void AML_PlayerController::PerformInteractWithTarget()
             UE_LOG(LogTemp, Warning, TEXT("Property"));
             if(APropertyManager* const Property = Cast<APropertyManager>(TargetObject))
             {
-               Property->ToggleProperty();
+            
             }
         }
     } else
