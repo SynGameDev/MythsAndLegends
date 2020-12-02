@@ -37,17 +37,20 @@ ABaseItem::ABaseItem()
 	ItemWidget->SetWidgetSpace(EWidgetSpace::Screen);
 	ItemWidget->SetDrawAtDesiredSize(true);
 	ItemWidget->SetRelativeLocation(FVector(100.0f, 100.0f, 100.0f));
+	ItemWidget->SetVisibility(false);
 
 }
 
 void ABaseItem::ShowOutline()
 {
 	MeshOutline->SetVisibility(true);
+	ItemWidget->SetVisibility(true);
 }
 
 void ABaseItem::HideOutline()
 {
 	MeshOutline->SetVisibility(false);
+	ItemWidget->SetVisibility(false);
 }
 
 void ABaseItem::BeginPlay()
@@ -71,9 +74,6 @@ void ABaseItem::BeginPlay()
 			UE_LOG(LogTemp, Error, TEXT("INVALID ITEM"));
 			break;
 	}
-
-	SetupCommonDetails();
-	
 }
 
 void ABaseItem::SetupCommonDetails()
@@ -83,7 +83,7 @@ void ABaseItem::SetupCommonDetails()
 
 	if(auto* const Widget = Cast<UItemUIClass>(ItemWidget->GetUserWidgetObject()))
 	{
-		Widget->SetupBasicDetails(this, ItemUIName, ItemDescription);
+		Widget->SetupBasicDetails(this, ItemName, ItemDescription);
 	}
 	
 }
