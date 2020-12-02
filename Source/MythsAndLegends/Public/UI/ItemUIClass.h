@@ -14,7 +14,7 @@ class MYTHSANDLEGENDS_API UItemUIClass : public UUserWidget
 {
 	GENERATED_BODY()
 public:
-	void SetupBasicDetails(class ABaseItem* Owner, FText l_ItemName, FText l_ItemDescription);
+	void SetupBasicDetails(class ABaseItem* Owner, const FName& l_ItemName, const FText& l_ItemDescription);
 	
 protected:
 	class ABaseItem* ItemOwner;
