@@ -15,15 +15,39 @@ class MYTHSANDLEGENDS_API UInventoryItemButton : public UUserWidget
 	GENERATED_BODY()
 public:
     
-    FORCEINLINE void Setup(class ABaseItem* lItem, FName lItemName) { Item = lItem; ItemName = lItemName; UE_LOG(LogTemp, Warning, TEXT("%s"), *FString(lItemName.ToString())); }
+    FORCEINLINE void Setup(class ABaseItem* lItem, FName lItemName) { Item = lItem; ItemName = lItemName; }
     FName GetItemName() const { return ItemName; }
 
     UFUNCTION(BlueprintCallable)
     void ViewItem();
+
+	virtual void NativeOnInitialized() override;
+	
     
 private:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item", meta=(AllowPrivateAccess="true"))
     class ABaseItem* Item;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item", meta=(AllowPrivateAccess="true"))
     FName ItemName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item", meta=(AllowPrivateAccess="true"))
+	bool IsQuickSlot = false;
+
+protected:
+	// General Details
+	UPROPERTY(meta=(BindWidget))
+	class UImage* SlotImage;
+	UPROPERTY(meta=(BindWidget))
+	class UButton* ItemButton;
+	UPROPERTY(meta=(BindWidget))
+	class UImage* ItemIcon;
+
+	// Item Count
+	UPROPERTY(meta=(bindWidget))
+	class UImage* CountBackground;
+	UPROPERTY(meta=(BindWidget))
+	class UTextBlock* ItemNum;
+
+	
+	
 };

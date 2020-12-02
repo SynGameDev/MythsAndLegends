@@ -24,3 +24,9 @@ void UInventoryItemButton::ViewItem()
         }
     } 
 }
+
+void UInventoryItemButton::NativeOnInitialized()
+{
+    Super::NativeOnInitialized();
+    
+}
