@@ -33,7 +33,7 @@ void UInventoryUI::GetInventoryItems()
                     if(NewItem)
                     {
                         ItemButtonsInInventory.Add(NewItem);
-                        SizeBoxList->AddChild(NewItem);
+                        InventoryContent->AddChild(NewItem);
                         Cast<UInventoryItemButton>(NewItem)->Setup(item, item->GetItemName());
                     }
                 }
