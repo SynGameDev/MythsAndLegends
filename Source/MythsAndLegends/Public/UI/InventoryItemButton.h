@@ -22,7 +22,7 @@ public:
     void ViewItem();
 
 	virtual void NativeOnInitialized() override;
-	
+	virtual void NativeConstruct() override;
     
 private:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item", meta=(AllowPrivateAccess="true"))
@@ -43,7 +43,7 @@ protected:
 	class UImage* ItemIcon;
 
 	// Item Count
-	UPROPERTY(meta=(bindWidget))
+	UPROPERTY(meta=(BindWidget))
 	class UImage* CountBackground;
 	UPROPERTY(meta=(BindWidget))
 	class UTextBlock* ItemNum;

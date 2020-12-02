@@ -6,6 +6,7 @@
 #include "MythsAndLegends/Public/UI/InventoryUI.h"
 #include "MythsAndLegends/Public/UI/MainHUD.h"
 #include "MythsAndLegends/Public/UI/SelectedInventoryItem.h"
+#include "Components/Button.h"
 
 #include "Kismet/GameplayStatics.h"
 void UInventoryItemButton::ViewItem()
@@ -30,3 +31,15 @@ void UInventoryItemButton::NativeOnInitialized()
     Super::NativeOnInitialized();
     
 }
+
+void UInventoryItemButton::NativeConstruct()
+{
+    Super::NativeConstruct();
+    
+    // Bound the on Click event
+    if(!ItemButton->OnClicked.IsBound())
+        ItemButton->OnClicked.AddDynamic(this, &UInventoryItemButton::ViewItem);
+
+    
+}
+
