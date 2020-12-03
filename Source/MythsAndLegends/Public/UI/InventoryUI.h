@@ -23,6 +23,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void CloseAllUI();
 
+	UFUNCTION(BlueprintCallable)
+	void ClearInventory();
+
     FORCEINLINE UWidget* GetSelectedItemWidget() const { return SelectedItemUI; }
     FORCEINLINE class ABaseItem* GetSelectedItem() const { return CurrentSelectedItem; }
 
