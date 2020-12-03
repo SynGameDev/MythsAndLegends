@@ -3,10 +3,11 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/Character.h"
 #include "MenuActor.generated.h"
 
 UCLASS()
-class MYTHSANDLEGENDS_API AMenuActor : public AActor
+class MYTHSANDLEGENDS_API AMenuActor : public ACharacter
 {
 	GENERATED_BODY()
 

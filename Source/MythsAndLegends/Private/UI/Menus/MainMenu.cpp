@@ -1,5 +1,6 @@
 ﻿#include "MythsAndLegends/Public/UI/Menus/MainMenu.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
 #include "Components/Button.h"
 
 void UMainMenu::NativeConstruct()
@@ -13,7 +14,7 @@ void UMainMenu::NativeConstruct()
 
 void UMainMenu::StartNewGame()
 {
-	
+	UGameplayStatics::OpenLevel(this, FName("TestEnviroment"));
 }
 
 void UMainMenu::OpenSavedGames()
