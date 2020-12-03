@@ -31,12 +31,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/UI/Menus/Logo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/UI/Menus/WID_MainMenu.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Levels/MainMenu.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Sprites/Menu/Background_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Sprites/Menu/Background_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Sprites/Menu/Background_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Sprites/Menu/Background_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/MainMenu.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/MainMenu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/MenuActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/UI/Inventory/BP_SelectedItem.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/UI/Inventory/BP_SelectedItem.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/UI/Menus/MainMenu.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/TestEnviroment.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/TestEnviroment.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/TestEnviroment_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/TestEnviroment_BuiltData.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/SelectedInventoryItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/SelectedInventoryItem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +98,10 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/MainMenu.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/MainMenu.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/MenuActor.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/MenuActor.h" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -367,6 +382,7 @@
       <workItem from="1606893007639" duration="415000" />
       <workItem from="1606894979831" duration="14443000" />
       <workItem from="1606919967797" duration="9941000" />
+      <workItem from="1606963955448" duration="4361000" />
     </task>
     <servers />
   </component>
