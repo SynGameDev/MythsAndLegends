@@ -22,13 +22,17 @@ public:
 	UWidget* InventoryWidget;
 
 	UFUNCTION(BlueprintCallable)
-	void SetValues(FName const Name, FText const Desc);
+	void SetValues(FName const Name, FText const Desc, class ABaseItem* const Item);
 
 	UFUNCTION(BlueprintCallable)
 	void EquipItem();
 
 	UFUNCTION(BlueprintCallable)
 	void DropItem();
+
+	virtual void NativeConstruct() override;
+
+	
 
 protected:
 	UPROPERTY(meta=(BindWidget))
@@ -44,10 +48,13 @@ protected:
 	UPROPERTY(meta=(BindWidget))
 	class UButton* ActionButton;
 	UPROPERTY(meta=(BindWidget))
-	class Ubutton* DropButton;
+	class UButton* DropButton;
 	UPROPERTY(meta=(BindWidget))
 	class UButton* QuickSlotButton;
 	UPROPERTY(meta=(BindWidget))
 	class UTextBlock* ActionText;
+
+private:
+	bool IsEquipped = false;
 	
 };
