@@ -58,11 +58,12 @@ void UInventoryUI::SelectItem(ABaseItem* SelectedItem)
                 if(auto* main = Cast<UMainHUD>(PlayerChar->GetMainUI()))
                 {
                     main->GetSelectedItemPoint()->AddChild(SelectedItemUI);
+                    Cast<USelectedInventoryItem>(SelectedItemUI)->SetValues(SelectedItem->GetItemName(), SelectedItem->GetItemDesc(), SelectedItem);
                 }
             }
             if(auto* wid = Cast<USelectedInventoryItem>(SelectedItemUI))
             {
-                wid->SetValues(SelectedItem->GetItemName(), SelectedItem->GetItemDesc());
+                wid->SetValues(SelectedItem->GetItemName(), SelectedItem->GetItemDesc(), SelectedItem);
                 wid->InventoryWidget = this;
             }
         } else
@@ -70,6 +71,8 @@ void UInventoryUI::SelectItem(ABaseItem* SelectedItem)
             Cast<UMainHUD>(PlayerChar->GetMainUI())->GetSelectedItemPoint()->RemoveChild(SelectedItemUI);
             SelectedItemUI = nullptr;
         }
+
+        
     }
 }
 
@@ -77,6 +80,15 @@ void UInventoryUI::CloseAllUI()
 {
     CurrentSelectedItem = nullptr;
     
+}
+
+void UInventoryUI::ClearInventory()
+{
+    for(auto* const itm : ItemButtonsInInventory)
+    {
+        itm->RemoveFromParent();
+    }
+    ItemButtonsInInventory.Empty();
 }
 
 void UInventoryUI::NativeConstruct()
