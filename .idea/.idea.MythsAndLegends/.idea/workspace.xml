@@ -31,13 +31,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Sprites/ItemButtonBackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Sprites/ItemButtonBackground.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/UI/Inventory/BP_SelectedItem.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/UI/Inventory/BP_SelectedItem.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryItemButton.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryItemButton.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryItemButton.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryItemButton.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/SelectedInventoryItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/SelectedInventoryItem.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +60,6 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Controllers/BaseAIController.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/SkillComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseConsumable.h" />
@@ -82,11 +80,14 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Properties/PropertyManager.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Properties/PropertyManager.h" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryItemButton.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryItemButton.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/SelectedInventoryItem.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/InventoryUI.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/InventoryUI.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/SkillComponent.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -365,7 +366,7 @@
       <workItem from="1606880773111" duration="6385000" />
       <workItem from="1606893007639" duration="415000" />
       <workItem from="1606894979831" duration="14443000" />
-      <workItem from="1606919967797" duration="4637000" />
+      <workItem from="1606919967797" duration="8591000" />
     </task>
     <servers />
   </component>
