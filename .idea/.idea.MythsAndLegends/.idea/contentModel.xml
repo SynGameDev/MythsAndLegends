@@ -43630,6 +43630,9 @@
               <e p="InventoryUI.cpp" t="Include" />
               <e p="ItemUIClass.cpp" t="Include" />
               <e p="MainHUD.cpp" t="Include" />
+              <e p="Menus" t="Include">
+                <e p="MainMenu.cpp" t="Include" />
+              </e>
               <e p="SelectedInventoryItem.cpp" t="Include" />
             </e>
           </e>
@@ -43678,6 +43681,10 @@
               <e p="InventoryUI.h" t="Include" />
               <e p="ItemUIClass.h" t="Include" />
               <e p="MainHUD.h" t="Include" />
+              <e p="Menus" t="Include">
+                <e p="MainMenu.h" t="Include" />
+                <e p="MenuActor.h" t="Include" />
+              </e>
               <e p="SelectedInventoryItem.h" t="Include" />
             </e>
           </e>
