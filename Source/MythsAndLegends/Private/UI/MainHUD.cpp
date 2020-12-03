@@ -74,11 +74,13 @@ void UMainHUD::UpdatePlayerHealth()
         float Max = PlayerChar->GetSkillComponent()->GetMaxHealth();
 
         // Setup the new variables but taking the min amout away
-        float Current = PlayerHealth - Min;
+        float Current = Health - Min;
         float NewMax = Max - Min;
 
         // Divide the new current by the New max to get the percentage value
         PlayerHealth = Current / NewMax;
+
+        UE_LOG(LogTemp, Warning, TEXT("Health percentage: %f"), PlayerHealth)
         
     }
 }
