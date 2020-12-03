@@ -21,6 +21,7 @@ public:
 	
 	// --- GETTERS --- //
 	FORCEINLINE float GetCharacterHealth() const { return CurrentHealth; }
+	FORCEINLINE float GetMaxHealth() const { return MaxHealth; }
 	FORCEINLINE float GetAttackStamina() const { return AttackStamina; }
 
 	
