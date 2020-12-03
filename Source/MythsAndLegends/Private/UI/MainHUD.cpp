@@ -68,7 +68,18 @@ void UMainHUD::UpdatePlayerHealth()
     // Get the player character, get the skilll component & create the percentage
     if(auto* const PlayerChar = Cast<ABaseCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0)))
     {
-        PlayerHealth = PlayerChar->GetSkillComponent()->GetCharacterHealth() / 100;
+        // Get all the current health details
+        float Health = PlayerChar->GetSkillComponent()->GetCharacterHealth();
+        float Min = 1;
+        float Max = PlayerChar->GetSkillComponent()->GetMaxHealth();
+
+        // Setup the new variables but taking the min amout away
+        float Current = PlayerHealth - Min;
+        float NewMax = Max - Min;
+
+        // Divide the new current by the New max to get the percentage value
+        PlayerHealth = Current / NewMax;
+        
     }
 }
 
