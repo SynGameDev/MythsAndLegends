@@ -49,13 +49,13 @@ void USelectedInventoryItem::EquipItem()
                 if(IsEquipped)
                 {
                     UE_LOG(LogTemp, Warning, TEXT("Equipping"));
-                    Inv->EquipItem(item);
+                    Inv->EquipItem(nullptr);
                     IsEquipped = false;
                     ActionText->SetText(FText::AsCultureInvariant("Equip"));
                 } else
                 {
                     UE_LOG(LogTemp, Warning, TEXT("Unequipping"));
-                    Inv->EquipItem(nullptr);
+                    Inv->EquipItem(item);
                     ActionText->SetText(FText::AsCultureInvariant("Unequip"));
                     IsEquipped = true;
                 }

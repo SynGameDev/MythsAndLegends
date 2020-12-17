@@ -154,6 +154,13 @@ void UInventoryComponent::EquipItem(ABaseItem* const Item)
 			}
 		}
 		
+	} else
+	{
+		if(auto* const CharOwner = Cast<ABaseCharacter>(GetOwner()))
+		{
+			EquippedItem = nullptr;
+			CharOwner->GetWeaponMesh()->SetStaticMesh(nullptr);
+		}
 	}
 }
 

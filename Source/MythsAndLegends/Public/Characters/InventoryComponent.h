@@ -49,3 +49,4 @@ private:
 	class ABaseItem* EquippedItem;	
 		
 };
+
