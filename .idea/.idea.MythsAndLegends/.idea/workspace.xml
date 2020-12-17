@@ -31,18 +31,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Sprites/Items/Potion_Icon.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Sprites/Items/Potion_Icon.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/AI/NPCs/NPC_BT.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase_BuiltData.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Upper_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Upper_1.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/NPC.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/MainHUD.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/DataTables/ItemDataTable.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/DataTables/ItemDataTable.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +54,9 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/IncrementPathIndex.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -346,7 +342,7 @@
       <workItem from="1606919967797" duration="9941000" />
       <workItem from="1606963955448" duration="5780000" />
       <workItem from="1608201384598" duration="5000" />
-      <workItem from="1608204496396" duration="6479000" />
+      <workItem from="1608204496396" duration="7332000" />
     </task>
     <servers />
   </component>
