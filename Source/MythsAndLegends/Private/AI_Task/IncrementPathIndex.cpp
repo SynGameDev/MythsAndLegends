@@ -17,6 +17,7 @@ UIncrementPathIndex::UIncrementPathIndex()
 
 EBTNodeResult::Type UIncrementPathIndex::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
+    UE_LOG(LogTemp, Warning, TEXT("Increment Path Index"));
     // Get the NPC Controller & Make sure that it's valid
     if(auto* const NPC_Con = Cast<ABaseAIController>(OwnerComp.GetOwner()))
     {
@@ -26,20 +27,19 @@ EBTNodeResult::Type UIncrementPathIndex::ExecuteTask(UBehaviorTreeComponent& Own
         // Get the NPC Character and make sure that it's valid
         if(auto* const NPC_Char = Cast<ANPC>(NPC_Con->GetPawn()))
         {
-            if (!NPC_Char->IsCharacterDead())
+
+            // If we are at the max index, then set it to zero otherwise increment it
+            if((NPC_Char->GetPatrolPoints()->GetTargetPoints().Num() - 1) == CurrentIndex)
             {
-                // If we are at the max index, then set it to zero otherwise increment it
-                if((NPC_Char->GetPatrolPoints()->GetTargetPoints().Num() - 1) == CurrentIndex)
-                {
-                    CurrentIndex = 0;
-                } else
-                {
-                    CurrentIndex++;
-                }
-                // Set the blackboard
-                NPC_Con->GetBlackboardComponent()->SetValueAsInt(NPC_Con->TargetIndex, CurrentIndex);
+                CurrentIndex = 0;
+            } else
+            {
+                CurrentIndex++;
             }
+            // Set the blackboard
+            NPC_Con->GetBlackboardComponent()->SetValueAsInt(NPC_Con->TargetIndex, CurrentIndex);
         }
+        
     }
 
     FinishLatentTask(OwnerComp, EBTNodeResult::Succeeded);

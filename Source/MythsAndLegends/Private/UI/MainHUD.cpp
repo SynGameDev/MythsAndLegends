@@ -80,7 +80,6 @@ void UMainHUD::UpdatePlayerHealth()
         // Divide the new current by the New max to get the percentage value
         PlayerHealth = Current / NewMax;
 
-        UE_LOG(LogTemp, Warning, TEXT("Health percentage: %f"), PlayerHealth)
         
     }
 }

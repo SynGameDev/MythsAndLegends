@@ -39,6 +39,7 @@ public:
 	FString ItemID;
 	UPROPERTY(EditAnywhere)
 	FName ItemName;
+	
 	// Name of the item that will be displayed in the UI
 	UPROPERTY(EditAnywhere)
 	FString ItemUIName;

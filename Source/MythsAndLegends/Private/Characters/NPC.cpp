@@ -26,11 +26,12 @@ void ANPC::BeginPlay()
         PawnSensingComponent->OnSeePawn.AddDynamic(this, &ANPC::OnSeePlayer);
     }
 
-    SetMovementState(MovementState);
+    
     if(auto* const NPC_Controller = Cast<ABaseAIController>(GetController()))
     {
         NPC_Controller->GetBlackboardComponent()->SetValueAsBool(NPC_Controller->TEST_PT_WillAttack, WillAttackPlayer);
     }
+    SetMovementState(MovementState);
 }
 
 void ANPC::SetMovementState(EMovementState const NewState)
