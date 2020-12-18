@@ -34,7 +34,7 @@ void ABaseConsumable::SpawnWeapon()
 			ItemMesh->SetStaticMesh(ItemData->ItemMesh);
 			MeshOutline->SetStaticMesh(ItemData->ItemMesh);
 			MeshOutline->SetMaterial(0, ItemData->OutlineMaterial);
-			ItemImage = ItemData->ItemIcon;
+			ItemImage = Cast<UImage>(ItemData->ItemIcon);
 			// --- CONSUMABLE DETAILS --- //
 			// General Details
 			ConsumingAnimation = ConsumableData->ConsumingAnimation;

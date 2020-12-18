@@ -50,7 +50,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<EItemType> ItemType;
 	UPROPERTY(EditAnywhere)
-	UImage* ItemIcon;
+	TSubclassOf<UImage> ItemIcon;
 
 
 
