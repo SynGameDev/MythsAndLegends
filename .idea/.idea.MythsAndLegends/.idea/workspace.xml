@@ -34,11 +34,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/WindowsNoEditor/FileOpenOrder/EditorOpenOrder.log" beforeDir="false" afterPath="$PROJECT_DIR$/Build/WindowsNoEditor/FileOpenOrder/EditorOpenOrder.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/MainMenu.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/MainMenu.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_1.umap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_1_BuiltData.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_2.umap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Prototype/Room_3.umap" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Upper_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Upper_1.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/MainMenu.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +68,8 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/MainMenu.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -346,7 +355,8 @@
       <workItem from="1606919967797" duration="9941000" />
       <workItem from="1606963955448" duration="5780000" />
       <workItem from="1608201384598" duration="5000" />
-      <workItem from="1608204496396" duration="10180000" />
+      <workItem from="1608204496396" duration="11278000" />
+      <workItem from="1608265084126" duration="1408000" />
     </task>
     <servers />
   </component>

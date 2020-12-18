@@ -14,7 +14,7 @@ void UMainMenu::NativeConstruct()
 
 void UMainMenu::StartNewGame()
 {
-	UGameplayStatics::OpenLevel(this, FName("TestEnviroment"));
+	UGameplayStatics::OpenLevel(this, FName("Showcase"));
 }
 
 void UMainMenu::OpenSavedGames()
