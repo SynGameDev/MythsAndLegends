@@ -49160,6 +49160,7 @@
               <e p="Menus" t="Include">
                 <e p="MainMenu.h" t="Include" />
                 <e p="MenuActor.h" t="Include" />
+                <e p="SettingsMenu.h" t="Include" />
               </e>
               <e p="SelectedInventoryItem.h" t="Include" />
             </e>

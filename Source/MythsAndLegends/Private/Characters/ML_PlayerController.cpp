@@ -44,7 +44,6 @@ void AML_PlayerController::BeginPlay()
 {
     Super::BeginPlay();
     SetupTree();
-    
 }
 
 void AML_PlayerController::MeleeAttack()

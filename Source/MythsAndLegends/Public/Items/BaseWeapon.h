@@ -25,6 +25,8 @@ public:
 	class UAnimMontage* AttackAnimation;
 	UPROPERTY(EditAnywhere)
 	float AnimationTime;
+	UPROPERTY(EditAnywhere)
+	float DamageTime;
 };
 
 USTRUCT(BlueprintType)
