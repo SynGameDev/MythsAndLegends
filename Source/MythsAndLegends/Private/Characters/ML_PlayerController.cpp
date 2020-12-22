@@ -50,8 +50,13 @@ void AML_PlayerController::BeginPlay()
 
 void AML_PlayerController::MeleeAttack()
 {
+    // Get & set the look at location to look at the target object
+    FRotator LookAtLocation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), TargetObject.GetActorLocation())
+    SetActorRotation = LookAtLocation;
+
     if(!CanAttack)
         return;
+        
     
     // Get the players current target and Insure that it's a NPC
     if(ABaseCharacter* const NPC = Cast<ABaseCharacter>(TargetObject) )
