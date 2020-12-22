@@ -24,6 +24,7 @@ public:
     FORCEINLINE class UBlackboardComponent* GetBlackboard() const { return BB_Component; }
 
     void MeleeAttack();
+    
 
     void SetAttackCooldown(float const Time);
 
@@ -32,6 +33,8 @@ private:
     
     virtual void SetupInputComponent() override;
     void MoveToDestination();
+
+    void ApplyDamage();
     
     virtual void Tick(float DeltaSeconds) override;
     virtual void BeginPlayingState() override;
@@ -44,6 +47,9 @@ private:
     float MinTargetDistance;
 
     class ABaseItem* ItemHovering;
+
+    // Damage Settings
+    float DamageToApply;
     
 
     // Movement Methods

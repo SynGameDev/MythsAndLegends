@@ -77,6 +77,7 @@ public:
 	FORCEINLINE float GetAttackCooldown() const { return AttackCooldownTime; }
 	FORCEINLINE float GetMinAttackDistance() const { return MinAttackDistance; }
 	FORCEINLINE EWeaponType GetWeaponType() const { return WeaponType; }
+    FORCEINLINE float GetDamageTimer() const { return DamageTime; }
 	
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
@@ -89,6 +90,8 @@ protected:
 	float AttackCooldownTime;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	float MinAttackDistance;
+    UPROPERTY(EditAnywhere)
+	float DamageTime;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	TEnumAsByte<EWeaponType> WeaponType;

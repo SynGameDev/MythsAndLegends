@@ -51,6 +51,8 @@ public:
 	TEnumAsByte<EItemType> ItemType;
 	UPROPERTY(EditAnywhere)
 	UTexture* ItemIcon;
+   
+    
 
 
 
@@ -106,6 +108,7 @@ protected:
 	TEnumAsByte<EItemTier> ItemTier;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Item Details", meta=(AllowProtectedAccess="true"))
 	UImage* ItemImage;
+    
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Spawn Details", meta=(AllowProtectedAccess="true"))

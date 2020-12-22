@@ -44,7 +44,6 @@ public:
 			if(auto* const Weapon = Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon()))
 			{
 				FAttackAnimation const AttackAnim = Weapon->GetAttackAnimation();
-				UE_LOG(LogTemp, Warning, TEXT("Time: %f"), AttackAnim.AnimationTime);
 				PlayAnimMontage(AttackAnim.AttackAnimation);
 				if(auto* const NPC_Controller = Cast<ABaseAIController>(GetController()))
 				{

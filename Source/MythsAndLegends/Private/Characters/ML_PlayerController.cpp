@@ -37,6 +37,8 @@ AML_PlayerController::AML_PlayerController()
 
     ItemHovering = nullptr;
     CanAttack = true;
+
+    DamageToApply = 0.0f;
 }
 
 
@@ -59,10 +61,18 @@ void AML_PlayerController::MeleeAttack()
         if(ABaseCharacter* const PlayerCharacter  = Cast<ABaseCharacter>(GetPawn()))
         {
             PlayerCharacter->Attack();
-            NPC->GetSkillComponent()->TakeDamage(PlayerCharacter->GetSkillComponent()->CalculateDamage());
+            DamageToApply = PlayerCharacter->GetSkillComponent()->CalculateDamage()
+            FTimerHandle AttackHandle;
+            WaitTime = Cast<ABaseWeapon>(PlayerCharacter->GetInventoryComponent()->GetEquippedweapon()).GetDamageTimer();
+            GetWorld()->GetTimerManager().SetTimer(AttackHandle, WaitTime, false, -1);
             CanAttack = false;
         }
     }
+}
+
+void AML_PlayerController::ApplyDamage()
+{
+    PlayerCharacter->GetSkillComponent()->CalculateDamage(DamageToApply);
 }
 
 void AML_PlayerController::SetAttackCooldown(float const Time)
