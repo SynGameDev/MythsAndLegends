@@ -11,6 +11,11 @@ USkillComponent::USkillComponent()
 
 void USkillComponent::TakeDamage(float Damage)
 {
+    // Check if this is a player character, if it is than reduce the damage applied
+    if(auto* const IsPlayer = Cast<APlayerCharacter>(GetOwner()))
+    {
+        Damage /= FMath::RandRange(1, 25);
+    }
     // TODO: Calcutate any damage resistant points due to armour
     CurrentHealth -= Damage;
 
@@ -24,10 +29,10 @@ void USkillComponent::TakeDamage(float Damage)
                 AnimRef->SetWeaponInstance(EEquippedWeaponInstance::Dead);
                 OwningCharacter->PlayerDead();
             }
+
+            
         }
     }
-
-    UE_LOG(LogTemp, Warning, TEXT("Taking Damage"));
 }
 
 float USkillComponent::CalculateDamage()

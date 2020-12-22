@@ -49,7 +49,8 @@ public:
 				if(auto* const NPC_Controller = Cast<ABaseAIController>(GetController()))
 				{
 					NPC_Controller->GetBlackboardComponent()->SetValueAsFloat(NPC_Controller->AttackCooldown, AttackAnim.AnimationTime);
-				} else if(auto* const PlayerController = Cast<AML_PlayerController>(UGameplayStatics::GetPlayerController(this, 0)))
+                    
+                } else if(auto* const PlayerController = Cast<AML_PlayerController>(UGameplayStatics::GetPlayerController(this, 0)))
 				{
 					PlayerController->SetAttackCooldown(AttackAnim.AnimationTime);	
 				}
