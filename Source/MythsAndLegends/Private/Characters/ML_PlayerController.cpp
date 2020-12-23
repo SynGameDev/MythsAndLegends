@@ -51,8 +51,8 @@ void AML_PlayerController::BeginPlay()
 void AML_PlayerController::MeleeAttack()
 {
     // Get & set the look at location to look at the target object
-    FRotator LookAtLocation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), TargetObject.GetActorLocation())
-    SetActorRotation = LookAtLocation;
+    FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(this->K2_GetActorLocation(), TargetObject->GetActorLocation());
+    // TODO: Look at enemy
 
     if(!CanAttack)
         return;
@@ -66,10 +66,12 @@ void AML_PlayerController::MeleeAttack()
         if(ABaseCharacter* const PlayerCharacter  = Cast<ABaseCharacter>(GetPawn()))
         {
             PlayerCharacter->Attack();
-            DamageToApply = PlayerCharacter->GetSkillComponent()->CalculateDamage()
-            FTimerHandle AttackHandle;
-            WaitTime = Cast<ABaseWeapon>(PlayerCharacter->GetInventoryComponent()->GetEquippedweapon()).GetDamageTimer();
-            GetWorld()->GetTimerManager().SetTimer(AttackHandle, WaitTime, false, -1);
+            
+            DamageToApply = PlayerCharacter->GetSkillComponent()->CalculateDamage();
+            // TODO: Introduce a wait time
+            float const WaitTime = Cast<ABaseWeapon>(PlayerCharacter->GetInventoryComponent()->GetEquippedWeapon())->GetDamageTimer();
+            UE_LOG(LogTemp, Warning, TEXT("Wait Time: %f"), WaitTime);
+            GetWorldTimerManager().SetTimer(AttackHandle, this, &AML_PlayerController::ApplyDamage, 1.0f, false);
             CanAttack = false;
         }
     }
@@ -77,7 +79,15 @@ void AML_PlayerController::MeleeAttack()
 
 void AML_PlayerController::ApplyDamage()
 {
-    PlayerCharacter->GetSkillComponent()->CalculateDamage(DamageToApply);
+    UE_LOG(LogTemp, Warning, TEXT("APPLY DAMAGE"))
+    // Make sure that the target object is a character, if it is than apply the damage
+    if(auto* const NPC = Cast<ABaseCharacter>(TargetObject))
+    {
+        NPC->GetSkillComponent()->TakeDamage(DamageToApply);
+    } else
+    {
+        UE_LOG(LogTemp, Warning, TEXT("FAILED DAMAGE"))
+    }
 }
 
 void AML_PlayerController::SetAttackCooldown(float const Time)
@@ -302,7 +312,7 @@ void AML_PlayerController::PerformInteractWithTarget()
         MeleeAttack();
     }
     
-    TargetObject = nullptr;
+    
     TargetIsEnemy = false;
 }
 

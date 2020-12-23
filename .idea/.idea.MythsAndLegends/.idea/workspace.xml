@@ -34,12 +34,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/SettingsMenu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/SettingsMenu.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/DataTables/WeaponDataTable.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/DataTables/WeaponDataTable.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/SettingsMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/SettingsMenu.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +64,15 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/MainMenu.cpp" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/SettingsMenu.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/SettingsMenu.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/SettingsMenu.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -87,7 +92,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="RiderCppFileTemplatesSettingsId" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.18387553" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -355,6 +360,7 @@
       <workItem from="1608201384598" duration="5000" />
       <workItem from="1608204496396" duration="11278000" />
       <workItem from="1608265084126" duration="3826000" />
+      <workItem from="1608700398652" duration="3589000" />
     </task>
     <servers />
   </component>

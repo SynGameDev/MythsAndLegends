@@ -42,7 +42,8 @@ void ABaseWeapon::SpawnWeapon()
             ItemMesh->SetStaticMesh(ItemData->ItemMesh);
             MeshOutline->SetStaticMesh(ItemData->ItemMesh);
             MeshOutline->SetMaterial(0, ItemData->OutlineMaterial);
-            ItemImage = Cast<UImage>(ItemData->ItemIcon); 
+            ItemImage = Cast<UImage>(ItemData->ItemIcon);
+            
             // --- WEAPON DETAILS --- //
             MinDamage = WeaponData->MinDamage;
             MaxDamage = WeaponData->MaxDamage;
@@ -50,6 +51,7 @@ void ABaseWeapon::SpawnWeapon()
             SocketName = WeaponData->SocketAttachmentName;
             AttackMontages = WeaponData->AttackAnimations;
             MinAttackDistance = WeaponData->MinAttackDistance;
+            
         }
     }
 }

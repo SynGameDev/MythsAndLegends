@@ -49103,6 +49103,7 @@
               <e p="MainHUD.cpp" t="Include" />
               <e p="Menus" t="Include">
                 <e p="MainMenu.cpp" t="Include" />
+                <e p="SettingsMenu.cpp" t="Include" />
               </e>
               <e p="SelectedInventoryItem.cpp" t="Include" />
             </e>

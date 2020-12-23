@@ -48,6 +48,8 @@ private:
 
     class ABaseItem* ItemHovering;
 
+	FTimerHandle AttackHandle;
+
     // Damage Settings
     float DamageToApply;
     
