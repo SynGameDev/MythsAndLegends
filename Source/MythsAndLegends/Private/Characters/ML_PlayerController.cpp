@@ -39,6 +39,7 @@ AML_PlayerController::AML_PlayerController()
     CanAttack = true;
 
     DamageToApply = 0.0f;
+    bIsGamePaused = false;
 }
 
 
@@ -95,6 +96,28 @@ void AML_PlayerController::SetAttackCooldown(float const Time)
     GetWorld()->GetTimerManager().SetTimer(AttackCooldownTh, this, &AML_PlayerController::ResetCanAttack, Time, false);
 }
 
+void AML_PlayerController::TogglePauseMenu()
+{
+    
+    bIsGamePaused = !bIsGamePaused;
+    if(auto* const PlayerChar = Cast<APlayerCharacter>(GetPawn()))
+    {
+        if(bIsGamePaused)
+        {
+            UGameplayStatics::SetGamePaused(this, true);
+            PlayerChar->MainHUD->RemoveFromViewport();
+            FLatentActionInfo const Info;
+            UGameplayStatics::LoadStreamLevel(this, "PauseMenu", true, false, Info);
+        } else
+        {
+            
+            PlayerChar->MainHUD->AddToViewport();
+            FLatentActionInfo const Info;
+            UGameplayStatics::UnloadStreamLevel(this, "PauseMenu", Info, false);
+        }
+    }
+}
+
 void AML_PlayerController::ResetCanAttack()
 {
     CanAttack = true;
@@ -119,6 +142,7 @@ void AML_PlayerController::SetupInputComponent()
     Super::SetupInputComponent();
     InputComponent->BindAction("SetDestination", IE_Pressed, this, &AML_PlayerController::MoveToDestination);
     InputComponent->BindAction("Inventory", IE_Pressed, this, &AML_PlayerController::ToggleInventoryUI);
+    InputComponent->BindAction("PauseGame", IE_Pressed, this, &AML_PlayerController::TogglePauseMenu);
 }
 
 void AML_PlayerController::MoveToDestination()

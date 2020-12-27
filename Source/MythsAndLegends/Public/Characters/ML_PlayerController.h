@@ -28,6 +28,8 @@ public:
 
     void SetAttackCooldown(float const Time);
 
+	void TogglePauseMenu();
+
 private:
     void SetupTree() const;
     
@@ -59,6 +61,9 @@ private:
     void MoveToTarget(FVector const Location);
     bool IsTargetInRange();
     void PerformInteractWithTarget();
+
+	// Pause Game
+	bool bIsGamePaused;
 
     // --- TRACES --- //
     void TraceOverItem();
