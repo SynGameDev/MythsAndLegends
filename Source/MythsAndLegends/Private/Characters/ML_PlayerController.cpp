@@ -109,11 +109,10 @@ void AML_PlayerController::TogglePauseMenu()
             FLatentActionInfo const Info;
             UGameplayStatics::LoadStreamLevel(this, "PauseMenu", true, false, Info);
         } else
-        {
-            
             PlayerChar->MainHUD->AddToViewport();
             FLatentActionInfo const Info;
-            UGameplayStatics::UnloadStreamLevel(this, "PauseMenu", Info, false);
+            UGameplayStatics::UnloadStreamLevel(this, "PauseMenu", Info, true);
+            
         }
     }
 }

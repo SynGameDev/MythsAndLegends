@@ -22,7 +22,7 @@ void UPauseMenu::ContinueGame()
 	UGameplayStatics::SetGamePaused(this, false);
 	if(auto* const PlayerController = Cast<AML_PlayerController>(UGameplayStatics::GetPlayerController(this, 0)))
 	{
-		PlayerController->TogglePauseMenu();
+		PlayerController->TogglePauseMenu();	
 	} else
 	{
 		UE_LOG(LogTemp, Error, TEXT("Unable to unpause game"));

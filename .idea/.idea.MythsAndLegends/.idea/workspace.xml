@@ -34,17 +34,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/UI/Menus/WID_PauseMenu.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Levels/PauseMenu.umap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/PauseMenu.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/PauseMenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase_BuiltData.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/PauseMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/PauseMenu.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +69,8 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/Menus/PauseMenu.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/PauseMenu.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -369,6 +361,8 @@
       <workItem from="1608700398652" duration="6641000" />
       <workItem from="1608730662931" duration="3048000" />
       <workItem from="1608773959873" duration="1661000" />
+      <workItem from="1609068806154" duration="135000" />
+      <workItem from="1609069241272" duration="411000" />
     </task>
     <servers />
   </component>
