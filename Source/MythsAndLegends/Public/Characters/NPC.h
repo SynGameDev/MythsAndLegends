@@ -28,6 +28,7 @@ public:
     FORCEINLINE int32 GetCurrentTargetIndex() const { return CurrentTargetIndex; }
     FORCEINLINE void SetNextTarget(bool const increment) { if(increment) { CurrentTargetIndex++; } else { CurrentTargetIndex--; }}
     FORCEINLINE EMovementState GetMovementState() const { return MovementState; }
+    FORCEINLINE class AWanderTargetPoint* GetWanderTargetPoint() const { return WanderTargetPoint; }
     void SetMovementState(EMovementState const NewState);
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Testing|Attack System")
@@ -52,6 +53,9 @@ private:
     AAITargetPoint* PatrolPoint;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement|Targets", meta=(AllowPrivateAccess="true"))
     int32 CurrentTargetIndex;
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement|Targets", meta=(AllowPrivateAccess="true"))
+    class AWanderTargetPoint* WanderTargetPoint;
 
     
     

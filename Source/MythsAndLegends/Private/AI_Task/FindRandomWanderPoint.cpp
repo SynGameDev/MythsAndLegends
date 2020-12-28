@@ -2,6 +2,8 @@
 
 
 #include "MythsAndLegends/Public/AI_Task/FindRandomWanderPoint.h"
+
+#include "AI_Objects/WanderTargetPoint.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
 #include "MythsAndLegends/Public/Characters/NPC.h"
@@ -25,10 +27,25 @@ EBTNodeResult::Type UFindRandomWanderPoint::ExecuteTask(UBehaviorTreeComponent& 
     {
         if(auto* const NPC_Character = Cast<ANPC>(NPC_Controller->GetPawn()))
         {
-            if(LimitedSearch && !NPC_Character->IsCharacterDead())
+            if(!NPC_Character->IsCharacterDead())
             {
+                FVector NPC_OriginPoint;
+                if(LimitedSearch)
+                {
+                    NPC_OriginPoint = NPC_Character->GetActorLocation();
+                } else
+                {
+                    if(NPC_Character->GetWanderTargetPoint())
+                    {
+                        NPC_OriginPoint = NPC_Character->GetWanderTargetPoint()->GetActorLocation();
+                    } else
+                    {
+                        NPC_OriginPoint = NPC_Character->GetActorLocation();
+                        LimitedSearch = true;
+                    }
+                }
                 // Get the Origin point of the NPC & create  a nav location
-                FVector const NPC_OriginPoint = NPC_Character->GetActorLocation();
+                
                 FNavLocation Location;
 
                 // Get the current Navigation System and set a random point within the radius, set this point on the blackboard
@@ -43,9 +60,6 @@ EBTNodeResult::Type UFindRandomWanderPoint::ExecuteTask(UBehaviorTreeComponent& 
                     {
                         UE_LOG(LogTemp, Warning, TEXT("NO BLACKBOARD"))
                     }
-                } else
-                {
-                    // TODO: Wander Around point instead of the characters origin
                 }
             }
         }
