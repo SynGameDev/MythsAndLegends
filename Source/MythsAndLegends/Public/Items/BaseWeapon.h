@@ -99,7 +99,7 @@ public:
     FORCEINLINE float GetDamageTimer() const { return DamageTime; }
     FORCEINLINE int32 GetTotalSpecialAttacks() const { return SpecialAttackMontages.Num(); }
 
-	FORCEINLINE FSpecialAttack GetSpecialAttack(int32 attack);
+	FORCEINLINE FSpecialAttack GetSpecialAttack(int32 const attack);
 	
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
