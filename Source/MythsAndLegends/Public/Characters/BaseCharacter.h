@@ -67,4 +67,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="EDITOR|Draw Debug", meta=(AllowProtectedAccess="true"))
 	bool DrawDebugShapes;
+
+	// Attack Variables
+	bool CanPerformSpecialAttack;
+	FTimerHandle SpecialAttackCooldown;
+	virtual void ResetSpecialAttack();
 };

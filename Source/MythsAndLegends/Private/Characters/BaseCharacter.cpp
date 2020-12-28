@@ -25,6 +25,7 @@ ABaseCharacter::ABaseCharacter()
 	InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("Inventory"));
 
 	IsDead = false;
+	CanPerformSpecialAttack = true;
 }
 
 void ABaseCharacter::Attack()
@@ -53,7 +54,7 @@ void ABaseCharacter::SpecialAttack(int32 const SpecialAttackIndex)
 {
 	if(auto* const PlayerController = Cast<AML_PlayerController>(GetController()))
 		{
-			if(PlayerController->CanPlayerAttack())
+			if(CanPerformSpecialAttack)
 			{
 				// Make sure that there is an equipped weapon & that it is valid
 				if(InventoryComponent->GetEquippedWeapon())
@@ -98,7 +99,9 @@ void ABaseCharacter::SpecialAttack(int32 const SpecialAttackIndex)
 									}
 								}
 
-								// TODO: Apply Special Attack Cooldown
+								// TODO: Get a special attack timer instead of hard code.
+								CanPerformSpecialAttack = false;
+								GetWorldTimerManager().SetTimer(SpecialAttackCooldown, this, &ABaseCharacter::ResetSpecialAttack, 30.0f, false, -1);
 							
 							}
 							
@@ -141,5 +144,10 @@ float ABaseCharacter::GetMinAttackDistance() const
 	}
 
 	return 120.0f;
+}
+
+void ABaseCharacter::ResetSpecialAttack()
+{
+	CanPerformSpecialAttack = true;
 }
 

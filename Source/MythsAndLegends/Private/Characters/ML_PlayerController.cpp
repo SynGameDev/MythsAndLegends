@@ -10,14 +10,13 @@
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
 #include "MythsAndLegends/Public/UI/MainHUD.h"
 #include "MythsAndLegends/Public/Properties/PropertyManager.h"
-
+#include "MythsAndLegends/Public/Characters/SkillComponent.h"
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BehaviorTreeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "Components/StaticMeshComponent.h"
-#include "Properties/PropertyManager.h"
+#include "Kismet/GameplayStatics.h"
 #include "UMG/Public/Blueprint/UserWidget.h"
 #include "DrawDebugHelpers.h"
 
@@ -119,34 +118,13 @@ void AML_PlayerController::TogglePauseMenu()
 
 void AML_PlayerController::SpecialAttackOne()
 {
-
-    if(auto* const PlayerChar = Cast<ABaseCharacter>(GetPawn()))
+    if(CanAttack)
     {
-        PlayerChar->SpecialAttack(0);
-    }
-
-    /*
-    TArray<FHitResult> OutHits;
-    FVector ActorLocation = GetPawn()->GetActorLocation();
-    FCollisionShape MyColSphere = FCollisionShape::MakeSphere(500.0f);
-
-    DrawDebugSphere(GetWorld(), ActorLocation, MyColSphere.GetSphereRadius(), 100, FColor::Purple, true);
-    
-    bool isHit = GetWorld()->SweepMultiByChannel(OutHits, ActorLocation, ActorLocation, FQuat::Identity, ECC_WorldStatic, MyColSphere);
-
-    if(isHit)
-    {
-        for(auto& Hit : OutHits)
+        if(auto* const PlayerChar = Cast<ABaseCharacter>(GetPawn()))
         {
-            if(GEngine)
-            {
-                GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, FString::Printf(TEXT("Hit Result: %s"), *Hit.Actor->GetName()));
-            }
+            PlayerChar->SpecialAttack(0);
         }
     }
-
-    */
-    
 }
 
 void AML_PlayerController::ResetCanAttack()
