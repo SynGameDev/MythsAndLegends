@@ -30,6 +30,8 @@ public:
 
 	void TogglePauseMenu();
 
+	FORCEINLINE bool CanPlayerAttack() const { return CanAttack; }
+
 private:
     void SetupTree() const;
     

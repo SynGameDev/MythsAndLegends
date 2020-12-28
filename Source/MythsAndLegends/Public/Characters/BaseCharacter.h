@@ -6,6 +6,7 @@
 
 
 
+#include "DrawDebugHelpers.h"
 #include "ML_PlayerController.h"
 #include "Controllers/BaseAIController.h"
 #include "GameFramework/Character.h"
@@ -61,30 +62,75 @@ public:
 
 	virtual void SpecialAttack(int32 const SpecialAttackIndex)
 	{
-		if(InventoryComponent->GetEquippedWeapon())
+		if(auto* const PlayerController = Cast<AML_PlayerController>(GetController()))
 		{
-			if(auto* const Weapon = Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon()))
+			if(PlayerController->CanPlayerAttack())
 			{
-				
-				if(Weapon->GetTotalSpecialAttacks() >= SpecialAttackIndex)
+				// Make sure that there is an equipped weapon & that it is valid
+				if(InventoryComponent->GetEquippedWeapon())
 				{
-					// TODO: Make Sure the attack is unlocked
-					FSpecialAttack const SpecialAttack = Weapon->GetSpecialAttack(SpecialAttackIndex);
-					FAttackAnimation const AttackAnim = SpecialAttack.AttackAnim;
-					PlayAnimMontage(AttackAnim.AttackAnimation);
-					SetAttackCooldown(AttackAnim.AnimationTime);
-				} else
+					if(auto* const Weapon = Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon()))
+					{
+						// Make sure the requested special attack is valid
+						if(Weapon->GetTotalSpecialAttacks() >= SpecialAttackIndex)
+						{
+							// Get the Special attack and check that it's unlocked, if it is than run the attack
+							FSpecialAttack const SpecialAttack = Weapon->GetSpecialAttack(SpecialAttackIndex);
+							if(IsSpecialAttackUnlocked(SpecialAttack))
+							{
+								// Setup the attack Animation, play it & set the attack cooldown
+								FAttackAnimation const AttackAnim = SpecialAttack.AttackAnim;
+								PlayAnimMontage(AttackAnim.AttackAnimation);
+								SetAttackCooldown(AttackAnim.AnimationTime);
+
+								// Setup the sweep variable
+								TArray<FHitResult> OutHits;
+								FVector const ActorLocation = GetActorLocation();
+								FCollisionShape const CollisionShape = FCollisionShape::MakeSphere(200.0f);
+
+								// Draw Debug Shape
+								if(DrawDebugShapes)
+									DrawDebugSphere(GetWorld(), ActorLocation, CollisionShape.GetSphereRadius(), 100, FColor::Purple, true, 1.0f);
+								
+								// Check if there are any hits, if there is than loop through all the objects make sure that they
+								// Are a Base Character & Deal damage to them
+								bool const Hit = GetWorld()->SweepMultiByChannel(OutHits, ActorLocation, ActorLocation, FQuat::Identity, ECC_WorldStatic, CollisionShape);
+								if(Hit)
+								{
+									for(auto& hit : OutHits)
+									{
+										if(auto* const BaseCharacter = Cast<ABaseCharacter>(hit.GetActor()))
+										{
+											if(BaseCharacter != this)
+											{
+												BaseCharacter->GetSkillComponent()->TakeDamage(this->GetSkillComponent()->CalculateDamage() * SpecialAttack.DamageMultiplier);
+											}
+										}
+									}
+								}
+
+								// TODO: Apply Special Attack Cooldown
+							
+							}
+							
+						} else
+						{
+							GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, FString("No Special Attack"));
+						}
+					}
+				} else 
 				{
-					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, FString("No Special Attack"));
+					if(GEngine)
+					{
+						GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Purple, FString("NO WEAPON EQUIPPED"));
+					}
 				}
 			}
-		} else 
+		} else
 		{
-			if(GEngine)
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Purple, FString("NO WEAPON EQUIPPED"));
-			}
+			// TODO: AI Special Attack
 		}
+		
 	}
 
 	virtual void SetAttackCooldown(float const time)
@@ -117,6 +163,12 @@ public:
 
 	FORCEINLINE virtual void PlayerDead() { IsDead = true; }
 	FORCEINLINE bool IsCharacterDead() const { return IsDead; }
+
+	FORCEINLINE bool IsSpecialAttackUnlocked(FSpecialAttack Attack) const
+	{
+		// TODO: Check if the player has the attack
+		return true;
+	}
 	
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="AI", meta=(AllowProtectedAccess="true"))
@@ -140,5 +192,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Character Status", meta=(AllowPrivateAccess="true"))
 	bool IsDead;
-	
+
+	TArray<FSpecialAttack> UnlockedSpecialAttacks;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="EDITOR|Draw Debug", meta=(AllowProtectedAccess="true"))
+	bool DrawDebugShapes;
 };
