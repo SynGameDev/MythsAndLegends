@@ -19,6 +19,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Properties/PropertyManager.h"
 #include "UMG/Public/Blueprint/UserWidget.h"
+#include "DrawDebugHelpers.h"
 
 AML_PlayerController::AML_PlayerController()
 {
@@ -98,7 +99,6 @@ void AML_PlayerController::SetAttackCooldown(float const Time)
 
 void AML_PlayerController::TogglePauseMenu()
 {
-    
     bIsGamePaused = !bIsGamePaused;
     if(auto* const PlayerChar = Cast<APlayerCharacter>(GetPawn()))
     {
@@ -107,14 +107,46 @@ void AML_PlayerController::TogglePauseMenu()
             UGameplayStatics::SetGamePaused(this, true);
             PlayerChar->MainHUD->RemoveFromViewport();
             FLatentActionInfo const Info;
-            UGameplayStatics::LoadStreamLevel(this, "PauseMenu", true, false, Info);
-        } else
+            UGameplayStatics::LoadStreamLevel(this,  FName("PauseMenu"), true, false, Info);
+        } else {
+            UE_LOG(LogTemp, Warning, TEXT("Hiding Pause Menu"));
             PlayerChar->MainHUD->AddToViewport();
             FLatentActionInfo const Info;
-            UGameplayStatics::UnloadStreamLevel(this, "PauseMenu", Info, true);
-            
+            UGameplayStatics::UnloadStreamLevel(this, FName("PauseMenu"), Info, true);
         }
     }
+}
+
+void AML_PlayerController::SpecialAttackOne()
+{
+
+    if(auto* const PlayerChar = Cast<ABaseCharacter>(GetPawn()))
+    {
+        PlayerChar->SpecialAttack(1);
+    }
+
+    /*
+    TArray<FHitResult> OutHits;
+    FVector ActorLocation = GetPawn()->GetActorLocation();
+    FCollisionShape MyColSphere = FCollisionShape::MakeSphere(500.0f);
+
+    DrawDebugSphere(GetWorld(), ActorLocation, MyColSphere.GetSphereRadius(), 100, FColor::Purple, true);
+    
+    bool isHit = GetWorld()->SweepMultiByChannel(OutHits, ActorLocation, ActorLocation, FQuat::Identity, ECC_WorldStatic, MyColSphere);
+
+    if(isHit)
+    {
+        for(auto& Hit : OutHits)
+        {
+            if(GEngine)
+            {
+                GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, FString::Printf(TEXT("Hit Result: %s"), *Hit.Actor->GetName()));
+            }
+        }
+    }
+
+    */
+    
 }
 
 void AML_PlayerController::ResetCanAttack()
@@ -142,6 +174,9 @@ void AML_PlayerController::SetupInputComponent()
     InputComponent->BindAction("SetDestination", IE_Pressed, this, &AML_PlayerController::MoveToDestination);
     InputComponent->BindAction("Inventory", IE_Pressed, this, &AML_PlayerController::ToggleInventoryUI);
     InputComponent->BindAction("PauseGame", IE_Pressed, this, &AML_PlayerController::TogglePauseMenu);
+
+    // Attacks
+    InputComponent->BindAction("SpecialAttackOne", IE_Pressed, this, &AML_PlayerController::SpecialAttackOne);
 }
 
 void AML_PlayerController::MoveToDestination()

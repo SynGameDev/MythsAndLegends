@@ -49037,6 +49037,7 @@
           </e>
         </e>
       </e>
+      <e p="PN_OpenWorldFoliage.png" t="Include" />
       <e p="Source" t="Include">
         <e p="MythsAndLegends" t="Include">
           <e p=".VSCodeCounter" t="Include">

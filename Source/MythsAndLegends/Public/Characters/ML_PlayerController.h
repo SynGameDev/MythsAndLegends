@@ -75,6 +75,9 @@ private:
     // --- ATTACK VARIABLES --- //
     bool CanAttack;
     FTimerHandle AttackCooldownTh;
+
+	// Special Attacks
+	void SpecialAttackOne();
     
     void ResetCanAttack();
     

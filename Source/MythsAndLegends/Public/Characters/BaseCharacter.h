@@ -45,14 +45,7 @@ public:
 			{
 				FAttackAnimation const AttackAnim = Weapon->GetAttackAnimation();
 				PlayAnimMontage(AttackAnim.AttackAnimation);
-				if(auto* const NPC_Controller = Cast<ABaseAIController>(GetController()))
-				{
-					NPC_Controller->GetBlackboardComponent()->SetValueAsFloat(NPC_Controller->AttackCooldown, AttackAnim.AnimationTime);
-                    
-                } else if(auto* const PlayerController = Cast<AML_PlayerController>(UGameplayStatics::GetPlayerController(this, 0)))
-				{
-					PlayerController->SetAttackCooldown(AttackAnim.AnimationTime);	
-				}
+				SetAttackCooldown(AttackAnim.AnimationTime);
 			}
 		} else
 		{
@@ -63,6 +56,45 @@ public:
 			{
 				PlayerController->SetAttackCooldown(2.0f);
 			}
+		}
+	}
+
+	virtual void SpecialAttack(int32 const SpecialAttackIndex)
+	{
+		if(InventoryComponent->GetEquippedWeapon())
+		{
+			if(auto* const Weapon = Cast<ABaseWeapon>(InventoryComponent->GetEquippedWeapon()))
+			{
+				
+				if(Weapon->GetTotalSpecialAttacks() >= SpecialAttackIndex)
+				{
+					// TODO: Make Sure the attack is unlocked
+					FSpecialAttack const SpecialAttack = Weapon->GetSpecialAttack(SpecialAttackIndex - 1);
+					FAttackAnimation const AttackAnim = SpecialAttack.AttackAnim;
+					PlayAnimMontage(AttackAnim.AttackAnimation);
+					SetAttackCooldown(AttackAnim.AnimationTime);
+				} else
+				{
+					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, FString("No Special Attack"));
+				}
+			}
+		} else 
+		{
+			if(GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Purple, FString("NO WEAPON EQUIPPED"));
+			}
+		}
+	}
+
+	virtual void SetAttackCooldown(float const time)
+	{
+		if(auto* const NPC_Controller = Cast<ABaseAIController>(GetController()))
+		{
+			NPC_Controller->GetBlackboardComponent()->SetValueAsFloat(NPC_Controller->AttackCooldown, time);
+		} else if(auto* const PlayerController = Cast<AML_PlayerController>(UGameplayStatics::GetPlayerController(this, 0)))
+		{
+			PlayerController->SetAttackCooldown(time);
 		}
 	}
 

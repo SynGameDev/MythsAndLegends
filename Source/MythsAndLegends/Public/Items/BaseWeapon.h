@@ -16,6 +16,8 @@ enum EWeaponType
 	STAFF
 };
 
+
+
 USTRUCT(BlueprintType)
 struct FAttackAnimation
 {
@@ -27,6 +29,21 @@ public:
 	float AnimationTime;
 	UPROPERTY(EditAnywhere)
 	float DamageTime;
+};
+
+USTRUCT(BlueprintType)
+struct FSpecialAttack
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere)
+	FAttackAnimation AttackAnim;
+	UPROPERTY(EditAnywhere)
+	float DamageMultiplier;
+	UPROPERTY(EditAnywhere)
+	float RecoveryTime;
+
+	// TODO: Add Magic Effects
 };
 
 USTRUCT(BlueprintType)
@@ -42,6 +59,8 @@ public:
 	TEnumAsByte<EWeaponType> WeaponType;
 	UPROPERTY(EditAnywhere)
 	TArray<FAttackAnimation> AttackAnimations;
+	UPROPERTY(EditAnywhere)
+	TArray<FSpecialAttack> SpecialAttacks;
 	UPROPERTY(EditAnywhere)
 	FName SocketAttachmentName;
 	UPROPERTY(EditAnywhere)
@@ -78,6 +97,9 @@ public:
 	FORCEINLINE float GetMinAttackDistance() const { return MinAttackDistance; }
 	FORCEINLINE EWeaponType GetWeaponType() const { return WeaponType; }
     FORCEINLINE float GetDamageTimer() const { return DamageTime; }
+    FORCEINLINE int32 GetTotalSpecialAttacks() const { return SpecialAttackMontages.Num(); }
+
+	FORCEINLINE FSpecialAttack GetSpecialAttack(int32 attack);
 	
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
@@ -86,6 +108,8 @@ protected:
 	float MaxDamage;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	TArray<FAttackAnimation> AttackMontages;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
+	TArray<FSpecialAttack> SpecialAttackMontages;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))
 	float AttackCooldownTime;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="WeaponDetails", meta=(AllowProtectedAccess="true"))

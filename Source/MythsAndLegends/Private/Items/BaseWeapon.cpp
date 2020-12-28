@@ -50,6 +50,7 @@ void ABaseWeapon::SpawnWeapon()
             WeaponType = WeaponData->WeaponType;
             SocketName = WeaponData->SocketAttachmentName;
             AttackMontages = WeaponData->AttackAnimations;
+            SpecialAttackMontages = WeaponData->SpecialAttacks;
             MinAttackDistance = WeaponData->MinAttackDistance;
             
         }
@@ -93,4 +94,16 @@ void ABaseWeapon::ShootArrow(const FVector FireDirection)
     {
         Arrow->FireArrow(FireDirection);
     }
+}
+
+FSpecialAttack ABaseWeapon::GetSpecialAttack(int32 attack)
+{
+    // Make sure that the attack is valid
+    if(SpecialAttackMontages.Num() > attack)
+    {
+        attack -= 1;
+        return SpecialAttackMontages[attack];
+    }
+
+    return FSpecialAttack();
 }
