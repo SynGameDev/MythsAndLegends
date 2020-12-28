@@ -93,7 +93,9 @@ void UInventoryComponent::DropItem(ABaseItem* Item)
 		Item->SetActorEnableCollision(true);
 		Item->SetActorTickEnabled(true);
 		Item->SetActorHiddenInGame(false);
-		
+		Item->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+		// Unequip the item
+		EquipItem(nullptr);
 	}
 }
 
