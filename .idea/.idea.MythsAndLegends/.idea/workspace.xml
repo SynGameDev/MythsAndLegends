@@ -33,12 +33,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/BaseCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/BaseCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" afterDir="false" />
-    </list>
+    <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +55,6 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/MoveToPositionNode.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/SelectedInventoryItem.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/InventoryComponent.h" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseConsumable.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/MainMenu.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseItem.h" />
@@ -76,6 +70,7 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/BaseCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -371,7 +366,7 @@
       <workItem from="1609078117204" duration="1704000" />
       <workItem from="1609120047029" duration="8145000" />
       <workItem from="1609138065785" duration="10926000" />
-      <workItem from="1609162118616" duration="1558000" />
+      <workItem from="1609162118616" duration="1995000" />
     </task>
     <servers />
   </component>
