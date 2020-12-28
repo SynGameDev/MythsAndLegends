@@ -49058,6 +49058,9 @@
           <e p="MythsAndLegendsPlayerController.cpp" t="Include" />
           <e p="MythsAndLegendsPlayerController.h" t="Include" />
           <e p="Private" t="Include">
+            <e p="AI_Objects" t="Include">
+              <e p="WanderTargetPoint.cpp" t="Include" />
+            </e>
             <e p="AI_Service" t="Include">
               <e p="ChangeSpeed.cpp" t="Include" />
             </e>
@@ -49116,6 +49119,9 @@
             <e p="PropertyBase.h" t="Include" />
           </e>
           <e p="Public" t="Include">
+            <e p="AI_Objects" t="Include">
+              <e p="WanderTargetPoint.h" t="Include" />
+            </e>
             <e p="AI_Service" t="Include">
               <e p="ChangeSpeed.h" t="Include" />
             </e>
