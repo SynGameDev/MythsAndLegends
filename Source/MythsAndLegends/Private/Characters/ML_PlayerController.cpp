@@ -122,7 +122,7 @@ void AML_PlayerController::SpecialAttackOne()
 
     if(auto* const PlayerChar = Cast<ABaseCharacter>(GetPawn()))
     {
-        PlayerChar->SpecialAttack(1);
+        PlayerChar->SpecialAttack(0);
     }
 
     /*
