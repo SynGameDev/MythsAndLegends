@@ -34,44 +34,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Levels/World/Vallurka_Rocks.umap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Levels/World/Vallurka_Terrain.umap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Levels/World/Vallurka_Terrain_sharedassets/Cliff_LayerInfo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Levels/World/Valurka_Properties.umap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Mannequin/Animations/Attack_B.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/PN_OpenWorldFoliage/Meshes/openWorld_flower_01_01_FoliageType.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/PN_OpenWorldFoliage/Meshes/openWorld_flower_01_02_FoliageType.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/water.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Maple/M_Leaf_Maple_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Maple/Tree_Trunk_Master_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Maple/bark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Maple/bark.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Maple/leaf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Maple/leaf.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Maple/t.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Maple/tree.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Maple/tree.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/DataTables/WeaponDataTable.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/DataTables/WeaponDataTable.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Barbarous.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Barbarous.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/PauseMenu.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/PauseMenu.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/Showcase/Showcase_BuiltData.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/World/Main.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/World/Main.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Oceam_1.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Ocean_2.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Ocean_3.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Town_1.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Town_1_Center.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Town_1_Down.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Town_1_Right.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Town_1_sharedassets/Cliff_LayerInfo.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Town_1_sharedassets/Dirt_LayerInfo.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Town_1_sharedassets/FreshHarvest_LayerInfo.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Town_1_sharedassets/Grass_LayerInfo.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Town_1_sharedassets/Pebble_LayerInfo.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Materials/M_Landscape.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Materials/M_Landscape.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Megascans/3D_Plants/Silver_Lady_Fern_00/ubolejkia_Var1_LOD0_1_FoliageType.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Megascans/3D_Plants/Silver_Lady_Fern_00/ubolejkia_Var1_LOD0_1_FoliageType.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Floor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Floor.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,10 +79,10 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/PlayerCharacter.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/Menus/PauseMenu.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/ML_PlayerController.h" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/ML_PlayerController.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/BaseCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Items/BaseWeapon.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Items/BaseWeapon.h" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -401,6 +377,7 @@
       <workItem from="1609069241272" duration="411000" />
       <workItem from="1609078117204" duration="1704000" />
       <workItem from="1609120047029" duration="8145000" />
+      <workItem from="1609138065785" duration="3629000" />
     </task>
     <servers />
   </component>
