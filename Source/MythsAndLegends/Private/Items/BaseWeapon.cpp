@@ -96,12 +96,11 @@ void ABaseWeapon::ShootArrow(const FVector FireDirection)
     }
 }
 
-FSpecialAttack ABaseWeapon::GetSpecialAttack(int32 attack)
+FSpecialAttack ABaseWeapon::GetSpecialAttack(int32 const attack)
 {
     // Make sure that the attack is valid
     if(SpecialAttackMontages.Num() > attack)
     {
-        attack -= 1;
         return SpecialAttackMontages[attack];
     }
 
