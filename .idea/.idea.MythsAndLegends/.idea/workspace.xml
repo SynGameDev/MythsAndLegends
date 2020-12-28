@@ -35,9 +35,11 @@
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/Generic Trees 02_FBX.FBX" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/Generic_Trees_02_FBX.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/Leaf_mat_7.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/Leaf_mat_7_ncl1_1.uasset" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/bark03.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/bark03.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/bark04.uasset" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/leafG2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/leafG2.uasset" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/leafg2A.jpg" afterDir="false" />
@@ -48,6 +50,9 @@
       <change afterPath="$PROJECT_DIR$/Content/Trees/Generic_Trees_02_FBX/lf2D1.uasset" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Objects/WanderTargetPoint.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Objects/WanderTargetPoint.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Vallurka_LargeObjects.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/World/Vallurka_LargeObjects.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" afterDir="false" />
     </list>
@@ -90,8 +95,8 @@
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/Characters/InventoryComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Objects/WanderTargetPoint.cpp" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/AI_Objects/WanderTargetPoint.h" />
-      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" />
       <option value="$PROJECT_DIR$/Source/MythsAndLegends/Private/AI_Task/FindRandomWanderPoint.cpp" />
+      <option value="$PROJECT_DIR$/Source/MythsAndLegends/Public/Characters/NPC.h" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1k2v3cOXaLHpi5LxRcZfk8UUCW2" />
@@ -388,7 +393,7 @@
       <workItem from="1609120047029" duration="8145000" />
       <workItem from="1609138065785" duration="10926000" />
       <workItem from="1609162118616" duration="1995000" />
-      <workItem from="1609164673925" duration="459000" />
+      <workItem from="1609164673925" duration="933000" />
     </task>
     <servers />
   </component>
