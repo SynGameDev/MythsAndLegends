@@ -69,7 +69,7 @@ public:
 				if(Weapon->GetTotalSpecialAttacks() >= SpecialAttackIndex)
 				{
 					// TODO: Make Sure the attack is unlocked
-					FSpecialAttack const SpecialAttack = Weapon->GetSpecialAttack(SpecialAttackIndex - 1);
+					FSpecialAttack const SpecialAttack = Weapon->GetSpecialAttack(SpecialAttackIndex);
 					FAttackAnimation const AttackAnim = SpecialAttack.AttackAnim;
 					PlayAnimMontage(AttackAnim.AttackAnimation);
 					SetAttackCooldown(AttackAnim.AnimationTime);
