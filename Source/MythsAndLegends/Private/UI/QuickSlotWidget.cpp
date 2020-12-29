@@ -1,10 +1,19 @@
 ﻿#include "MythsAndLegends/Public/UI/QuickSlotWidget.h"
 
 #include "Characters/BaseCharacter.h"
+#include "Components/Button.h"
 #include "MythsAndLegends/Public/Items/BaseWeapon.h"
 #include "MythsAndLegends/Public/Items/BaseConsumable.h"
 #include "MythsAndLegends/Public/Characters/InventoryComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "MythsAndLegends/Public/UI/MainHUD.h"
+#include "MythsAndLegends/Public/Characters/PlayerCharacter.h"
+#include "MythsAndLegends/Public/UI/InventoryUI.h"
+
+void UQuickSlotWidget::NativeConstruct()
+{
+	ItemSlot->OnClicked.AddDynamic(this, &UQuickSlotWidget::Action);
+}
 
 void UQuickSlotWidget::SelectItem()
 {
@@ -21,8 +30,23 @@ void UQuickSlotWidget::SelectItem()
 	}
 }
 
-void UQuickSlotWidget::ShowAvailableSlot()
+void UQuickSlotWidget::Action()
 {
-	ItemSlot->
+	// Validate the Main UI & player as the character
+	if(auto* const Player = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0)))
+	{
+		if(auto* const MainHUD = Cast<UMainHUD>(Player->GetMainUI()))
+		{
+			// Check if the inventory is open
+			if(auto* const Inventory = Cast<UInventoryUI>(MainHUD->GetInventoryWidget()))
+			{
+				SetItem(Inventory->GetSelectedItem());
+			} else
+			{
+				SelectItem();	
+			}
+		}
+	}
 }
+
 

@@ -11,12 +11,10 @@ class MYTHSANDLEGENDS_API UQuickSlotWidget : public UUserWidget
 {
 	GENERATED_BODY()
 public:
-	
+	virtual void NativeConstruct() override;
 	void SelectItem();
 	FORCEINLINE void SetItem(class ABaseItem* Item) { ItemInSlot = Item; }
 	FORCEINLINE void RemoveItem() { ItemInSlot=nullptr;}
-	// Set Select Slot
-	void ShowAvailableSlot();
 private:
 	class ABaseItem* ItemInSlot;
 	bool bIsSlotAvailable;
@@ -26,4 +24,6 @@ private:
 	class UButton* ItemSlot;
 	UPROPERTY(meta=(BindWidgetOptional))
 	class UImage* ItemIcon;
+
+	void Action();
 };
