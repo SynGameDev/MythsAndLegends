@@ -49111,6 +49111,7 @@
                 <e p="PauseMenu.cpp" t="Include" />
                 <e p="SettingsMenu.cpp" t="Include" />
               </e>
+              <e p="QuickSlotWidget.cpp" t="Include" />
               <e p="SelectedInventoryItem.cpp" t="Include" />
             </e>
           </e>
@@ -49173,6 +49174,7 @@
                 <e p="PauseMenu.h" t="Include" />
                 <e p="SettingsMenu.h" t="Include" />
               </e>
+              <e p="QuickSlotWidget.h" t="Include" />
               <e p="SelectedInventoryItem.h" t="Include" />
             </e>
           </e>

@@ -1,11 +1,9 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+	// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-
-
 #include "MainHUD.generated.h"
 
 /**
@@ -66,6 +64,15 @@ private:
     
     // --- TIMERS --- //
     FTimerHandle ThEnemyTarget;
-        
-    
+
+	// --- QUICK SLOTS --- //
+	UPROPERTY(meta=(BindWidget))
+	class UQuickSlotWidget* QuickSlot_1;
+	UPROPERTY(meta=(BindWidget))
+	class UQuickSlotWidget* QuickSlot_2;
+	UPROPERTY(meta=(BindWidget))
+	class UQuickSlotWidget* QuickSlot_3;
+	UPROPERTY(meta=(BindWidget))
+	class UQuickSlotWidget* QuickSlot_4;
+	
 };
