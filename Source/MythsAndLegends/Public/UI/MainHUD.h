@@ -42,7 +42,7 @@ private:
     bool IsInventoryOpen = false;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Inventory|Variables", meta=(AllowPrivateAccess="true"))
     TSubclassOf<UUserWidget> InventoryWidgetClass;
-    class UWidget* InventoryWidget;
+    class UWidget* InventoryWidget; 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Inventory|Variables", meta=(AllowPrivateAccess="true"))
     class USizeBox* SelectedItemPoint;
 
