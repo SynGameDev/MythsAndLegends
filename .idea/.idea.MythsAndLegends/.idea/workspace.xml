@@ -35,8 +35,7 @@
   <component name="ChangeListManager">
     <list default="true" id="806eb478-75d1-48ff-9d7a-874831d271e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MythsAndLegends/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/QuickSlotWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Private/UI/QuickSlotWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/QuickSlotWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MythsAndLegends/Public/UI/QuickSlotWidget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/World/Main.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/World/Main.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -380,7 +379,8 @@
       <workItem from="1609162118616" duration="1995000" />
       <workItem from="1609164673925" duration="3479000" />
       <workItem from="1609214166080" duration="2606000" />
-      <workItem from="1609224825655" duration="1243000" />
+      <workItem from="1609224825655" duration="1329000" />
+      <workItem from="1609226618254" duration="1000" />
     </task>
     <servers />
   </component>
